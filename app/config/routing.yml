@@ -1,0 +1,4 @@
+code_cats_panel:
+    resource: "@CodeCatsPanelBundle/Resources/config/routing.yml"
+    prefix:   /panel
+

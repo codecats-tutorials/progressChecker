@@ -1,0 +1,18 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    {% block items %}
+    {% endblock %}
+{% endblock %}
+
+
+{% block javascripts %}
+    {% block libs %}
+    <script type="text/javascript" 
+        src="{{ asset('bundles/codecatspanel/js/ext-4.2.1.883/ext-all-dev.js') }}">
+    </script>
+    {% endblock %}
+
+    {% block app %}
+    {% endblock %}
+{% endblock %}
