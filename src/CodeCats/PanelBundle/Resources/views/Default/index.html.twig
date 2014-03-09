@@ -6,9 +6,9 @@
 {% endblock %}
 
 {% block app %}
-    {% for script in scripts %}
+   {% for script in scripts %}
         <script type="text/javascript" 
             src="{{ asset('bundles/codecatspanel' ~ script) }}">
         </script>
-    {% endfor %}
+   {% endfor %}
 {% endblock %}

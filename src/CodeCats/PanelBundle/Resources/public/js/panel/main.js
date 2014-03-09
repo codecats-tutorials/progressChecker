@@ -1,4 +1,3 @@
-
 Ext.application({
     name    : 'Pc',
     appFolder: 'bundles/codecatspanel/js/panel',

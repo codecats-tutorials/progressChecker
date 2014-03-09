@@ -1,0 +1,13 @@
+code_cats_panel_homepage:
+    pattern:  /
+    defaults: { _controller: CodeCatsPanelBundle:Default:index }
+
+login_check:
+  path: /login_check
+
+login:
+  path: /login
+  defaults: { _controller: CodeCatsPanelBundle:Account:login }
+
+account:
+    path: /

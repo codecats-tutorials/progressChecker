@@ -13,7 +13,7 @@ Ext.define('Pc.viewport.Panel', {
                     title : t('Postęp')
                 },
                 {
-                    title   : 'bar'
+                    title   : t('Języki')
                 }
             ]
         },
