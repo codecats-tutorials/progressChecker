@@ -7,8 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DefaultController extends Controller
 {
     public function indexAction()
-    {
-       
+    {  
         $kernel = $this->container->get('kernel');   
         $arrBundles = $kernel->getBundles();
         $path = $arrBundles['CodeCatsPanelBundle']->getPath();

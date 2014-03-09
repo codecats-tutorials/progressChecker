@@ -2,14 +2,25 @@ Ext.define('Pc.viewport.Panel', {
     extend: 'Ext.container.Viewport',
     layout: 'border',
     items : [
-		{
-                    region : 'north',
-                    xtype: 'button',
-                    text : 'aaa'
-		},
+        {
+            xtype   : 'pc-header'
+        },
+        {
+            region  : 'center',
+            xtype   : 'tabpanel',
+            items   : [
                 {
-                    region: 'north',
-                    xtype:'button-node'
+                    title : t('Postęp')
+                },
+                {
+                    title   : 'bar'
                 }
+            ]
+        },
+        {
+            xtype   : 'panel',
+            region  : 'south',
+            title   : 'll'
+        }
     ]
 });

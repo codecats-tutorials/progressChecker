@@ -12,6 +12,11 @@
 
 
 {% block javascripts %}
+	{% block bootstrap %}
+	<script type="text/javascript" 
+        src="{{ asset('bundles/codecatspanel/js/core/config.js') }}">
+    </script>
+	{% endblock %}
     {% block libs %}
     <script type="text/javascript" 
         src="{{ asset('bundles/codecatspanel/js/ext-4.2.1.883/ext-all-dev.js') }}">
