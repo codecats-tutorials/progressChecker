@@ -15,3 +15,16 @@ account:
 logout:
   path: /logout
   defaults: { _controller: CodeCatsPanelBundle:User:logout }
+
+code_cats_panel_progress_get:
+    pattern: /progress/
+    defaults: { _controller: CodeCatsPanelBundle:Progress:get }
+    methods: [GET]
+code_cats_panel_progress_put:
+    pattern: /progress/{id}
+    defaults: { _controller: CodeCatsPanelBundle:Progress:get, id: null }
+    methods: [PUT]
+code_cats_panel_progress_delete:
+    pattern: /progress/{id}
+    defaults: { _controller: CodeCatsPanelBundle:Progress:delete }
+    methods: [DELETE]

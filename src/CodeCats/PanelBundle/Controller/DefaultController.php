@@ -21,14 +21,15 @@ class DefaultController extends Controller
                    new \RecursiveDirectoryIterator($path), 
                    \RecursiveIteratorIterator::SELF_FIRST
         );
+
         $scripts = [];
         foreach ($objects as $object) {
-            if (substr($object, -3) === '.js') {
+            if (substr($object, -3) === '.js' && substr($object, -7) !== 'main.js') {
                 $scripts[] = preg_replace ('@^.+/js/panel@', '/js/panel', $object);
             }
         }
-        
-        return $this->render('CodeCatsPanelBundle:Default:index.html.twig', 
+
+        return $this->render('CodeCatsPanelBundle:Default:index.html.twig',
                 array('scripts' => $scripts));
     }
 }
