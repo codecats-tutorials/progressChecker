@@ -1,14 +1,29 @@
 {% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link type="text/css"
+          href="{{ asset('bundles/codecatspanel/css/login.css') }}"
+          rel="stylesheet" />
+{% endblock %}
+
 {% block body %}
-    <form action="{{ path('login_check') }}" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="_username" value="" />
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="_password" />
-
-        <input type="hidden" name="_target_path" value="account" />
-
+    <form class="center form" action="{{ path('login_check') }}" method="post">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="_username" value="" />
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="_password" />
+        </div>
+        <div>
+            <input type="hidden" name="_target_path" value="account" />
+        </div>
         <input type="submit" name="login" />
+        {% if error %}
+            <div class="error">
+                {{ error.message }}
+            </div>
+        {% endif %}
     </form>
 {% endblock %}

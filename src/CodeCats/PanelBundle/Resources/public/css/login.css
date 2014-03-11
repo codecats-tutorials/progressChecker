@@ -1,0 +1,29 @@
+.center {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:20em;
+    height:14em;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -12em; /*set to a negative number 1/2 of your width*/
+    padding-top: 1em;
+    padding-left: 5em;
+}
+.error {
+    color:red;
+}
+.form {
+    background: #a7c7dc; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #a7c7dc 0%, #85b2d3 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#a7c7dc), color-stop(100%,#85b2d3)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg, #a7c7dc 0%,#85b2d3 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg, #a7c7dc 0%,#85b2d3 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg, #a7c7dc 0%,#85b2d3 100%); /* IE10+ */
+    background: linear-gradient(135deg, #a7c7dc 0%,#85b2d3 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7c7dc', endColorstr='#85b2d3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    -webkit-box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
+    border-radius: 1%;
+}

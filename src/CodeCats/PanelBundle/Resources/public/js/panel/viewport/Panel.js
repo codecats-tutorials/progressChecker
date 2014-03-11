@@ -10,7 +10,12 @@ Ext.define('Pc.viewport.Panel', {
             xtype   : 'tabpanel',
             items   : [
                 {
-                    title : t('Postęp')
+                    title : t('Postęp'),
+                    items : [
+                        {
+                            xtype : 'button-add'
+                        }
+                    ]
                 },
                 {
                     title   : t('Języki')
