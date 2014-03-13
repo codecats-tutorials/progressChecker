@@ -13,12 +13,17 @@ class ProgressController extends Controller
 //        $reports = $serializer->serialize($doctrineobject, 'json');
 //        return new Response($doctrineobject);
 
-        return new JsonResponse(array('success' => true, 'data' => [['id' => 4]]));
+        return new JsonResponse(array('success' => true, 'data' => [['id' => 4, 'title' => 'a']]));
+    }
+
+    public function putAction()
+    {
+
     }
 
     public function deleteAction()
     {
-        return new JsonResponse(array('success' => true, 'data' => [['id' => 666]]));
+        return new JsonResponse(array('success' => true, 'data' => [['id' => 666, 'title' => 'a']]));
     }
 
 }

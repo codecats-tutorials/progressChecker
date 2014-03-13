@@ -22,7 +22,7 @@ code_cats_panel_progress_get:
     methods: [GET]
 code_cats_panel_progress_put:
     pattern: /progress/{id}
-    defaults: { _controller: CodeCatsPanelBundle:Progress:get, id: null }
+    defaults: { _controller: CodeCatsPanelBundle:Progress:put, id: null }
     methods: [PUT]
 code_cats_panel_progress_delete:
     pattern: /progress/{id}
