@@ -3,10 +3,10 @@ Ext.define('Pc.store.Progress', {
     model   : 'Pc.model.Progress',
     autoLoad: true,
     autoSync: true,
-    model: 'Pc.model.Progress',
-    proxy: {
-        type: 'rest',
-        url: url('progress'),
+    model   : 'Pc.model.Progress',
+    proxy   : {
+        type    : 'rest',
+        url     : url('progress'),
         reader: {
             type: 'json',
             root: 'data'

@@ -11,7 +11,16 @@ Ext.define('Pc.viewport.Header', {
         '->',
         {
             xtype : 'button',
-            text:'aaaa'
+            text:'AJAX',
+            handler : function () {
+                Ext.Ajax.request({
+                    method  : 'PUT',
+                    url     : 'progress',
+                    params  : {
+                        title : 'TTT'
+                    }
+                });
+            }
         }
     ]
 });
