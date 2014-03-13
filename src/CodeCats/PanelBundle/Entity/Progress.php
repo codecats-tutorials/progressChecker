@@ -35,20 +35,6 @@ class Progress
      */
     private $description;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="started", type="datetime")
-     */
-    private $started;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="ended", type="datetime")
-     */
-    private $ended;
-
 
     /**
      * Get id
@@ -106,49 +92,4 @@ class Progress
         return $this->description;
     }
 
-    /**
-     * Set started
-     *
-     * @param \DateTime $started
-     * @return Progress
-     */
-    public function setStarted($started)
-    {
-        $this->started = $started;
-
-        return $this;
-    }
-
-    /**
-     * Get started
-     *
-     * @return \DateTime 
-     */
-    public function getStarted()
-    {
-        return $this->started;
-    }
-
-    /**
-     * Set ended
-     *
-     * @param \DateTime $ended
-     * @return Progress
-     */
-    public function setEnded($ended)
-    {
-        $this->ended = $ended;
-
-        return $this;
-    }
-
-    /**
-     * Get ended
-     *
-     * @return \DateTime 
-     */
-    public function getEnded()
-    {
-        return $this->ended;
-    }
 }

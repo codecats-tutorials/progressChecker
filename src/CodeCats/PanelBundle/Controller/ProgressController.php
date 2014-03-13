@@ -26,13 +26,11 @@ class ProgressController extends Controller
 
         $fb = $this->get('fire_php');
 
-
-
         $progress = new Progress();
         $form = $this->createForm(new ProgressType(), $progress);
 
-        $form->setData(json_decode($request->getContent(), true));
-$fb->log($form);
+        $form->submit(json_decode($request->getContent(), true));
+
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($progress);

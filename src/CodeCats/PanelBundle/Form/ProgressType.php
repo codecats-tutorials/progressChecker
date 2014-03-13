@@ -17,8 +17,9 @@ class ProgressType extends AbstractType
         $builder
             ->add('title')
             ->add('description')
-            ->add('started')
-            ->add('ended')
+            ->add('id')
+           // ->add('started')
+          //  ->add('ended')
         ;
     }
     
@@ -30,6 +31,7 @@ class ProgressType extends AbstractType
 
         $resolver->setDefaults(array(
             'csrf_protection' => false,
+            'csrf_field_name' => '_dc',
             'data_class' => 'CodeCats\PanelBundle\Entity\Progress'
         ));
     }
