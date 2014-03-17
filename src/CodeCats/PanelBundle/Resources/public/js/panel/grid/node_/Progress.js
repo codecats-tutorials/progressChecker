@@ -34,7 +34,7 @@ Ext.define('Pc.grid.node_.Progress', {
                 xtype       : 'textfield',
                 allowBlank  : false
             }
-        }/*,
+        },
         {
             text        : t('Rozpoczęto'),
             dataIndex   : 'started',
@@ -42,7 +42,7 @@ Ext.define('Pc.grid.node_.Progress', {
                 xtype       : 'datefield',
                 format      : 'm/d/y'
             }
-        },
+        }/*,
         {
             text        : t('Zakończono'),
             dataIndex   : 'ended',

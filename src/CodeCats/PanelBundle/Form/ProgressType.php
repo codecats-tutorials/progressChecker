@@ -18,7 +18,7 @@ class ProgressType extends AbstractType
             ->add('title')
             ->add('description')
             ->add('id')
-           // ->add('started')
+            ->add('started')
           //  ->add('ended')
         ;
     }

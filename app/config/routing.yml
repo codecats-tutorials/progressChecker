@@ -1,3 +1,7 @@
+code_cats_front:
+    resource: "@CodeCatsFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
 code_cats_panel:
     resource: "@CodeCatsPanelBundle/Resources/config/routing.yml"
     prefix:   /panel

@@ -35,6 +35,14 @@ class Progress
      */
     private $description;
 
+    /**
+     * @var
+     *
+     * @ORM\Column(name="started", type="datetime")
+     */
+    private $started;
+
+    private $ended;
 
     /**
      * Get id
@@ -90,6 +98,18 @@ class Progress
     public function getDescription()
     {
         return $this->description;
+    }
+
+    public function setStarted($date)
+    {
+        $this->started = new \DateTime($date);
+
+        return $this;
+    }
+
+    public function getStarted()
+    {
+        return $this->started;
     }
 
 }

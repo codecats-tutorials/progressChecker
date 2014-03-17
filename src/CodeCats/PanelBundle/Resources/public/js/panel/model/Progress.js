@@ -3,8 +3,8 @@ Ext.define('Pc.model.Progress', {
     fields: [
         'id',
         'title',
-        'description'//,
-     //   'started',
+        'description',
+        'started',
      //   'ended'
     ]
 });

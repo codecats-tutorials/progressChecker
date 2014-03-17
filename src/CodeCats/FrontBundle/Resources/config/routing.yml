@@ -1,0 +1,3 @@
+code_cats_front_homepage:
+    pattern:  /
+    defaults: { _controller: CodeCatsFrontBundle:Default:index }

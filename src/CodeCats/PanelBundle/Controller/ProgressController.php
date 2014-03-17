@@ -7,29 +7,39 @@ use CodeCats\PanelBundle\Form\ProgressType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 class ProgressController extends Controller
 {
     public function getAction()
     {
-//        $serializer = $this->container->get('serializer');
-//        $reports = $serializer->serialize($doctrineobject, 'json');
-//        return new Response($doctrineobject);
+        $em = $this->getDoctrine()->getManager();
+        $progress = $em->getRepository('CodeCatsPanelBundle:Progress');
+        $all = $progress->findAll();
+        $json = array();
+        foreach ($all as $progress){
+            array_push($json, array(
+                'id' => $progress->getId(),
+                'title' => $progress->getTitle()
+            ));
+        }
 
-        return new JsonResponse(array('success' => true, 'data' => [['id' => null, 'title' => 'a']]));
+        return new JsonResponse(array('success' => true, 'data' => $json));
     }
 
     public function putAction(Request $request)
     {
 
-       // var_dump($request->query->all());
-
         $fb = $this->get('fire_php');
 
         $progress = new Progress();
-        $form = $this->createForm(new ProgressType(), $progress);
+        $form = $this->createForm(new ProgressType(), $progress, array('method' => 'PUT'));
+        $store = json_decode($request->getContent(), true);
 
-        $form->submit(json_decode($request->getContent(), true));
+        unset($store['started']);
+        $form->submit($store);
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
