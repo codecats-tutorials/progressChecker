@@ -20,11 +20,19 @@ code_cats_panel_progress_get:
     pattern: /progress/
     defaults: { _controller: CodeCatsPanelBundle:Progress:get }
     methods: [GET]
-code_cats_panel_progress_put:
+code_cats_panel_progress_update:
     pattern: /progress/{id}
-    defaults: { _controller: CodeCatsPanelBundle:Progress:put, id: null }
+    defaults: { _controller: CodeCatsPanelBundle:Progress:update }
     methods: [PUT]
+code_cats_panel_progress_create:
+    pattern: /progress/
+    defaults: { _controller: CodeCatsPanelBundle:Progress:create }
+    methods: [POST]
 code_cats_panel_progress_delete:
     pattern: /progress/{id}
     defaults: { _controller: CodeCatsPanelBundle:Progress:delete }
     methods: [DELETE]
+
+code_cats_panel_progress_form:
+    pattern: /progress/f
+    defaults: { _controller: CodeCatsPanelBundle:Progress:form }

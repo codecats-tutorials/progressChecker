@@ -17,9 +17,10 @@ class ProgressType extends AbstractType
         $builder
             ->add('title')
             ->add('description')
-            ->add('id')
+     //       ->add('id')
             ->add('started')
-          //  ->add('ended')
+            ->add('ended')
+            ->add('submit', 'submit')
         ;
     }
     

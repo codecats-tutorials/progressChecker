@@ -5,6 +5,6 @@ Ext.define('Pc.model.Progress', {
         'title',
         'description',
         'started',
-     //   'ended'
+        'ended'
     ]
 });

@@ -40,17 +40,17 @@ Ext.define('Pc.grid.node_.Progress', {
             dataIndex   : 'started',
             field       : {
                 xtype       : 'datefield',
-                format      : 'm/d/y'
+                format      : 'Y-d-m'
             }
-        }/*,
+        },
         {
             text        : t('Zakończono'),
             dataIndex   : 'ended',
             field       : {
                 xtype       : 'datefield',
-                format      : 'm/d/y'
+                format      : 'Y-d-m'
             }
-        }*/
+        }
     ],
     tbar    : [
         {

@@ -107,8 +107,7 @@ class Progress implements \JsonSerializable
 
     public function setStarted($date)
     {
-        $this->started = $date;
-      //  $this->started = new \DateTime($date);
+        $this->started = new \DateTime($date);
 
         return $this;
     }
