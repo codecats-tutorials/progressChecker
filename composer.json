@@ -19,7 +19,8 @@
         "sensio/framework-extra-bundle": "~3.0",
         "sensio/generator-bundle": "~2.3",
         "incenteev/composer-parameter-handler": "~2.0",
-        "dvelopment/firephp-bundle": "dev-master"
+        "dvelopment/firephp-bundle": "dev-master",
+        "symfony/serializer": "2.5.*@dev"
     },
     "scripts": {
         "post-install-cmd": [

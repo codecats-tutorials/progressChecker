@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "b9a4605cdfd3bed6b7c2435d7f5b384f",
+    "hash": "e1c0dbfb3ab1b45459aab842f9c4b977",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1319,6 +1319,55 @@
             "time": "2014-02-19 14:49:26"
         },
         {
+            "name": "symfony/serializer",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Serializer",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Serializer.git",
+                "reference": "6c9f6812d2611f40bd4f27fc4e5917ab0780cae4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Serializer/zipball/6c9f6812d2611f40bd4f27fc4e5917ab0780cae4",
+                "reference": "6c9f6812d2611f40bd4f27fc4e5917ab0780cae4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Serializer\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Serializer Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-03-04 14:58:09"
+        },
+        {
             "name": "symfony/swiftmailer-bundle",
             "version": "v2.3.5",
             "target-dir": "Symfony/Bundle/SwiftmailerBundle",
@@ -1605,7 +1654,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "dvelopment/firephp-bundle": 20
+        "dvelopment/firephp-bundle": 20,
+        "symfony/serializer": 20
     },
     "platform": {
         "php": ">=5.3.3"

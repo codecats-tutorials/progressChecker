@@ -10,23 +10,22 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
 use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\Serializer\Encoder\XmlEncoder;
 
 class ProgressController extends Controller
 {
     public function getAction()
     {
+        $encoders = array(new XmlEncoder(), new JsonEncoder());
+        $normalizers = array(new GetSetMethodNormalizer());
+
+        $serializer = new Serializer($normalizers, $encoders);
+
         $em = $this->getDoctrine()->getManager();
         $progress = $em->getRepository('CodeCatsPanelBundle:Progress');
         $all = $progress->findAll();
-        $json = array();
-        foreach ($all as $progress){
-            array_push($json, array(
-                'id' => $progress->getId(),
-                'title' => $progress->getTitle()
-            ));
-        }
 
-        return new JsonResponse(array('success' => true, 'data' => $json));
+        return new JsonResponse(array('success' => true, 'data' => $all));
     }
 
     public function putAction(Request $request)
