@@ -1,0 +1,7 @@
+parameters:
+#    code_cats_test.example.class: CodeCats\TestBundle\Example
+
+services:
+#    code_cats_test.example:
+#        class: %code_cats_test.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

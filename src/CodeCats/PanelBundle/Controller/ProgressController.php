@@ -11,7 +11,7 @@ use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
-use Symfony\Component\Validator\Constraints\DateTime;
+use DateTime;
 
 class ProgressController extends Controller
 {
@@ -20,22 +20,23 @@ class ProgressController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $progress = $em->getRepository('CodeCatsPanelBundle:Progress')->find(5);
+      ///  $progress = $em->getRepository('CodeCatsPanelBundle:Progress')->find(5);
+        $progress = new Progress();
         $form = $this->createForm(new ProgressType(), $progress);
 
         $store = array(
-            'title' => 'a'
+            'title' => 'aa',
+            'ended' => new DateTime()
         );
-        $store['started'] = (new \DateTime('now'))->format('Y-m-d');
-        var_export($store);
-
         $form->submit($store);
 
         if ($form->isValid()) {
-            //$em->flush();
+            //$progress->setStarted(new DateTime());
+        //    $em->flush();
 
             return new JsonResponse(array('success' => true));
         }
+        var_export($this->getErrorMessages($form));
 
         return new JsonResponse(($this->getErrorMessages($form)));
 

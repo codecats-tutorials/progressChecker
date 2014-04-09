@@ -1,12 +1,12 @@
 <?php
 
-namespace CodeCats\PanelBundle\Form;
+namespace CodeCats\TestBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class ProgressType extends AbstractType
+class TestType extends AbstractType
 {
         /**
      * @param FormBuilderInterface $builder
@@ -15,11 +15,8 @@ class ProgressType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title')
-            ->add('description')
-     //       ->add('id')
-            ->add('started', 'datetime')
-            ->add('ended', 'datetime')
+            ->add('name')
+            ->add('start')
         ;
     }
     
@@ -28,11 +25,8 @@ class ProgressType extends AbstractType
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-
         $resolver->setDefaults(array(
-            'csrf_protection' => false,
-            'csrf_field_name' => '_dc',
-            'data_class' => 'CodeCats\PanelBundle\Entity\Progress'
+            'data_class' => 'CodeCats\TestBundle\Entity\Test'
         ));
     }
 
@@ -41,6 +35,6 @@ class ProgressType extends AbstractType
      */
     public function getName()
     {
-        return 'codecats_panelbundle_progress';
+        return 'codecats_testbundle_test';
     }
 }

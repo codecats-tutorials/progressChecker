@@ -7,9 +7,6 @@
 {% endblock %}
 
 {% block body %}
-    {% for i in 1..9999 %}
-        {{ i }}
-    {% endfor %}
     <form class="center form" action="{{ path('login_check') }}" method="post">
         <div>
             <label for="username">Username:</label>
@@ -33,21 +30,6 @@
     {% block javascripts %}
         <script type="text/javascript"
                 src="{{ asset('bundles/codecatspanel/js/jquery/jquery-2.1.0.min.js') }}">
-        </script>
-        <script>
-            window['dir'] = 'up';
-            window.setInterval(function () {
-                var h = 0;
-                if (window.dir !== 'up') {
-                    h =  $('body').height();
-                    window.dir = 'up';
-                } else {
-                    window.dir = 'down';
-                }
-                $('body,html').animate({ scrollTop: h }, 9000);
-            }, 9000);
-          //  $('body,html').animate({ scrollTop: $('body').height() }, 2000);
-
         </script>
     {% endblock %}
 {% endblock %}

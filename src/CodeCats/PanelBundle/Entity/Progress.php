@@ -3,6 +3,7 @@
 namespace CodeCats\PanelBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use DateTime;
 
 /**
  * Progress
@@ -36,19 +37,24 @@ class Progress implements \JsonSerializable
     private $description;
 
     /**
-     * @var
+     * @var DateTime
      *
      * @ORM\Column(name="started", type="datetime")
      */
     private $started;
 
     /**
-     * @var
+     * @var DateTime
      *
      * @ORM\Column(name="ended", type="datetime")
      */
     private $ended;
 
+    public function __construct()
+    {
+        $this->setStarted(new DateTime());
+        $this->setEnded(new DateTime());
+    }
     /**
      * Get id
      *
@@ -108,7 +114,6 @@ class Progress implements \JsonSerializable
     public function setStarted($date)
     {
         $this->started = $date;
-      //  $this->started = new \DateTime($date);
 
         return $this;
     }
@@ -120,7 +125,7 @@ class Progress implements \JsonSerializable
 
     public function setEnded($date)
     {
-        $this->ended = new \DateTime($date);
+        $this->ended = $date;
 
         return $this;
     }
