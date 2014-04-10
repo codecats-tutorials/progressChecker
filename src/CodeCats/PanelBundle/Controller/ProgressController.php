@@ -57,17 +57,10 @@ class ProgressController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $progress = $em->getRepository('CodeCatsPanelBundle:Progress')->find($id);
+        $fb->log($progress);
         $form = $this->createForm(new ProgressType(), $progress);
 
-        $store = json_decode($request->getContent(), true);
-$store['started'] = 'now';
-$store['ended'] = new \Datetime('now');
-
-        unset($store['id']);
-       // unset($store['started']);
-        unset($store['ended']);
-
-        $form->submit($store);
+        $form->handleRequest($request);
 
         if ($form->isValid()) {
             $em->flush();
@@ -89,7 +82,8 @@ $store['ended'] = new \Datetime('now');
 
         unset($store['id']);
         unset($store['started']);
-        $form->submit($store);
+       // $form->submit($store);
+        $form->handleRequest($request);
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();

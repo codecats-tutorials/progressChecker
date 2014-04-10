@@ -8,7 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction($name)
+    public function indexAction($name, Request $request)
     {
         $fb = $this->get('fire_php');
 
@@ -24,7 +24,7 @@ class DefaultController extends Controller
             "start" => new \DateTime()
         );
 
-        $form->submit($store);
+        $form->handleRequest($request);
 
         if ($form->isValid()) {
             $em->persist($test);

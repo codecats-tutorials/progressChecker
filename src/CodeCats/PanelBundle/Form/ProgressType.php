@@ -2,6 +2,7 @@
 
 namespace CodeCats\PanelBundle\Form;
 
+use CodeCats\PanelBundle\Form\DataTransformer\StringToDateTimeTransformer;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -18,8 +19,10 @@ class ProgressType extends AbstractType
             ->add('title')
             ->add('description')
      //       ->add('id')
-            ->add('started', 'datetime')
-            ->add('ended', 'datetime')
+            //->add('started', 'datetime')
+          //  ->add('ended', 'datetime')
+            ->add('started', 'text')
+            ->addViewTransformer(new StringToDateTimeTransformer())
         ;
     }
     
