@@ -2,9 +2,12 @@
 
 namespace CodeCats\PanelBundle\Controller;
 
+use CodeCats\PanelBundle\CodeCatsPanelBundle;
 use CodeCats\PanelBundle\Entity\Progress;
 use CodeCats\PanelBundle\Form\ProgressType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Config\Definition\Exception\Exception;
+use Symfony\Component\Form\Forms;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
@@ -15,6 +18,7 @@ use DateTime;
 
 class ProgressController extends Controller
 {
+
     public function formAction(Request $request)
     {
 
@@ -54,21 +58,64 @@ class ProgressController extends Controller
     {
         $fb = $this->get('fire_php');
 
+
         $em = $this->getDoctrine()->getManager();
 
         $progress = $em->getRepository('CodeCatsPanelBundle:Progress')->find($id);
-        $fb->log($progress);
         $form = $this->createForm(new ProgressType(), $progress);
+//        $form->setData(json_decode($request->getContent(), true));
 
-        $form->handleRequest($request);
+        $fb->log($request->getContent());
+        //from firebug:
+        //PUT http://pc.t/app_dev.php/panel/progress/5?_dc=1397662229471
+        //{"id":5,"title":"aaa","description":"lllll","started":"2014-03-18"}
+      //  $form->handleRequest($request);
+        $fb->log($form->isValid());
+        //false :(
+
+       // var_dump($request);
+       // $form->handleRequest($request);
+        $factory = Forms::createFormFactory();
+
+
+        $form = $factory->createNamed(null, new ProgressType(), $progress, array('method'=>'PUT'));
+
+//        $form->handleRequest(null, $request);
+        $form->submit(json_decode($request->getContent(), true));
 
         if ($form->isValid()) {
-            $em->flush();
+            //false too
+            //$em->flush();
+            $fb->log($progress);
 
             return new JsonResponse(array('success' => true));
         }
 
+
+
         return new JsonResponse(array('success' => false, 'errors' => $this->getErrorMessages($form)));
+    }
+
+    /*
+curl --data "progress[title]=abc&progress[description]=oo&progress[started]=2009-01-13&_method=PUT" http://pc.t/app_dev.php/panel/progress/test/test>out.htm
+     */
+    public function testTestAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $progress = $em->getRepository('CodeCatsPanelBundle:Progress')->find(5);
+        //$form = $this->createForm(new ProgressType(), $progress, array('method' => 'PUT'))->add('submit', 'submit');
+       // $form = $this->createForm(new ProgressType(), $progress)->add('submit', 'submit');
+        $factory = Forms::createFormFactory();
+
+        $form = $factory->createNamed(null, new ProgressType())->add('submit', 'submit');
+        $form->handleRequest(null, $request);
+       // return new JsonResponse(array('success' => true));
+        return $this->render('CodeCatsPanelBundle:Progress:test.html.twig', [
+            'form' => $form->createView(),
+            'valid' => $form->isValid(),
+            'progress' => $progress,
+            'request' => $request
+        ]);
     }
 
     public function createAction(Request $request)
@@ -76,24 +123,24 @@ class ProgressController extends Controller
         $fb = $this->get('fire_php');
 
         $progress = new Progress();
-        $form = $this->createForm(new ProgressType(), $progress, array('method' => 'PUT'));
-        $store = json_decode($request->getContent(), true);
+        $em = $this->getDoctrine()->getManager();
+        $progress = $em->getRepository('CodeCatsPanelBundle:Progress')->find(5);
+        $factory = Forms::createFormFactory();
+        $form = $factory->createNamed(null, new ProgressType(), $progress);
 
-
-        unset($store['id']);
-        unset($store['started']);
-       // $form->submit($store);
-        $form->handleRequest($request);
+        $form->handleRequest(null, $request);
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($progress);
-            $em->flush();
+//            $em->persist($progress);
+  //          $em->flush();
 
             return new JsonResponse(array('success' => true));
         }
+        $fb->log($this->getErrorMessages($form));
+        $fb->log($form->getErrors());
 
-        return new JsonResponse(array('success' => false, 'errors' => $form->getErrors()));
+        return new JsonResponse(array('success' => false, 'errors' => $this->getErrorMessages($form)));
     }
 
     public function deleteAction()

@@ -19,15 +19,14 @@ class TestType extends AbstractType
             ->add('start')
         ;
     }
+    
     /**
      * @param OptionsResolverInterface $resolver
      */
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'CodeCats\TestBundle\Entity\Test',
-            'csrf_protection' => false,
-            'csrf_field_name' => '_dc'
+            'data_class' => 'CodeCats\TestBundle\Entity\Test'
         ));
     }
 

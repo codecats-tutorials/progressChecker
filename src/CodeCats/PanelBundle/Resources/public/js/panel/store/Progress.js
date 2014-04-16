@@ -3,16 +3,19 @@ Ext.define('Pc.store.Progress', {
     model   : 'Pc.model.Progress',
     autoLoad: true,
     autoSync: true,
-    model   : 'Pc.model.Progress',
     proxy   : {
         type    : 'rest',
         url     : url('progress'),
+        //type: 'ajax',
         reader: {
             type: 'json',
             root: 'data'
         },
         writer: {
             type: 'json'
+        },
+        headers: {
+            'Content-Type' : 'application/json'
         }
     }
 });

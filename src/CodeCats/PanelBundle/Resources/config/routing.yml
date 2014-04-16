@@ -1,3 +1,11 @@
+
+code_cats_panel_progress_form:
+    pattern: /progress/test/test
+    defaults: { _controller: CodeCatsPanelBundle:Progress:testTest }
+    methods: [PUT, POST, GET]
+    requirements:
+      _method: PUT
+
 code_cats_panel_homepage:
   pattern:  /
   defaults: { _controller: CodeCatsPanelBundle:Default:index }
@@ -25,14 +33,10 @@ code_cats_panel_progress_update:
     defaults: { _controller: CodeCatsPanelBundle:Progress:update }
     methods: [PUT]
 code_cats_panel_progress_create:
-    pattern: /progress/
+    pattern: /progress
     defaults: { _controller: CodeCatsPanelBundle:Progress:create }
     methods: [POST]
 code_cats_panel_progress_delete:
     pattern: /progress/{id}
     defaults: { _controller: CodeCatsPanelBundle:Progress:delete }
     methods: [DELETE]
-
-code_cats_panel_progress_form:
-    pattern: /progress/f
-    defaults: { _controller: CodeCatsPanelBundle:Progress:form }
