@@ -7,9 +7,12 @@
 {% endblock %}
 
 {% block body %}
+    <div class="languages">
+        <button>Polski</button><button>English</button><button>ES</button><button>LT</button><button>SP</button><button>PL</button>
+    </div>
     <form class="center form" action="{{ path('login_check') }}" method="post">
         <div>
-            <label for="username">Username:</label>
+            <label for="username">{{ 'login.username' | trans }}</label>
             <input type="text" id="username" name="_username" value="" />
         </div>
         <div>
@@ -19,7 +22,9 @@
         <div>
             <input type="hidden" name="_target_path" value="account" />
         </div>
-        <input type="submit" name="login" />
+        <div>
+            <input type="submit" name="login" />
+        </div>
         {% if error %}
             <div class="error">
                 {{ error.message }}

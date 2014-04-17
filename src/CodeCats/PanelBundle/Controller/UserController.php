@@ -14,7 +14,6 @@ class UserController extends Controller
 	public function loginAction(Request $request)
 	{
 		$form = $this->createForm(new LoginType(), new Login());
-		//$request = $this->getRequest();
 		$session = $request->getSession();
 		
 		if ($request->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
@@ -23,8 +22,10 @@ class UserController extends Controller
 			$error = $session->get(SecurityContext::AUTHENTICATION_ERROR);
 			$session->remove(SecurityContext::AUTHENTICATION_ERROR);
 		}
-		 
-		
+        $request->setLocale('en');
+        echo $request->getLocale();
+        echo $this->get('translator')->trans('login.username');
+
 		return $this->render(
 				'CodeCatsPanelBundle:User:login.html.twig',
 				array(

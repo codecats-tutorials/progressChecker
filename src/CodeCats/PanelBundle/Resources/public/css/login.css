@@ -27,3 +27,9 @@
     box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
     border-radius: 1%;
 }
+.languages {
+    margin:auto;
+    width:50%;
+    background-color:#b0e0e6;
+    text-align: center;
+}
