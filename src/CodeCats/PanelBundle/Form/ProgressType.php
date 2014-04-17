@@ -18,13 +18,18 @@ class ProgressType extends AbstractType implements CsrfProviderInterface
     {
         $builder
             ->add('title')
-            ->add('description')
+            ->add('description', 'text', array(
+                'required' => false
+            ))
      //       ->add('id')
             ->add('started', 'date', array(
                 'widget' => 'single_text',
                 'format' => 'yyyy-MM-dd',
             ))
-          //  ->add('ended', 'datetime')
+            ->add('ended', 'date', array(
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd',
+            ))
 //            ->add('started', 'text')
 //            ->addViewTransformer(new StringToDateTimeTransformer())
 //            ->add(

@@ -1,11 +1,3 @@
-
-code_cats_panel_progress_form:
-    pattern: /progress/test/test
-    defaults: { _controller: CodeCatsPanelBundle:Progress:testTest }
-    methods: [PUT, POST, GET]
-    requirements:
-      _method: PUT
-
 code_cats_panel_homepage:
   pattern:  /
   defaults: { _controller: CodeCatsPanelBundle:Default:index }
@@ -25,7 +17,7 @@ logout:
   defaults: { _controller: CodeCatsPanelBundle:User:logout }
 
 code_cats_panel_progress_get:
-    pattern: /progress/
+    pattern: /progress
     defaults: { _controller: CodeCatsPanelBundle:Progress:get }
     methods: [GET]
 code_cats_panel_progress_update:

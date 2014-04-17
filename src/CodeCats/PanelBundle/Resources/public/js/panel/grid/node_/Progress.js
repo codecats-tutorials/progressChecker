@@ -40,7 +40,7 @@ Ext.define('Pc.grid.node_.Progress', {
             dataIndex   : 'started',
             field       : {
                 xtype       : 'datefield',
-                format      : 'Y-d-m'
+                format      : 'Y-m-d'
             }
         },
         {
@@ -48,7 +48,7 @@ Ext.define('Pc.grid.node_.Progress', {
             dataIndex   : 'ended',
             field       : {
                 xtype       : 'datefield',
-                format      : 'Y-d-m'
+                format      : 'Y-m-d'
             }
         }
     ],

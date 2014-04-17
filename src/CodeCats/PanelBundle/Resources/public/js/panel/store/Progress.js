@@ -6,7 +6,6 @@ Ext.define('Pc.store.Progress', {
     proxy   : {
         type    : 'rest',
         url     : url('progress'),
-        //type: 'ajax',
         reader: {
             type: 'json',
             root: 'data'
