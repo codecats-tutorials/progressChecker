@@ -51,12 +51,13 @@ class ProgressController extends Controller
     {
         $fb = $this->get('fire_php');
         $em = $this->getDoctrine()->getManager();
+        $factory = Forms::createFormFactory();
+
         $progress = new Progress();
 
-        $factory = Forms::createFormFactory();
         $form = $factory->createNamed(null, new ProgressType(), $progress);
+        $form->submit(json_decode($request->getContent(), true));
 
-        $form->handleRequest(null, $request);
         if ($form->isValid()) {
             $em->persist($progress);
             $em->flush();

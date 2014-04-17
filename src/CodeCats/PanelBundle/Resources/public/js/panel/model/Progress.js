@@ -6,5 +6,12 @@ Ext.define('Pc.model.Progress', {
         'description',
         'started',
         'ended'
+    ],
+    validations: [
+        {
+            type: 'length',
+            field: 'title',
+            min: 1
+        }
     ]
 });

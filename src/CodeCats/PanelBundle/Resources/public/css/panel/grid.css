@@ -1,0 +1,34 @@
+tr.x-grid-row-selected{
+    color:blue;
+
+    -webkit-animation: color-change 1s 1;
+    -moz-animation: color-change 1s 1;
+    -o-animation: color-change 1s 1;
+    -ms-animation: color-change 1s 1;
+    animation: color-change 1s 1;
+}
+@-webkit-keyframes color-change {
+    0% { color: white; }
+    50% { color: #B1ACFF; }
+    100% { color: blue; }
+}
+@-moz-keyframes color-change {
+    0% { color: white; }
+    50% { color: #B1ACFF; }
+    100% { color: blue; }
+}
+@-ms-keyframes color-change {
+    0% { color: white; }
+    50% { color: #B1ACFF; }
+    100% { color: blue; }
+}
+@-o-keyframes color-change {
+    0% { color: white; }
+    50% { color: #B1ACFF; }
+    100% { color: blue; }
+}
+@keyframes color-change {
+    0% { color: white; }
+    50% { color: #B1ACFF; }
+    100% { color: blue; }
+}

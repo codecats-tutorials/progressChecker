@@ -8,7 +8,7 @@ use Symfony\Component\Form\Extension\Csrf\CsrfProvider\CsrfProviderInterface;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class ProgressType extends AbstractType implements CsrfProviderInterface
+class ProgressType extends AbstractType
 {
         /**
      * @param FormBuilderInterface $builder
@@ -21,7 +21,6 @@ class ProgressType extends AbstractType implements CsrfProviderInterface
             ->add('description', 'text', array(
                 'required' => false
             ))
-     //       ->add('id')
             ->add('started', 'date', array(
                 'widget' => 'single_text',
                 'format' => 'yyyy-MM-dd',
@@ -30,11 +29,6 @@ class ProgressType extends AbstractType implements CsrfProviderInterface
                 'widget' => 'single_text',
                 'format' => 'yyyy-MM-dd',
             ))
-//            ->add('started', 'text')
-//            ->addViewTransformer(new StringToDateTimeTransformer())
-//            ->add(
-//                $builder->create('started', 'text')->addModelTransformer(new StringToDateTimeTransformer())
-//            )
         ;
     }
     
@@ -57,30 +51,5 @@ class ProgressType extends AbstractType implements CsrfProviderInterface
     public function getName()
     {
         return 'progress';
-    }
-
-    /**
-     * Generates a CSRF token for a page of your application.
-     *
-     * @param string $intention Some value that identifies the action intention
-     *                          (i.e. "authenticate"). Doesn't have to be a secret value.
-     */
-    public function generateCsrfToken($intention)
-    {
-        // TODO: Implement generateCsrfToken() method.
-    }
-
-    /**
-     * Validates a CSRF token.
-     *
-     * @param string $intention The intention used when generating the CSRF token
-     * @param string $token The token supplied by the browser
-     *
-     * @return Boolean Whether the token supplied by the browser is correct
-     */
-    public function isCsrfTokenValid($intention, $token)
-    {
-        return true;
-        // TODO: Implement isCsrfTokenValid() method.
     }
 }
