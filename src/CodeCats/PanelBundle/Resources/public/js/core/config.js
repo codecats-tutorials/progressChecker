@@ -1,3 +1,5 @@
+var CodeCats = CodeCats || {};
+
 function t(txt) {
 	console.log('trans');
 	return txt;

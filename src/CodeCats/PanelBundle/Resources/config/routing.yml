@@ -1,3 +1,7 @@
+code_cats_panel_language:
+  pattern: /language/{locale}
+  defaults: { _controller: CodeCatsPanelBundle:Language:switchLanguage }
+
 code_cats_panel_homepage:
   pattern:  /
   defaults: { _controller: CodeCatsPanelBundle:Default:index }
@@ -32,3 +36,6 @@ code_cats_panel_progress_delete:
     pattern: /progress/{id}
     defaults: { _controller: CodeCatsPanelBundle:Progress:delete }
     methods: [DELETE]
+switch_language:
+    pattern: /switchLanguage
+    defaults: { _controller: CodeCatsPanelBundle:Language:switchLanguage }

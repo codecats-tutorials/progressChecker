@@ -7,26 +7,36 @@
 {% endblock %}
 
 {% block body %}
-    <div class="languages">
-        <button>Polski</button><button>English</button><button>ES</button><button>LT</button><button>SP</button><button>PL</button>
+    <div class="languages message">
+    {% for locale, language in languages %}
+        <a class="button-link" href="{{ path('code_cats_panel_language', {locale: locale}) }}">{{ language }}</a>
+    {% else %}
+    {% endfor %}
     </div>
+
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="info message">
+            <p>{{ flashMessage | trans }}</p>
+        </div>
+    {% endfor %}
+
     <form class="center form" action="{{ path('login_check') }}" method="post">
-        <div>
+        <p>
             <label for="username">{{ 'login.username' | trans }}</label>
             <input type="text" id="username" name="_username" value="" />
-        </div>
-        <div>
-            <label for="password">Password:</label>
+        </p>
+        <p>
+            <label for="password">{{ 'login.password' | trans }}</label>
             <input type="password" id="password" name="_password" />
-        </div>
+        </p>
         <div>
             <input type="hidden" name="_target_path" value="account" />
         </div>
-        <div>
-            <input type="submit" name="login" />
-        </div>
+        <p>
+            <input type="submit" name="login" class="button-link form-submit" value="{{ 'login.submit' | trans }}" />
+        </p>
         {% if error %}
-            <div class="error">
+            <div class="error message form-error">
                 {{ error.message }}
             </div>
         {% endif %}
