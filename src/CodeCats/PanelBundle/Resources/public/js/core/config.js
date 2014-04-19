@@ -1,4 +1,5 @@
 var CodeCats = CodeCats || {};
+var I18n = I18n || {};
 
 function t(txt) {
 	console.log('trans');

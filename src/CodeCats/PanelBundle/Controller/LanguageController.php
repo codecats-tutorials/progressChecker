@@ -57,7 +57,7 @@ class LanguageController extends Controller
 
         $path = $this->get('kernel')->locateResource('@CodeCatsPanelBundle/Resources/public/js/cache');
         $this->makeDirIfNotExists($path .= '/translations');
-        file_put_contents($path . '/messages.' . $locale . '.json', $content);
+        file_put_contents("$path/messages.$locale.json", "I18n['$locale'] = $content");
     }
 
     protected function makeDirIfNotExists($path) {

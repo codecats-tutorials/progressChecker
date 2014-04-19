@@ -7,19 +7,13 @@
 {% endblock %}
 
 {% block body %}
-    <div class="languages message">
-    {% for locale, language in languages %}
-        <a class="button-link" href="{{ path('code_cats_panel_language', {locale: locale}) }}">{{ language }}</a>
-    {% else %}
-    {% endfor %}
-    </div>
 
     {% for flashMessage in app.session.flashbag.get('notice') %}
-        <div id="note" class="info message">
+        <div class="info message">
             <p>{{ flashMessage | trans }}</p>
         </div>
     {% endfor %}
-
+{#
     <form class="center form" action="{{ path('login_check') }}" method="post">
         <p>
             <label for="username">{{ 'login.username' | trans }}</label>
@@ -41,6 +35,7 @@
             </div>
         {% endif %}
     </form>
+#}
 
     {% block javascripts %}
         <script type="text/javascript"

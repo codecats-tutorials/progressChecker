@@ -1,3 +1,12 @@
+body, a.button-link, input{
+    text-shadow: -1px -1px 9px rgba(0, 0, 0, 1),
+        -1px 0 #595B5B, 0 1px #595B5B, 1px 0 #595B5B, 0 -1px #595B5B;
+    font-weight: bold;
+
+}
+input {
+
+}
 .center {
     position:fixed;
     top: 50%;
@@ -20,6 +29,7 @@
     background: linear-gradient(135deg, #a7c7dc 0%,#85b2d3 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7c7dc', endColorstr='#85b2d3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
+    padding: 10px;
     -webkit-box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
     -moz-box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
     box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
@@ -31,7 +41,8 @@ form.form p {
 .form-error {
     width: 70% !important;
     margin-top: 10px;
-    text-align: center;
+    margin: auto;
+    border-radius: 10px;
 }
 .form-submit {
     width: 50% !important;
@@ -49,6 +60,7 @@ form.form p {
 .message{
     -webkit-background-size: 40px 40px;
     -moz-background-size: 40px 40px;
+
     background-size: 40px 40px;
     background-image: -webkit-gradient(linear, left top, right bottom,
     color-stop(.25, rgba(255, 255, 255, .05)), color-stop(.25, transparent),
@@ -70,17 +82,23 @@ form.form p {
     background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
     transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
     transparent 75%, transparent);
-    -moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);
-    box-shadow: inset 0 -1px 0 rgba(255,255,255,.4);
+    -webkit-box-shadow: 7px 7px 14px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    7px 7px 14px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         7px 7px 14px 0px rgba(50, 50, 50, 0.75);
     width: 100%;
-    border: 1px solid;
+    border: 2px solid black;
+    border-style: ridge groove groove ridge;
+    border-radius: 5px;
     color: #fff;
-    padding: 15px;
+    padding: 0px;
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-top: 10px;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0,0,0,.5);
     -webkit-animation: animate-bg 5s linear infinite;
     -moz-animation: animate-bg 5s linear infinite;
+
 }
 .info{
     background-color: #4ea5cd;
@@ -127,7 +145,23 @@ form.form p {
         background-position: -80px 0;
     }
 }
+/*hide flash*/
+#note {
+    opacity: .7;
+    -webkit-transform: translateY(-500px);
+    -webkit-animation: slideDown 6s 1s 1 ease forwards;
+    -moz-transform:    translateY(-500px);
+    -moz-animation:    slideDown 6s 1s 1 ease forwards;
+}
 
+@-webkit-keyframes slideDown {
+    0%, 100% { -webkit-transform: translateY(-500px); }
+    10%, 90% { -webkit-transform: translateY(0px); }
+}
+@-moz-keyframes slideDown {
+    0%, 100% { -moz-transform: translateY(-500px); }
+    10%, 90% { -moz-transform: translateY(0px); }
+}
 /*Button link*/
 .button-link {
     text-decoration: none;

@@ -58,4 +58,9 @@ class UserController extends Controller
 
         return $this->redirect($this->generateUrl('login'));
     }
+
+    public function registerAction(Request $request)
+    {
+        return $this->render('CodeCatsPanelBundle:User:register.html.twig');
+    }
 }

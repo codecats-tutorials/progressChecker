@@ -8,17 +8,17 @@ code_cats_panel_homepage:
 
 login_check:
   path: /login_check
-
 login:
   path: /login
   defaults: { _controller: CodeCatsPanelBundle:User:login }
-
 account:
   path: /
-
 logout:
   path: /logout
   defaults: { _controller: CodeCatsPanelBundle:User:logout }
+register:
+  path: /register
+  defaults: { _controller: CodeCatsPanelBundle:User:register }
 
 code_cats_panel_progress_get:
     pattern: /progress
