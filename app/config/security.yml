@@ -6,6 +6,7 @@ security:
             iterations:       1
             
     role_hierarchy:
+        RULE_USER:    ROLE_UNFILLED_USER
         ROLE_ADMIN:   ROLE_USER
         ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
       
@@ -14,17 +15,18 @@ security:
             entity: {class: CodeCats\PanelBundle\Entity\User, property: username}
         
     firewalls:
-      admin_area:
-        pattern: ^/admin
-        http_basic: ~
-      secured_area:
-        pattern: ^/
-        anonymous: ~
-        form_login:
-          login_path: login
-          check_path: login_check
+        admin_area:
+            pattern: ^/admin
+            http_basic: ~
+        secured_area:
+            pattern: ^/
+            anonymous: ~
+            form_login:
+                login_path: login
+                check_path: login_check
 
     access_control:
-      - { path: ^/hello, roles: ROLE_USER }
+        - { path: ^/panel/progress, roles: ROLE_USER }
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         
 

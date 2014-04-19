@@ -23,11 +23,11 @@
     <form class="center form" action="{{ path('login_check') }}" method="post">
         <p>
             <label for="username">{{ 'login.username' | trans }}</label>
-            <input type="text" id="username" name="_username" value="" placeholder="{{ 'login.username' | trans }}" />
+            <input type="text" id="username" name="_username" value="" placeholder="{{ 'login.username' | trans }}" required="required" />
         </p>
         <p>
             <label for="password">{{ 'login.password' | trans }}</label>
-            <input type="password" id="password" name="_password" placeholder="{{ 'login.password' | trans }}" />
+            <input type="password" id="password" name="_password" placeholder="{{ 'login.password' | trans }}" required="required" />
         </p>
         <div>
             <input type="hidden" name="_target_path" value="account" />

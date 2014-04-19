@@ -3,6 +3,8 @@
 namespace CodeCats\PanelBundle\Controller;
 
 use CodeCats\PanelBundle\Form\LanguageType;
+use CodeCats\PanelBundle\Form\Model\Registration;
+use CodeCats\PanelBundle\Form\RegistrationType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use CodeCats\PanelBundle\Entity\User;
 use CodeCats\PanelBundle\Form\LoginType;
@@ -19,6 +21,10 @@ class UserController extends Controller
 {
 	public function loginAction(Request $request)
 	{
+        if ($this->get('security.context')->isGranted('ROLE_USER')) {
+
+            return $this->redirect($this->generateUrl('code_cats_panel_homepage'));
+        }
         $yaml = new Parser();
         $messages = $yaml->parse(file_get_contents($this->get('kernel')->getRootDir() . '/config/languages.yml'));
 
@@ -61,6 +67,33 @@ class UserController extends Controller
 
     public function registerAction(Request $request)
     {
-        return $this->render('CodeCatsPanelBundle:User:register.html.twig');
+        $form = $this->createForm(new RegistrationType(), new Registration());
+        $form->add($this->get('translator')->trans('login.submit'), 'submit');
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $registration = $form->getData();
+
+            $factory = $this->get('security.encoder_factory');
+            $user = $registration->getUser();
+
+            $encoder = $factory->getEncoder($user);
+            $password = $encoder->encodePassword($user->getPassword(), $user->getSalt());
+            $user->setPassword($password);
+
+            $em->persist($user);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('login'));
+        }
+
+        return $this->render(
+            'CodeCatsPanelBundle:User:register.html.twig',
+            array(
+                'form' => $form->createView()
+            )
+        );
     }
 }

@@ -13,29 +13,20 @@
             <p>{{ flashMessage | trans }}</p>
         </div>
     {% endfor %}
-{#
-    <form class="center form" action="{{ path('login_check') }}" method="post">
-        <p>
-            <label for="username">{{ 'login.username' | trans }}</label>
-            <input type="text" id="username" name="_username" value="" />
-        </p>
-        <p>
-            <label for="password">{{ 'login.password' | trans }}</label>
-            <input type="password" id="password" name="_password" />
-        </p>
-        <div>
-            <input type="hidden" name="_target_path" value="account" />
-        </div>
-        <p>
-            <input type="submit" name="login" class="button-link form-submit" value="{{ 'login.submit' | trans }}" />
-        </p>
-        {% if error %}
+
+    <form class="center form" action="" method="post">
+        {% for child in form %}
+            <p>
+                {{ form_widget(child) }}
+                {{ form_label(child) }}
+            </p>
+        {% endfor %}
+        {% if form_errors(form) %}
             <div class="error message form-error">
-                {{ error.message }}
+                {{ form_errors(form) }}
             </div>
         {% endif %}
     </form>
-#}
 
     {% block javascripts %}
         <script type="text/javascript"

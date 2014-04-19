@@ -10,6 +10,7 @@ namespace CodeCats\PanelBundle\Form\Model;
 
 
 use CodeCats\PanelBundle\Entity\User;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class Registration
 {
