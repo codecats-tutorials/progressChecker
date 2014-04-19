@@ -4,8 +4,22 @@ body, a.button-link, input{
     font-weight: bold;
 
 }
-input {
-
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    background-color: #FFFFFF;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    font-weight: normal;
+    text-shadow: none;
+    height: 2em;
+    box-shadow: -3px -3px 15px -6px rgba(0,0,0,0.75) inset;
+    border-radius: 10px;
+    border: 2px solid gray;
+    border-style: groove ridge ridge groove;
+    text-align: center;
+}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    outline: 0 none;
 }
 .center {
     position:fixed;
@@ -30,13 +44,17 @@ input {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7c7dc', endColorstr='#85b2d3',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
     padding: 10px;
-    -webkit-box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 33px -6px rgba(0,0,0,0.75);
+    padding-bottom: 40px;
+    -webkit-box-shadow:     10px 10px 33px -6px rgba(0,0,0,0.75), 7px 7px 14px 0px rgba(200, 200, 200, 0.6) inset;
+    -moz-box-shadow:        10px 10px 33px -6px rgba(0,0,0,0.75), 7px 7px 14px 0px rgba(200, 200, 200, 0.6) inset;
+    box-shadow:             10px 10px 33px -6px rgba(0,0,0,0.75), 7px 7px 14px 0px rgba(200, 200, 200, 0.6) inset;
     border-radius: 2%;
+    border: 2px solid gray;
+    border-style: ridge groove groove ridge;
 }
 form.form p {
     text-align:center;
+    margin-left: 10px;
 }
 .form-error {
     width: 70% !important;
@@ -82,11 +100,11 @@ form.form p {
     background-image: linear-gradient(135deg, rgba(255, 255, 255, .05) 25%, transparent 25%,
     transparent 50%, rgba(255, 255, 255, .05) 50%, rgba(255, 255, 255, .05) 75%,
     transparent 75%, transparent);
-    -webkit-box-shadow: 7px 7px 14px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow:    7px 7px 14px 0px rgba(50, 50, 50, 0.75);
-    box-shadow:         7px 7px 14px 0px rgba(50, 50, 50, 0.75);
+    -webkit-box-shadow: 7px 7px 14px 0px rgba(50, 50, 50, 0.75), 7px 7px 14px 0px rgba(200, 200, 200, 0.6) inset;
+    -moz-box-shadow:    7px 7px 14px 0px rgba(50, 50, 50, 0.75), 7px 7px 14px 0px rgba(200, 200, 200, 0.6) inset;
+    box-shadow:         7px 7px 14px 0px rgba(50, 50, 50, 0.75), 7px 7px 14px 0px rgba(200, 200, 200, 0.6) inset;
     width: 100%;
-    border: 2px solid black;
+    border: 2px solid lightgray;
     border-style: ridge groove groove ridge;
     border-radius: 5px;
     color: #fff;
