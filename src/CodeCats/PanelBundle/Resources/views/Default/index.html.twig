@@ -9,6 +9,12 @@
 {% endblock %}
 
 {% block app %}
+    {% for package in packages %}
+        <script type="text/javascript"
+                src="{{ asset('bundles/codecatspanel' ~ package) }}">
+        </script>
+    {% endfor %}
+
    {% for script in scripts %}
         <script type="text/javascript" 
             src="{{ asset('bundles/codecatspanel' ~ script) }}">

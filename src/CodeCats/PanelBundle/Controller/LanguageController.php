@@ -17,7 +17,7 @@ class LanguageController extends Controller
     {
       //  $request->setLocale($locale);
         $request->getSession()->set('_locale', $locale);
-        $this->putCookie($locale);
+        //$this->putCookie($locale);
 
         $path = $this->getPathBack($request);
         $router = $this->container->get('router');

@@ -2,6 +2,7 @@
 
 namespace CodeCats\PanelBundle\Form;
 
+use CodeCats\PanelBundle\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
@@ -21,6 +22,11 @@ class UserType extends AbstractType
                 'first_name'    => 'password',
                 'second_name'   => 'confirm',
                 'type'          => 'password'
+            ))
+            ->add('grade', 'choice', array(
+                'choices'   => array(User::GRADE_USER => User::GRADE_USER, User::GRADE_DEVELOPER => User::GRADE_DEVELOPER),
+                'required'  => true,
+                'multiple'  => false
             ))
         ;
     }

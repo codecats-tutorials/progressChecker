@@ -10,3 +10,9 @@ services:
         arguments: ["%kernel.default_locale%"]
         tags:
             - { name: kernel.event_subscriber }
+
+    code_cats.user_manager:
+        class: CodeCats\PanelBundle\EventListener\UserManager
+        arguments: [@service_container]
+        tags:
+            - {name: doctrine.event_listener, event: prePersist }

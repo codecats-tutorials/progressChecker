@@ -8,7 +8,8 @@ security:
     role_hierarchy:
         RULE_USER:    ROLE_UNFILLED_USER
         ROLE_ADMIN:   ROLE_USER
-        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+        ROLE_DEVELOPER: ROLE_ADMIN
+        ROLE_SUPER_ADMIN: [ROLE_DEVELOPER, ROLE_ALLOWED_TO_SWITCH]
       
     providers:
         administrators:

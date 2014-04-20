@@ -1,0 +1,21 @@
+src/CodeCats/PanelBundle/Resources/public/js/panel/viewport/Panel.js:13: t('Postęp')
+src/CodeCats/PanelBundle/Resources/public/js/panel/viewport/Panel.js:21: t('Języki')
+src/CodeCats/PanelBundle/Resources/public/js/panel/button/node_/Delete.js:4: t('Usuń')
+src/CodeCats/PanelBundle/Resources/public/js/panel/button/node_/Edit.js:4: t('Edytuj')
+src/CodeCats/PanelBundle/Resources/public/js/panel/button/node_/Add.js:4: t('Dodaj')
+src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js:10: t('Anuluj')
+src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js:11: t('Zapisz')
+src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js:23: t('Id')
+src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js:32: t('Tytuł')
+src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js:40: t('Opis')
+src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js:48: t('Rozpoczęto')
+src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js:56: t('Zakończono')
+src/CodeCats/PanelBundle/Resources/views/User/login.html.twig:19:            <p>{{ flashMessage | trans }}
+src/CodeCats/PanelBundle/Resources/views/User/login.html.twig:25:            <label for="username">{{ 'login.username' | trans }}
+src/CodeCats/PanelBundle/Resources/views/User/login.html.twig:26:            <input type="text" id="username" name="_username" value="" placeholder="{{ 'login.username' | trans }}
+src/CodeCats/PanelBundle/Resources/views/User/login.html.twig:29:            <label for="password">{{ 'login.password' | trans }}
+src/CodeCats/PanelBundle/Resources/views/User/login.html.twig:30:            <input type="password" id="password" name="_password" placeholder="{{ 'login.password' | trans }}
+src/CodeCats/PanelBundle/Resources/views/User/login.html.twig:36:            <input type="submit" name="login" class="button-link form-submit" value="{{ 'login.submit' | trans }}
+src/CodeCats/PanelBundle/Resources/views/User/login.html.twig:40:                {{ error.message | trans }}
+src/CodeCats/PanelBundle/Resources/views/User/register.html.twig:13:            <p>{{ flashMessage | trans }}
+src/CodeCats/PanelBundle/Controller/UserController.php:71:trans('login.submit'), 'submit')

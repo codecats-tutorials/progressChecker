@@ -37,7 +37,7 @@
         </p>
         {% if error %}
             <div class="error message form-error">
-                {{ error.message }}
+                {{ error.message | trans }}
             </div>
         {% endif %}
     </form>

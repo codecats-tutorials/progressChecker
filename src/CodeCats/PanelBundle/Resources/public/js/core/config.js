@@ -1,10 +1,6 @@
 var CodeCats = CodeCats || {};
 var I18n = I18n || {};
 
-function t(txt) {
-	console.log('trans');
-	return txt;
-}
 var URL_DEV  = '/app_dev.php/panel';
 var URL_PROD = '/app.php/panel';
 

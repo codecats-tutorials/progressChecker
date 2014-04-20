@@ -13,6 +13,10 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class User implements UserInterface
 {
+    const GRADE_DEVELOPER   = 'developer';
+    const GRADE_ADMIN       = 'admin';
+    const GRADE_MODERATOR   = 'moderator';
+    const GRADE_USER        = 'user';
     /**
      * @var integer
      *
@@ -43,6 +47,10 @@ class User implements UserInterface
      */
     private $password;
 
+    /**
+     * @ORM\Column(type="string", columnDefinition="ENUM('DEVELOPER', 'ADMIN', 'MODERATOR', 'USER') NOT NULL")
+     */
+    private $grade;
 
     /**
      * Get id
@@ -135,4 +143,16 @@ class User implements UserInterface
         return null;
     }
 
+    public function setGrade($grade)
+    {
+        if ( ! in_array($grade, array(self::GRADE_ADMIN, self::GRADE_DEVELOPER, self::GRADE_MODERATOR, self::GRADE_USER))) {
+            throw new \InvalidArgumentException('Invalid grade');
+        }
+        $this->grade = $grade;
+    }
+
+    public function getGrade()
+    {
+        return $this->grade;
+    }
 }
