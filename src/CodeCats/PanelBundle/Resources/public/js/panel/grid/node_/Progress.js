@@ -53,7 +53,7 @@ Ext.define('Pc.grid.node_.Progress', {
             }
         },
         {
-            text        : t('Zakończono'),
+            text        : Ext.String.format(t('Zakończono')),
             dataIndex   : 'ended',
             field       : {
                 xtype       : 'datefield',

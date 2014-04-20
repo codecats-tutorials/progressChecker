@@ -64,7 +64,7 @@
                 {
                     "name": "Johannes Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "http://jmsyst.com",
+                    "homepage": "https://github.com/schmittjoh",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -1211,21 +1211,20 @@
         },
         {
             "name": "symfony/icu",
-            "version": "v1.2.1",
+            "version": "v1.0.1",
             "target-dir": "Symfony/Component/Icu",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Icu.git",
-                "reference": "98e197da54df1f966dd5e8a4992135703569c987"
+                "reference": "fdba214b1e087c149843bde976263c53ac10c975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Icu/zipball/98e197da54df1f966dd5e8a4992135703569c987",
-                "reference": "98e197da54df1f966dd5e8a4992135703569c987",
+                "url": "https://api.github.com/repos/symfony/Icu/zipball/fdba214b1e087c149843bde976263c53ac10c975",
+                "reference": "fdba214b1e087c149843bde976263c53ac10c975",
                 "shasum": ""
             },
             "require": {
-                "lib-icu": ">=4.4",
                 "php": ">=5.3.3",
                 "symfony/intl": "~2.3"
             },
@@ -1255,7 +1254,7 @@
                 "icu",
                 "intl"
             ],
-            "time": "2013-10-04 10:06:38"
+            "time": "2013-10-04 09:12:07"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -1326,12 +1325,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Serializer.git",
-                "reference": "31c8b2c5ccafbcba87aa6e365b2c31a9ce6fd329"
+                "reference": "d9205216ce3265326476b26b36172f2b29220e5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Serializer/zipball/31c8b2c5ccafbcba87aa6e365b2c31a9ce6fd329",
-                "reference": "31c8b2c5ccafbcba87aa6e365b2c31a9ce6fd329",
+                "url": "https://api.github.com/repos/symfony/Serializer/zipball/d9205216ce3265326476b26b36172f2b29220e5f",
+                "reference": "d9205216ce3265326476b26b36172f2b29220e5f",
                 "shasum": ""
             },
             "require": {
@@ -1366,7 +1365,7 @@
             ],
             "description": "Symfony Serializer Component",
             "homepage": "http://symfony.com",
-            "time": "2014-04-11 08:02:41"
+            "time": "2014-04-18 20:40:52"
         },
         {
             "name": "symfony/swiftmailer-bundle",
