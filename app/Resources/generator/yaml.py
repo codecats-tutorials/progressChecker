@@ -3,6 +3,8 @@ __author__ = 't'
 import translate
 import re
 from sys import argv
+import yaml
+import codecs
 
 locale = None
 try:
@@ -35,6 +37,7 @@ regexPHP    = re.compile("trans\((.+?)\)")
 with open('./messages/usages-no-path.txt', 'r') as file: lines = file.read().split('\n')
 
 toYaml = ''
+yamlDirectory = {}
 for line in lines:
     string = None
     string = match(regexJS, line)
@@ -45,11 +48,25 @@ for line in lines:
 
     if string != None:
         if locale == None:
-            toYaml += string + ': \n'
-        else:
-            toYaml += string + ': %s\n' % translate.translate(string, locale, localeFrom)
+            yamlDirectory['' + string + ''] = ' '
 
-if locale == None:
-    with open('./messages/messages.base.yml', 'w') as file: file.write(toYaml)
-else:
-    with open('./messages/messages.' + locale + '.yml', 'w') as file: file.write(toYaml)
+        else:
+            yamlDirectory['"' + string + '"'] = '"%s"' % translate.translate(string, locale, localeFrom)
+
+pathName = './messages/messages.base.yml'
+if locale != None:
+    pathName = './messages/messages.' + locale + '.yml'
+
+content = yaml.safe_dump(yamlDirectory, default_flow_style = False)
+with codecs.open(pathName, 'w') as file: file.write(content)
+
+#     if string != None:
+#         if locale == None:
+#             toYaml += string + ': \n'
+#         else:
+#             toYaml += string + ': %s\n' % translate.translate(string, locale, localeFrom)
+#
+# if locale == None:
+#     with open('./messages/messages.base.yml', 'w') as file: file.write(toYaml)
+# else:
+#     with open('./messages/messages.' + locale + '.yml', 'w') as file: file.write(toYaml)
