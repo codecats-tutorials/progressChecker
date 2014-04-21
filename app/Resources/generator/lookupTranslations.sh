@@ -1,6 +1,10 @@
 #!/bin/bash
-#grep -ro "\st('.\+')"
-#grep -roh "\st('.\+')"
+
+#Module looks for the translations calls in whole project, available files extensions: php, js, twig.
+#Omiting the vendor directory, two kinds of files will be saved as usaged (file with details)
+#and usages-no-path (file without details) its placed into generator/messages directory
+
+
 cd ../../..
 
 #js

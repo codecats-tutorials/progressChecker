@@ -1,4 +1,21 @@
 # -*- coding: utf-8 -*-
+'''
+en - english
+pl - polish
+
+Module reads the generator/messages/usages-no-path.txt line by line. Then creates the yaml file (translated or base).
+example (required: usages-no-path.txt file):
+python yaml.py
+-> creates base yaml file into messages
+
+python yaml.py pl
+-> creates translated pl file into messages, base text is autodetected
+
+python yaml.py pl en
+-> created translated pl file into messages, base text is en
+
+keep in mind: usages-no-path.txt file can be generated via lookupTranslations.sh
+'''
 __author__ = 't'
 import translate
 import re
@@ -48,25 +65,15 @@ for line in lines:
 
     if string != None:
         if locale == None:
-            yamlDirectory['' + string + ''] = ' '
+            yamlDirectory['' + string + ''] = ''
 
         else:
-            yamlDirectory['"' + string + '"'] = '"%s"' % translate.translate(string, locale, localeFrom)
+            yamlDirectory['' + string + ''] = '"%s"' % translate.translate(string, locale, localeFrom)
 
 pathName = './messages/messages.base.yml'
 if locale != None:
     pathName = './messages/messages.' + locale + '.yml'
 
-content = yaml.safe_dump(yamlDirectory, default_flow_style = False)
-with codecs.open(pathName, 'w') as file: file.write(content)
 
-#     if string != None:
-#         if locale == None:
-#             toYaml += string + ': \n'
-#         else:
-#             toYaml += string + ': %s\n' % translate.translate(string, locale, localeFrom)
-#
-# if locale == None:
-#     with open('./messages/messages.base.yml', 'w') as file: file.write(toYaml)
-# else:
-#     with open('./messages/messages.' + locale + '.yml', 'w') as file: file.write(toYaml)
+content = yaml.safe_dump(yamlDirectory, default_flow_style = False, encoding='utf-8', allow_unicode=True)
+with codecs.open(pathName, 'w') as file: file.write(content)

@@ -1,4 +1,17 @@
 # -*- coding: utf-8 -*-
+'''
+Script reads input/message.{2}.yml file, where {2} is 2nd argument given (default value is "auto")),
+File translated structure is:
+ "login.form.username: username" translations is run on "username"
+Output is saved into output/messages.{1}.yml where {1} is 1st argument. The {1} and {2} is locale "en", "fr", "pl" etc.
+
+example:
+python translate.py en
+-> input/messages.auto.yml is translated from autodetection into english output/messages.en.yml
+
+python translate.py en pl
+-> input/messages.pl.yml is translated from polish into english output/messages.en.yml
+'''
 __author__ = 't'
 import os,sys,inspect
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
@@ -10,11 +23,14 @@ import translate
 from sys import argv
 import codecs
 
-# locale = argv[1]
-locale = 'en'
+def stripMarginQuotes(str):
+    if str == None: return None
+    if (str[0:1] + str[-1:]) == '""':
+        str = str[1:-1]
+    return str
 
+locale = argv[1]
 localeFrom = 'auto'
-localeFrom = 'pl'
 try:
     localeFrom = argv[2]
 except:
@@ -27,14 +43,8 @@ with codecs.open(path, 'r', 'utf8') as file: docs = yaml.load(file)
 
 translatedDocs = {}
 for key in docs:
-    translatedDocs[key] = translate.translate(codecs.encode(docs[key], 'utf8'), locale, localeFrom)
-
-
-for key in translatedDocs:
-    print key
+    translatedDocs[key] = translate.translate(codecs.encode(stripMarginQuotes(docs[key]), 'utf8'), locale, localeFrom)
 
 content = yaml.safe_dump(translatedDocs, default_flow_style = False, encoding='utf-8', allow_unicode=True)
-print content
-with codecs.open('./output/messages.' + locale + '.yml', 'w', 'utf8') as file: file.write(content)
 
-with open('./output/test.yml', 'w') as file: file.write('łąźćóęółń')
+with open('./output/messages.' + locale + '.yml', 'w') as file: file.write(content)

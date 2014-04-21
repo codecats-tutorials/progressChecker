@@ -2,15 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c96e0c14-3824-4e79-bd39-617e2c408759" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/input/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Resources/translations/generator/generate.sh" afterPath="$PROJECT_DIR$/app/Resources/generator/generate.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Resources/translations/generator/lookupTranslations.sh" afterPath="$PROJECT_DIR$/app/Resources/generator/lookupTranslations.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Resources/translations/generator/messages/.gitignore" afterPath="$PROJECT_DIR$/app/Resources/generator/messages/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Resources/translations/generator/progress.sh" afterPath="$PROJECT_DIR$/app/Resources/generator/progress.sh" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Resources/translations/generator/translate.py" afterPath="$PROJECT_DIR$/app/Resources/generator/translate.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/Resources/translations/generator/yaml.py" afterPath="$PROJECT_DIR$/app/Resources/generator/yaml.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/translations/messages.ar.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/translations/messages.es.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/translations/messages.jp.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/translations/messages.ko.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/translations/messages.lt.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/translations/messages.ru.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/translations/messages.zh.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/generator/generate.sh" afterPath="$PROJECT_DIR$/app/Resources/generator/generate.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/generator/.idea/generator.iml" afterPath="$PROJECT_DIR$/app/Resources/generator/.idea/generator.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/languages.yml" afterPath="$PROJECT_DIR$/app/config/languages.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/generator/lookupTranslations.sh" afterPath="$PROJECT_DIR$/app/Resources/generator/lookupTranslations.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/generator/.idea/misc.xml" afterPath="$PROJECT_DIR$/app/Resources/generator/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/translate.py" afterPath="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/translate.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/generator/.idea/workspace.xml" afterPath="$PROJECT_DIR$/app/Resources/generator/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/generator/yaml.py" afterPath="$PROJECT_DIR$/app/Resources/generator/yaml.py" />
     </list>
     <ignored path="Symfony.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,73 +40,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="lookupTranslations.sh" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/generator/lookupTranslations.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="-8.4" vertical-offset="0" max-vertical-offset="510">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/input/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="11" selection-start="13" selection-end="13" vertical-scroll-proportion="0.014563107" vertical-offset="0" max-vertical-offset="1030">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usages.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/generator/messages/usages.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messages.fr.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.fr.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="23" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="messages.it.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.it.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="messages.pl.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.pl.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+            <state line="2" column="20" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Progress.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js">
+      <file leaf-file-name="messages.jp.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.jp.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="60" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1635">
+            <state line="1" column="5" selection-start="40" selection-end="45" vertical-scroll-proportion="0.02276176" vertical-offset="0" max-vertical-offset="659">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages.zh.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.zh.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages.ru.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.ru.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages.zh.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.zh.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="messages.lt.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.lt.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
               <folding />
             </state>
           </provider>
@@ -118,9 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/AppKernel.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/TestBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/TestBundle/Form/TestType.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/Progress/test.html.twig" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Progress.js" />
@@ -160,23 +146,26 @@
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/cache/translations/messages.pl.json" />
         <option value="$PROJECT_DIR$/web/bundles/codecatspanel/js/cache/translations/messages.pl.json" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/core/config.js" />
-        <option value="$PROJECT_DIR$/app/Resources/translations/messages.en.yml" />
         <option value="$PROJECT_DIR$/app/Resources/translations/messages.pl.yml" />
         <option value="$PROJECT_DIR$/app/Resources/translations/lookupTranslations.sh" />
         <option value="$PROJECT_DIR$/app/Resources/translations/generator/messages/.gitignore" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js" />
         <option value="$PROJECT_DIR$/app/Resources/translations/generator/lookupTranslations.sh" />
         <option value="$PROJECT_DIR$/app/Resources/translations/messages.base.yml" />
-        <option value="$PROJECT_DIR$/app/config/languages.yml" />
         <option value="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/.gitignore" />
+        <option value="$PROJECT_DIR$/app/Resources/translations/messages.en.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.en.yml" />
+        <option value="$PROJECT_DIR$/app/config/languages.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.jp.yml" />
+        <option value="$PROJECT_DIR$/app/Resources/translations/messages.jp.yml" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="y" value="24" />
-    <option name="width" value="1246" />
-    <option name="height" value="1176" />
+    <option name="width" value="1280" />
+    <option name="height" value="776" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1217,6 +1206,32 @@
               <option name="myItemId" value="reverseTranslateFromYaml" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reverseTranslateFromYaml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="output" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -1886,9 +1901,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output" />
-      <recent name="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/input" />
       <recent name="$PROJECT_DIR$/app/Resources/translations" />
+      <recent name="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/input" />
+      <recent name="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output" />
       <recent name="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/User" />
       <recent name="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/cache/translations" />
     </key>
@@ -1959,15 +1974,16 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1246" height="1176" extended-state="5" />
+    <frame x="0" y="24" width="1280" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18729903" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -1975,7 +1991,6 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952926" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2000,81 +2015,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Progress.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="79" selection-start="663" selection-end="663" vertical-scroll-proportion="0.4404946" vertical-offset="210" max-vertical-offset="2430" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Progress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="256" selection-end="256" vertical-scroll-proportion="0.27863777" vertical-offset="0" max-vertical-offset="646" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Progress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="34" selection-start="217" selection-end="217" vertical-scroll-proportion="0.16253869" vertical-offset="0" max-vertical-offset="646" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/css/panel/grid.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="24" selection-start="756" selection-end="756" vertical-scroll-proportion="0.76986754" vertical-offset="0" max-vertical-offset="604" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/ProgressType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="5" selection-start="1477" selection-end="1477" vertical-scroll-proportion="0.0" vertical-offset="795" max-vertical-offset="915" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/LoginType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="50" selection-start="257" selection-end="277" vertical-scroll-proportion="0.36713287" vertical-offset="0" max-vertical-offset="572" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="19" selection-start="100" selection-end="100" vertical-scroll-proportion="0.04643963" vertical-offset="0" max-vertical-offset="646" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/Progress/form.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="11" selection-start="208" selection-end="208" vertical-scroll-proportion="0.20100503" vertical-offset="0" max-vertical-offset="597" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/DependencyInjection/Configuration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="633" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/ProgressController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="2047" selection-end="2047" vertical-scroll-proportion="0.8748068" vertical-offset="139" max-vertical-offset="1125" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bundles/codecatspanel/js/cache/translations/messages.en.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1017" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/layout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="7" selection-start="473" selection-end="473" vertical-scroll-proportion="0.27190334" vertical-offset="0" max-vertical-offset="993" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="61" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/User/register.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="615" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="7" selection-start="187" selection-end="187" vertical-scroll-proportion="0.17475729" vertical-offset="0" max-vertical-offset="1030" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/cache/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="11" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105" />
@@ -2103,16 +2043,6 @@
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/Model/Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="5" selection-start="626" selection-end="626" vertical-scroll-proportion="0.5252918" vertical-offset="0" max-vertical-offset="1028" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1052" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="8" selection-start="1856" selection-end="1856" vertical-scroll-proportion="0.0" vertical-offset="163" max-vertical-offset="1215" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/security.yml">
@@ -2177,9 +2107,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="39" selection-start="2428" selection-end="2428" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="1185">
-          <folding />
-        </state>
+        <state line="64" column="39" selection-start="2428" selection-end="2428" vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="1185" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/UserType.php">
@@ -2189,9 +2117,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="45" selection-start="2355" selection-end="2376" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="1485">
-          <folding />
-        </state>
+        <state line="70" column="45" selection-start="2355" selection-end="2376" vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="1485" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/generator/messages/.gitignore">
@@ -2199,11 +2125,34 @@
         <state line="1" column="11" selection-start="13" selection-end="13" vertical-scroll-proportion="0.02276176" vertical-offset="0" max-vertical-offset="659" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js">
+    <entry file="file://$PROJECT_DIR$/app/console">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="60" selection-start="1687" selection-end="1687" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1635">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1030" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="11" selection-start="13" selection-end="13" vertical-scroll-proportion="0.02276176" vertical-offset="0" max-vertical-offset="659" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/input/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1030" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/lookupTranslations.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="0.32012194" vertical-offset="0" max-vertical-offset="656" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/messages/usages.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.0209581" vertical-offset="682" max-vertical-offset="1350" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.fr.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="23" selection-start="86" selection-end="86" vertical-scroll-proportion="0.04405286" vertical-offset="0" max-vertical-offset="681" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.it.yml">
@@ -2213,70 +2162,154 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/console">
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/yaml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1030" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.fr.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="23" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="150">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/generator/messages/usages.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1017">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.en.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="12" selection-start="155" selection-end="155" vertical-scroll-proportion="0.07281554" vertical-offset="0" max-vertical-offset="1030">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/languages.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="18" selection-start="101" selection-end="101" vertical-scroll-proportion="0.07281554" vertical-offset="0" max-vertical-offset="1030">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.pl.yml">
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/input/messages.pl.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/generator/yaml.py">
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/translate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/generator/lookupTranslations.sh">
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.fr.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="-8.4" vertical-offset="0" max-vertical-offset="510">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/input/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.de.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1030">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.en.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="11" selection-start="13" selection-end="13" vertical-scroll-proportion="0.014563107" vertical-offset="0" max-vertical-offset="1030">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.lt.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="12" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.de.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.zh.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.ru.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.ru.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="8" selection-start="1856" selection-end="1856" vertical-scroll-proportion="1.5070643" vertical-offset="0" max-vertical-offset="1215">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="380" selection-end="380" vertical-scroll-proportion="0.32967034" vertical-offset="0" max-vertical-offset="637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="46" selection-start="1671" selection-end="1673" vertical-scroll-proportion="0.51805335" vertical-offset="495" max-vertical-offset="1635">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.pl.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="20" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.ar.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.zh.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/languages.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="12" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.jp.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="24" selection-start="104" selection-end="112" vertical-scroll-proportion="0.07317073" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/generator/generate.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.jp.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="5" selection-start="40" selection-end="45" vertical-scroll-proportion="0.02276176" vertical-offset="0" max-vertical-offset="659">
           <folding />
         </state>
       </provider>
