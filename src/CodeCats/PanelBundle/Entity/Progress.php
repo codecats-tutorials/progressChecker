@@ -50,6 +50,12 @@ class Progress implements \JsonSerializable
      */
     private $ended;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="CodeCats\PanelBundle\Entity\Category", inversedBy="progresses")
+     * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
+     */
+    private $category;
+
     public function __construct()
     {
         $this->setStarted(new DateTime());
