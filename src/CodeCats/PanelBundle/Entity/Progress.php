@@ -141,6 +141,16 @@ class Progress implements \JsonSerializable
         return $this->ended;
     }
 
+    public function setCategory(Category $category)
+    {
+        $this->category = $category;
+    }
+
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
     /**
      * (PHP 5 &gt;= 5.4.0)<br/>
      * Specify data which should be serialized to JSON
@@ -157,7 +167,8 @@ class Progress implements \JsonSerializable
             'title'         => $this->getTitle(),
             'description'   => $this->getDescription(),
             'started'       => $this->getStarted()->format($pattern),
-            'ended'         => $this->getEnded()->format($pattern)
+            'ended'         => $this->getEnded()->format($pattern),
+            'category'      => $this->getCategory()
         );
     }
 }

@@ -71,6 +71,16 @@ class Category implements \JsonSerializable
         return $this->name;
     }
 
+    public function addProgress(Progress $progress)
+    {
+        $this->progresses->add($progress);
+    }
+
+    public function getProgresses()
+    {
+        return $this->progresses;
+    }
+
     /**
      * (PHP 5 &gt;= 5.4.0)<br/>
      * Specify data which should be serialized to JSON
@@ -80,6 +90,10 @@ class Category implements \JsonSerializable
      */
     public function jsonSerialize()
     {
-        // TODO: Implement jsonSerialize() method.
+        return array(
+            'id'        => $this->getId(),
+            'name'      => $this->getName(),
+            'progress'  => $this->getProgresses()
+        );
     }
 }

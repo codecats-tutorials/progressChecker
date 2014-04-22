@@ -1,5 +1,6 @@
-login.username: Username
+Bad credentials: Dichiarazione erronea
+Tytuł: Titolo
+language.changed: Lingua Cambiato
 login.password: Password
-login.submit: Submit
-language.changed: Language was changed
-
+login.submit: Email
+login.username: Utente

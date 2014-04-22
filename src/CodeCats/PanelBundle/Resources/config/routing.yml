@@ -1,6 +1,10 @@
+#-----------------------------------------------------------------------------------------------------------------------
 code_cats_panel_language:
   pattern: /language/{locale}
   defaults: { _controller: CodeCatsPanelBundle:Language:switchLanguage }
+switch_language:
+    pattern: /switch-language
+    defaults: { _controller: CodeCatsPanelBundle:Language:switchLanguage }
 
 code_cats_panel_homepage:
   pattern:  /
@@ -19,6 +23,7 @@ logout:
 register:
   path: /register
   defaults: { _controller: CodeCatsPanelBundle:User:register }
+#-----------------------------------------------------------------------------------------------------------------------
 
 code_cats_panel_progress_get:
     pattern: /progress
@@ -36,6 +41,9 @@ code_cats_panel_progress_delete:
     pattern: /progress/{id}
     defaults: { _controller: CodeCatsPanelBundle:Progress:delete }
     methods: [DELETE]
-switch_language:
-    pattern: /switchLanguage
-    defaults: { _controller: CodeCatsPanelBundle:Language:switchLanguage }
+
+
+
+test:
+    pattern: /test
+    defaults: { _controller: CodeCatsPanelBundle:Test:test }

@@ -18,13 +18,14 @@ use DateTime;
 
 class ProgressController extends Controller
 {
-    public function getAction()
+    public function getAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $progress = $em->getRepository('CodeCatsPanelBundle:Progress');
         $all = $progress->findAll();
 
-        return new JsonResponse(array('success' => true, 'data' => $all));
+
+        return new JsonResponse(array('success' => true, 'data' => $all, 'total' => count($all)));
     }
 
     public function updateAction(Request $request, $id)
