@@ -10,7 +10,10 @@ Ext.define('Pc.grid.node_.Progress', {
             cancelBtnText 	: t('Anuluj'),
             saveBtnText 	: t('Zapisz'),
             listeners       : {
-                edit            : function (editor, event) {},
+                edit            : function (editor, event) {
+                    var gridStore = event.view.up('grid').getStore();
+                    gridStore.reload();
+                },
                 cancelEdit      : function (editor, event) {
                     var gridStore = event.view.up('grid').getStore();
                     if ( ! gridStore.getAt(0).get('id')) gridStore.removeAt(0);
@@ -89,8 +92,8 @@ Ext.define('Pc.grid.node_.Progress', {
                 var grid        = btn.up('grid'),
                     selection   = grid.getView().getSelectionModel();
 
-                if (selection.hasSelection()) {
-                    grid.getStore().remove(selection.getSelection()[0]);
+                if (selection.getLastFocused()) {
+                    grid.getStore().remove(selection.getLastFocused());
                 }
             }
         }

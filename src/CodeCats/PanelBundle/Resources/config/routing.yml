@@ -55,7 +55,7 @@ code_cats_panel_category_get:
   methods: [GET]
 
 code_cats_panel_category_update:
-  pattern: /update
+  pattern: /category/{id}
   defaults: { _controller: CodeCatsPanelBundle:Category:update }
   methods: [PUT]
 
@@ -65,6 +65,6 @@ code_cats_panel_category_create:
   methods: [POST]
 
 code_cats_panel_category_delete:
-  pattern: /delete
+  pattern: /category/{id}
   defaults: { _controller: CodeCatsPanelBundle:Category:delete }
   methods: [DELETE]

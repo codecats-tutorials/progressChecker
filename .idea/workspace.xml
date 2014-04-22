@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c96e0c14-3824-4e79-bd39-617e2c408759" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Category.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Category.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/viewport/Panel.js" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/viewport/Panel.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/CategoryType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/combobox/Node.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/utilities/date.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/utilities/messages.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/user.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/utilities/utilities.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CategoryController.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CategoryController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Progress.js" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Progress.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/ProgressController.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/ProgressController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/ProgressRepository.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/ProgressRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/main.js" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -33,46 +38,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Progress.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Progress.php">
+      <file leaf-file-name="user.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="170" column="51" selection-start="3409" selection-end="3409" vertical-scroll-proportion="-105.625" vertical-offset="0" max-vertical-offset="2685">
+            <state line="43" column="76" selection-start="1138" selection-end="1191" vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="900">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Category.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js">
+      <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="54" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1275">
+            <state line="64" column="39" selection-start="2428" selection-end="2428" vertical-scroll-proportion="-35.0" vertical-offset="45" max-vertical-offset="1110">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Category.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Category.js">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="29" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+            <state line="12" column="44" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Category.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Category.js">
+      <file leaf-file-name="Progress.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="24" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+            <state line="93" column="0" selection-start="2935" selection-end="2935" vertical-scroll-proportion="0.0" vertical-offset="991" max-vertical-offset="1680">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProgressController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Node.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/combobox/Node.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routing.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="67" column="20" selection-start="2009" selection-end="2009" vertical-scroll-proportion="0.0" vertical-offset="466" max-vertical-offset="1125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProgressController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/ProgressController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="0" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.87401575" vertical-offset="0" max-vertical-offset="1125">
+            <state line="56" column="22" selection-start="1951" selection-end="1951" vertical-scroll-proportion="-7.0833335" vertical-offset="490" max-vertical-offset="1125">
               <folding />
             </state>
           </provider>
@@ -81,19 +104,10 @@
       <file leaf-file-name="CategoryController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CategoryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="49" selection-start="693" selection-end="693" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="600">
+            <state line="68" column="55" selection-start="2198" selection-end="2198" vertical-scroll-proportion="-24.583334" vertical-offset="430" max-vertical-offset="1170">
               <folding>
-                <element signature="e#51#108#0" expanded="true" />
+                <element signature="e#51#92#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Panel.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/viewport/Panel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="25" selection-start="693" selection-end="693" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -111,11 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/LoginType.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/LanguageType.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/EventListener/LocaleListener.php" />
-        <option value="$PROJECT_DIR$/app/Resources/translations/messages.fr.yml" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/layout.html.twig" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/User/register.html.twig" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/Model/Register.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/Model/Registration.php" />
@@ -141,7 +150,6 @@
         <option value="$PROJECT_DIR$/app/Resources/translations/messages.pl.yml" />
         <option value="$PROJECT_DIR$/app/Resources/translations/lookupTranslations.sh" />
         <option value="$PROJECT_DIR$/app/Resources/translations/generator/messages/.gitignore" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js" />
         <option value="$PROJECT_DIR$/app/Resources/translations/generator/lookupTranslations.sh" />
         <option value="$PROJECT_DIR$/app/Resources/translations/messages.base.yml" />
         <option value="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/.gitignore" />
@@ -155,13 +163,19 @@
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Category.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/ProgressRepository.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Category.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Category.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/viewport/Panel.js" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/CategoryType.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/ProgressController.php" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Progress.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CategoryController.php" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/user.js" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/main.js" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/combobox/Node.js" />
       </list>
     </option>
   </component>
@@ -781,6 +795,48 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="utilities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeCats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PanelBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="store" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -912,6 +968,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="node_" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Symfony" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CodeCats" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PanelBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="panel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="combobox" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1985,11 +2083,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel" />
+      <recent name="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form" />
       <recent name="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store" />
       <recent name="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model" />
       <recent name="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_" />
-      <recent name="$PROJECT_DIR$/app/Resources/translations" />
-      <recent name="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/input" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/input" />
@@ -2059,14 +2157,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1280" height="776" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18671875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -2074,12 +2172,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2099,51 +2197,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/core/translate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="29" selection-start="740" selection-end="740" vertical-scroll-proportion="0.30582523" vertical-offset="0" max-vertical-offset="1030" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/UserType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="4" selection-start="1006" selection-end="1006" vertical-scroll-proportion="0.43240556" vertical-offset="0" max-vertical-offset="1006" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/generator/messages/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="11" selection-start="13" selection-end="13" vertical-scroll-proportion="0.02276176" vertical-offset="0" max-vertical-offset="659" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/console">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1030" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="11" selection-start="13" selection-end="13" vertical-scroll-proportion="0.02276176" vertical-offset="0" max-vertical-offset="659" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/input/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1030" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/generator/lookupTranslations.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="292" selection-end="292" vertical-scroll-proportion="0.32012194" vertical-offset="0" max-vertical-offset="656" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/generator/messages/usages.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.0209581" vertical-offset="682" max-vertical-offset="1350" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.fr.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="23" selection-start="86" selection-end="86" vertical-scroll-proportion="0.04405286" vertical-offset="0" max-vertical-offset="681" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/generator/yaml.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1140" />
@@ -2189,11 +2242,6 @@
         <state line="14" column="0" selection-start="380" selection-end="380" vertical-scroll-proportion="0.32967034" vertical-offset="0" max-vertical-offset="637" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="46" selection-start="1671" selection-end="1673" vertical-scroll-proportion="0.51805335" vertical-offset="495" max-vertical-offset="1635" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.ar.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="637" />
@@ -2231,123 +2279,77 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.lt.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.lt.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.it.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/cache/translations/messages.it.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/translate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/input/messages.pl.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.jp.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="104" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <folding />
-        </state>
+        <state line="3" column="24" selection-start="104" selection-end="112" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.it.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.13657056" vertical-offset="0" max-vertical-offset="659">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="155" selection-end="155" vertical-scroll-proportion="0.13657056" vertical-offset="0" max-vertical-offset="659" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/languages.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="4" selection-start="86" selection-end="86" vertical-scroll-proportion="0.11013216" vertical-offset="0" max-vertical-offset="681">
-          <folding />
-        </state>
+        <state line="5" column="4" selection-start="86" selection-end="86" vertical-scroll-proportion="0.11013216" vertical-offset="0" max-vertical-offset="681" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/translations/messages.ja.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.ja.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="39" selection-start="2428" selection-end="2428" vertical-scroll-proportion="1.347032" vertical-offset="0" max-vertical-offset="1110">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/Test/test.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="45" selection-start="2355" selection-end="2376" vertical-scroll-proportion="0.37442923" vertical-offset="609" max-vertical-offset="1290">
-          <folding />
-        </state>
+        <state line="70" column="45" selection-start="2355" selection-end="2376" vertical-scroll-proportion="0.37442923" vertical-offset="609" max-vertical-offset="1290" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="30" selection-start="428" selection-end="428" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="765">
-          <folding>
-            <element signature="e#51#92#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="15" column="30" selection-start="428" selection-end="428" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="765" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/ProgressRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="26" selection-start="581" selection-end="581" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="525">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="988" selection-end="988" vertical-scroll-proportion="0.22026432" vertical-offset="300" max-vertical-offset="1125">
-          <folding />
-        </state>
+        <state line="25" column="26" selection-start="581" selection-end="581" vertical-scroll-proportion="-15.625" vertical-offset="0" max-vertical-offset="525" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Category.php">
@@ -2361,28 +2363,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Progress.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="51" selection-start="3409" selection-end="3409" vertical-scroll-proportion="-105.625" vertical-offset="0" max-vertical-offset="2685">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="54" selection-start="2403" selection-end="2403" vertical-scroll-proportion="0.0" vertical-offset="594" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Category.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="29" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Category.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="24" selection-start="340" selection-end="340" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+        <state line="170" column="51" selection-start="3409" selection-end="3409" vertical-scroll-proportion="0.0" vertical-offset="2550" max-vertical-offset="2700">
           <folding />
         </state>
       </provider>
@@ -2394,18 +2375,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CategoryController.php">
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/CategoryType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="49" selection-start="693" selection-end="693" vertical-scroll-proportion="-13.75" vertical-offset="0" max-vertical-offset="600">
-          <folding>
-            <element signature="e#51#108#0" expanded="true" />
-          </folding>
+        <state line="41" column="24" selection-start="1083" selection-end="1083" vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="690">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Progress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="10" selection-start="429" selection-end="429" vertical-scroll-proportion="0.38694993" vertical-offset="0" max-vertical-offset="659">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="24" selection-start="340" selection-end="340" vertical-scroll-proportion="0.29590288" vertical-offset="0" max-vertical-offset="659">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="29" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/ProgressController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="0" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.87401575" vertical-offset="0" max-vertical-offset="1125">
+        <state line="56" column="22" selection-start="1951" selection-end="1951" vertical-scroll-proportion="-7.0833335" vertical-offset="490" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="55" selection-start="2198" selection-end="2198" vertical-scroll-proportion="-24.583334" vertical-offset="430" max-vertical-offset="1170">
+          <folding>
+            <element signature="e#51#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="20" selection-start="2009" selection-end="2009" vertical-scroll-proportion="0.0" vertical-offset="466" max-vertical-offset="1125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/core/translate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="44" selection-start="325" selection-end="325" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="18" selection-start="202" selection-end="202" vertical-scroll-proportion="0.16535433" vertical-offset="0" max-vertical-offset="635">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="39" selection-start="2428" selection-end="2428" vertical-scroll-proportion="-35.0" vertical-offset="45" max-vertical-offset="1110">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="0" selection-start="2935" selection-end="2935" vertical-scroll-proportion="0.0" vertical-offset="991" max-vertical-offset="1680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="9" selection-start="817" selection-end="817" vertical-scroll-proportion="0.47799698" vertical-offset="0" max-vertical-offset="1320">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="76" selection-start="1138" selection-end="1191" vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="900">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/Node.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/utilities/date.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="3" selection-start="519" selection-end="519" vertical-scroll-proportion="0.36418816" vertical-offset="0" max-vertical-offset="659">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/combobox/Node.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="23" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
           <folding />
         </state>
       </provider>

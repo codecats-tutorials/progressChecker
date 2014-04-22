@@ -15,6 +15,7 @@ Ext.define('Pc.store.Progress', {
         },
         headers: {
             'Content-Type' : 'application/json'
-        }
+        },
+        afterRequest:function(request, success){}
     }
 });

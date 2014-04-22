@@ -42,7 +42,7 @@ class ProgressController extends Controller
             $em->persist($progress);
             $em->flush();
 
-            return new JsonResponse(array('success' => true));
+            return new JsonResponse(array('success' => true, 'id' => $progress->getId()));
         }
 
         return new JsonResponse(array('success' => false, 'errors' => $form->getErrors()));
@@ -62,7 +62,7 @@ class ProgressController extends Controller
         if ($form->isValid()) {
             $em->flush();
 
-            return new JsonResponse(array('success' => true));
+            return new JsonResponse(array('success' => true, 'id' => null));
         }
 
         return new JsonResponse(array('success' => false, 'errors' => $form->getErrors()));
