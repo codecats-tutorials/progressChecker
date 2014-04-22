@@ -18,7 +18,12 @@ Ext.define('Pc.viewport.Panel', {
                     ]
                 },
                 {
-                    title   : t('Języki')
+                    title : t('Języki'),
+                    items : [
+                        {
+                            xtype   : 'grid-category'
+                        }
+                    ]
                 }
             ]
         },

@@ -3,8 +3,8 @@ code_cats_panel_language:
   pattern: /language/{locale}
   defaults: { _controller: CodeCatsPanelBundle:Language:switchLanguage }
 switch_language:
-    pattern: /switch-language
-    defaults: { _controller: CodeCatsPanelBundle:Language:switchLanguage }
+  pattern: /switch-language
+  defaults: { _controller: CodeCatsPanelBundle:Language:switchLanguage }
 
 code_cats_panel_homepage:
   pattern:  /
@@ -25,25 +25,46 @@ register:
   defaults: { _controller: CodeCatsPanelBundle:User:register }
 #-----------------------------------------------------------------------------------------------------------------------
 
-code_cats_panel_progress_get:
-    pattern: /progress
-    defaults: { _controller: CodeCatsPanelBundle:Progress:get }
-    methods: [GET]
-code_cats_panel_progress_update:
-    pattern: /progress/{id}
-    defaults: { _controller: CodeCatsPanelBundle:Progress:update }
-    methods: [PUT]
-code_cats_panel_progress_create:
-    pattern: /progress
-    defaults: { _controller: CodeCatsPanelBundle:Progress:create }
-    methods: [POST]
-code_cats_panel_progress_delete:
-    pattern: /progress/{id}
-    defaults: { _controller: CodeCatsPanelBundle:Progress:delete }
-    methods: [DELETE]
-
-
-
 test:
-    pattern: /test
-    defaults: { _controller: CodeCatsPanelBundle:Test:test }
+  pattern: /test
+  defaults: { _controller: CodeCatsPanelBundle:Test:test }
+
+code_cats_panel_progress_get:
+  pattern: /progress
+  defaults: { _controller: CodeCatsPanelBundle:Progress:get }
+  methods: [GET]
+
+code_cats_panel_progress_update:
+  pattern: /progress/{id}
+  defaults: { _controller: CodeCatsPanelBundle:Progress:update }
+  methods: [PUT]
+
+code_cats_panel_progress_create:
+  pattern: /progress
+  defaults: { _controller: CodeCatsPanelBundle:Progress:create }
+  methods: [POST]
+
+code_cats_panel_progress_delete:
+  pattern: /progress/{id}
+  defaults: { _controller: CodeCatsPanelBundle:Progress:delete }
+  methods: [DELETE]
+
+code_cats_panel_category_get:
+  pattern: /category
+  defaults: { _controller: CodeCatsPanelBundle:Category:get }
+  methods: [GET]
+
+code_cats_panel_category_update:
+  pattern: /update
+  defaults: { _controller: CodeCatsPanelBundle:Category:update }
+  methods: [PUT]
+
+code_cats_panel_category_create:
+  pattern: /category
+  defaults: { _controller: CodeCatsPanelBundle:Category:create }
+  methods: [POST]
+
+code_cats_panel_category_delete:
+  pattern: /delete
+  defaults: { _controller: CodeCatsPanelBundle:Category:delete }
+  methods: [DELETE]

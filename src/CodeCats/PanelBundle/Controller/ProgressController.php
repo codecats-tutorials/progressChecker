@@ -22,30 +22,9 @@ class ProgressController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $progress = $em->getRepository('CodeCatsPanelBundle:Progress');
-        $all = $progress->findAll();
+        $all = $progress->findFront($request->get('start'), $request->get('limit'));
 
-
-        return new JsonResponse(array('success' => true, 'data' => $all, 'total' => count($all)));
-    }
-
-    public function updateAction(Request $request, $id)
-    {
-        $fb = $this->get('fire_php');
-        $em = $this->getDoctrine()->getManager();
-        $factory = Forms::createFormFactory();
-
-        $progress = $em->getRepository('CodeCatsPanelBundle:Progress')->find($id);
-
-        $form = $factory->createNamed(null, new ProgressType(), $progress, array('method'=>'PUT'));
-        $form->submit(json_decode($request->getContent(), true));
-
-        if ($form->isValid()) {
-            $em->flush();
-
-            return new JsonResponse(array('success' => true));
-        }
-
-        return new JsonResponse(array('success' => false, 'errors' => $form->getErrors()));
+        return new JsonResponse(array_merge(array('success' => true), $all));
     }
 
     public function createAction(Request $request)
@@ -61,6 +40,26 @@ class ProgressController extends Controller
 
         if ($form->isValid()) {
             $em->persist($progress);
+            $em->flush();
+
+            return new JsonResponse(array('success' => true));
+        }
+
+        return new JsonResponse(array('success' => false, 'errors' => $form->getErrors()));
+    }
+
+    public function updateAction(Request $request, $id)
+    {
+        $fb = $this->get('fire_php');
+        $em = $this->getDoctrine()->getManager();
+        $factory = Forms::createFormFactory();
+
+        $progress = $em->getRepository('CodeCatsPanelBundle:Progress')->find($id);
+
+        $form = $factory->createNamed(null, new ProgressType(), $progress, array('method'=>'PUT'));
+        $form->submit(json_decode($request->getContent(), true));
+
+        if ($form->isValid()) {
             $em->flush();
 
             return new JsonResponse(array('success' => true));

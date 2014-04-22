@@ -11,9 +11,16 @@ class TestController extends Controller
     public function testAction()
     {
         $em = $this->getDoctrine()->getManager();
+        $progress = $em->getRepository('CodeCatsPanelBundle:Progress');
 
-        $category = $em->getRepository('CodeCatsPanelBundle:Category')->find(1);
-        var_dump($category->getProgresses()[0]);
+        $all = $progress->findFront(1,2);
+        var_dump($all);
+
+
+//        $em = $this->getDoctrine()->getManager();
+//
+//        $category = $em->getRepository('CodeCatsPanelBundle:Category')->find(1);
+//        var_dump($category->getProgresses()[0]);
 
 
 //        $category = new Category();

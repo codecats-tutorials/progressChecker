@@ -12,4 +12,18 @@ use Doctrine\ORM\EntityRepository;
  */
 class ProgressRepository extends EntityRepository
 {
+    public function findFront($start = 0, $limit = 25)
+    {
+        $qb = $this->createQueryBuilder('p');
+
+        //$queryCounter = $qb;
+
+        $qb->setFirstResult($start);
+        $qb->setMaxResults($limit);
+
+        return array(
+            'data'  => $qb->getQuery()->getResult(),
+            'total' => $qb->select('COUNT(p)')->getQuery()->getSingleScalarResult()
+        );
+    }
 }
