@@ -1,6 +1,38 @@
-Bad credentials: Klaidingas ataskaita
+'''foo'', array(': d>
+Anuluj: Atšaukti kataloge
+Czy jesteś pewien: Ar tikrai
+Dodaj: Papildyti
+Edytuj: Redaguoti
+Języki: Kalbos
+Kategoria: Kategorija
+Konfiguracja: Konfigūracija
+Nazwa: Pavadinimas
+Operacja jest nieodwracalna, czy kontynuować?: Operacija yra negrįžtamas, ar tęsti?
+Opis: Aprašymas
+Postęp: Pažanga
+Proszę czekać...: Prašome palaukti ...
+Rozpoczęto: Pradėtas
+Twoje konto: Jūsų paskyra
+Twój profil: Jūsų profilis
 Tytuł: Pavadinimas
+Usuń: Pašalinti
+Użytkownik: Vartotojas
+'Użytkownik: ': 'Vartotojas:'
+Wyloguj się: Automatiškai išsijungti
+Zakończono: Užbaigtas
+Zapisz: Sutaupyti
+bar: baras
+error.message: klaida
+flashMessage: flashMessage
+foo: foo
+foobar: foobar
+foobarfoo: foobarfoo
+label: etiketė
 language.changed: Pasikeitė kalba
 login.password: Slaptažodis
 login.submit: Laišką
-login.username: Vartotojas
+login.username: Vartotojo vardas
+logout.correct: Automatiškai išsijungti
+no translation: ne tóumaczeń
+non-existent: neegzistuojantis
+single-quoted key: vieno cituojamas pagrindinis

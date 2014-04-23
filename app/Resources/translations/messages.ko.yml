@@ -1,6 +1,38 @@
-Bad credentials: 의 잘못된 문
+'''foo'', array(': d>
+Anuluj: 카탈로그 취소
+Czy jesteś pewien: 확실 해요
+Dodaj: 추가
+Edytuj: 편집
+Języki: 언어
+Kategoria: 범주
+Konfiguracja: 구성
+Nazwa: 이름
+Operacja jest nieodwracalna, czy kontynuować?: 작업은 되돌릴 수 없습니다, 또는 계속?
+Opis: 기술
+Postęp: 진행
+Proszę czekać...: 기다려주십시오 ...
+Rozpoczęto: 시작
+Twoje konto: 귀하의 계정
+Twój profil: 프로필
 Tytuł: 표제
+Usuń: 제거
+Użytkownik: 사용자
+'Użytkownik: ': '사용자 :'
+Wyloguj się: 로그 아웃
+Zakończono: 완료
+Zapisz: 저장
+bar: 바
+error.message: 오류
+flashMessage: flashMessage
+foo: foo는
+foobar: 는 foobar
+foobarfoo: foob​​arfoo
+label: 상표
 language.changed: 변경된 언어
 login.password: 암호
 login.submit: 이메일
-login.username: 사용자
+login.username: 이름
+logout.correct: 로그 아웃
+no translation: 더 tóumaczeń 없습니다
+non-existent: 존재하지 않는
+single-quoted key: 단일 인용 키

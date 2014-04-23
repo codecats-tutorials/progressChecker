@@ -1,6 +1,38 @@
-Bad credentials: 错误的声明
+'''foo'', array(': d>
+Anuluj: 取消目录
+Czy jesteś pewien: 你确定
+Dodaj: 加
+Edytuj: 编辑
+Języki: 语言
+Kategoria: 类别
+Konfiguracja: 组态
+Nazwa: 名称
+Operacja jest nieodwracalna, czy kontynuować?: 该操作是不可逆的，还是继续？
+Opis: 描述
+Postęp: 进展
+Proszę czekać...: 请稍候...
+Rozpoczęto: 开始
+Twoje konto: 您的帐户
+Twój profil: 您的个人资料
 Tytuł: 标题
+Usuń: 清除
+Użytkownik: 用户
+'Użytkownik: ': 用户名：
+Wyloguj się: 注销
+Zakończono: 已完成
+Zapisz: 节省
+bar: 酒吧
+error.message: 错误
+flashMessage: flashMessage
+foo: 富
+foobar: foob​​ar的
+foobarfoo: foob​​arfoo
+label: 标签
 language.changed: 更改的语言
 login.password: 密码
 login.submit: 电子邮件
-login.username: 用户
+login.username: 用户名
+logout.correct: 注销
+no translation: 没有tóumaczeń
+non-existent: 不存在
+single-quoted key: 单引号键

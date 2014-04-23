@@ -1,6 +1,38 @@
-Bad credentials: Dichiarazione erronea
+'''foo'', array(': d>
+Anuluj: Annulla catalogo
+Czy jesteś pewien: Sei sicuro
+Dodaj: Aggiungere
+Edytuj: Modifica
+Języki: Lingue
+Kategoria: Categoria
+Konfiguracja: Configurazione
+Nazwa: Nome
+Operacja jest nieodwracalna, czy kontynuować?: La chirurgia è irreversibile, o continuare?
+Opis: Descrizione
+Postęp: Progressi
+Proszę czekać...: Attendere prego ...
+Rozpoczęto: Avviato
+Twoje konto: Il tuo account
+Twój profil: Il tuo profilo
 Tytuł: Titolo
+Usuń: Rimuovere
+Użytkownik: Utente
+'Użytkownik: ': 'Utente:'
+Wyloguj się: Esci
+Zakończono: Completato
+Zapisz: Salvare
+bar: bar
+error.message: errore
+flashMessage: flashMessage
+foo: foo
+foobar: foobar
+foobarfoo: foobarfoo
+label: etichetta
 language.changed: Lingua Cambiato
 login.password: Password
 login.submit: Email
-login.username: Utente
+login.username: Nome utente
+logout.correct: Esci
+no translation: non tóumaczeń
+non-existent: inesistente
+single-quoted key: solo tasto citato

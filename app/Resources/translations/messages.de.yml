@@ -1,6 +1,38 @@
-Bad credentials: Fehlerhafte Erklärung
+'''foo'', array(': d>
+Anuluj: Abbrechen Katalog
+Czy jesteś pewien: Sind Sie sicher, dass
+Dodaj: Hinzufügen
+Edytuj: Bearbeiten
+Języki: Sprachen
+Kategoria: Kategorie
+Konfiguracja: Konfiguration
+Nazwa: Name
+Operacja jest nieodwracalna, czy kontynuować?: Der Vorgang ist irreversibel, oder fahren?
+Opis: Beschreibung
+Postęp: Fortschritt
+Proszę czekać...: Bitte warten Sie ...
+Rozpoczęto: Schritte
+Twoje konto: Ihr Konto
+Twój profil: Ihr Profil
 Tytuł: Titel
+Usuń: Entfernen
+Użytkownik: Benutzer
+'Użytkownik: ': 'Benutzer:'
+Wyloguj się: Ausloggen
+Zakończono: Fertiggestellt
+Zapisz: Sparen
+bar: Bar
+error.message: Fehler
+flashMessage: flashMessage
+foo: foo
+foobar: foobar
+foobarfoo: foobarfoo
+label: Etikett
 language.changed: Geänderte Sprache
 login.password: Passwort
 login.submit: E-Mail
-login.username: Benutzer
+login.username: Benutzername
+logout.correct: Ausloggen
+no translation: keine tóumaczeń
+non-existent: nicht vorhanden
+single-quoted key: einfachen Anführungszeichen Schlüssel

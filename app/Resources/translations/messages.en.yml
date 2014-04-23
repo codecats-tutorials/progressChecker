@@ -1,6 +1,38 @@
-login.username: Username
-login.password: Password
-login.submit: Submit
-language.changed: Language was changed
-Bad credentials: Bad credentials
+'''foo'', array(': d>
+Anuluj: Cancel catalog
+Czy jesteś pewien: Are you sure
+Dodaj: Add
+Edytuj: Edit
+Języki: Languages
+Kategoria: Category
+Konfiguracja: Configuration
+Nazwa: Name
+Operacja jest nieodwracalna, czy kontynuować?: The operation is irreversible, or continue?
+Opis: Description
+Postęp: Progress
+Proszę czekać...: Please wait ...
+Rozpoczęto: Started
+Twoje konto: Your Account
+Twój profil: Your profile
 Tytuł: Title
+Usuń: Remove
+Użytkownik: User
+'Użytkownik: ': 'User:'
+Wyloguj się: Log out
+Zakończono: Completed
+Zapisz: Save
+bar: bar
+error.message: error
+flashMessage: flashMessage
+foo: foo
+foobar: foobar
+foobarfoo: foobarfoo
+label: label
+language.changed: Changed language
+login.password: Password
+login.submit: Email
+login.username: Username
+logout.correct: Log out
+no translation: no tóumaczeń
+non-existent: non-existent
+single-quoted key: single-quoted key

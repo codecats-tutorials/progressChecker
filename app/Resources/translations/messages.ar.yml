@@ -1,6 +1,38 @@
-Bad credentials: بيان خاطئ ل
+'''foo'', array(': d>
+Anuluj: إلغاء كتالوج
+Czy jesteś pewien: هل أنت متأكد
+Dodaj: إضافة
+Edytuj: تحرير
+Języki: اللغات
+Kategoria: فئة
+Konfiguracja: ترتيب
+Nazwa: اسم
+Operacja jest nieodwracalna, czy kontynuować?: وهذه العملية لا رجعة فيها، أو الاستمرار؟
+Opis: وصف
+Postęp: تقدم
+Proszę czekać...: يرجى الانتظار ...
+Rozpoczęto: التي
+Twoje konto: حسابك
+Twój profil: ملفك الشخصي
 Tytuł: لقب
+Usuń: نزع
+Użytkownik: المستخدم
+'Użytkownik: ': 'مستخدم:'
+Wyloguj się: تسجيل الخروج
+Zakończono: الانتهاء
+Zapisz: حفظ
+bar: شريط
+error.message: خطأ
+flashMessage: flashMessage
+foo: فو
+foobar: foobar
+foobarfoo: foobarfoo
+label: ملصق
 language.changed: اللغة تغييرها
 login.password: كلمة السر
 login.submit: البريد الإلكتروني
-login.username: المستخدم
+login.username: اسم المستخدم
+logout.correct: تسجيل الخروج
+no translation: لا tóumaczeń
+non-existent: غير موجود
+single-quoted key: مفتاح نقلت واحد

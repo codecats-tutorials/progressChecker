@@ -1,4 +1,37 @@
-login.username: Nom d'utilisateur
+'''foo'', array(': d>
+Anuluj: Annuler le catalogue
+Czy jesteś pewien: Etes-vous sûr
+Dodaj: Ajouter
+Edytuj: Modifier
+Języki: Langues
+Kategoria: Catégorie
+Konfiguracja: Configuration
+Nazwa: Nom
+Opis: Description
+Postęp: Progrès
+Proszę czekać...: S&#39;il vous plaît patienter ...
+Rozpoczęto: Commencé
+Twoje konto: Votre compte
+Twój profil: Votre profil
+Tytuł: Titre
+Usuń: Supprimer
+Użytkownik: Utilisateur
+'Użytkownik: ': 'Utilisateur:'
+Wyloguj się: Déconnexion
+Zakończono: Terminé
+Zapisz: Sauver
+bar: bar
+error.message: erreur
+flashMessage: flashMessage
+foo: foo
+foobar: foobar
+foobarfoo: foobarfoo
+label: étiquette
+language.changed: Changement langue
 login.password: Mot de passe
-login.submit: Soumettre
-
+login.submit: Email
+login.username: Nom d' utilisateur
+logout.correct: Déconnexion
+no translation: pas tóumaczeń
+non-existent: inexistant
+single-quoted key: clé entre guillemets simples

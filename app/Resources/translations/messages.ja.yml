@@ -1,6 +1,38 @@
-Bad credentials: の誤声明
+'''foo'', array(': d>
+Anuluj: カタログをキャンセル
+Czy jesteś pewien: 本気？
+Dodaj: 加える
+Edytuj: 編集
+Języki: 言語
+Kategoria: カテゴリ
+Konfiguracja: 設定
+Nazwa: 名前
+Operacja jest nieodwracalna, czy kontynuować?: 操作は元に戻すことは、あるいは継続？
+Opis: 説明
+Postęp: 進捗
+Proszę czekać...: しばらくお待ちください...
+Rozpoczęto: 開始
+Twoje konto: アカウント
+Twój profil: あなたのプロフィール
 Tytuł: タイトル
+Usuń: 削除する
+Użytkownik: ユーザー
+'Użytkownik: ': ユーザー：
+Wyloguj się: ログアウト
+Zakończono: 完成した
+Zapisz: 保存
+bar: バー
+error.message: エラー
+flashMessage: flashMessage
+foo: fooの
+foobar: foob​​arに
+foobarfoo: foob​​arfoo
+label: ラベル
 language.changed: 変更された言語
 login.password: パスワード
 login.submit: Eメール
-login.username: ユーザー
+login.username: ユーザ名
+logout.correct: ログアウト
+no translation: 何tóumaczeńん
+non-existent: 存在しない
+single-quoted key: 一重引用符で囲まれたキー

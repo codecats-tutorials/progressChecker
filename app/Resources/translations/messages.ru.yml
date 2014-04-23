@@ -1,6 +1,38 @@
-Bad credentials: Ошибочное утверждение
+'''foo'', array(': d>
+Anuluj: Отменить каталог
+Czy jesteś pewien: Вы уверены,
+Dodaj: Добавлять
+Edytuj: Редактировать
+Języki: Языки
+Kategoria: Категория
+Konfiguracja: Конфигурация
+Nazwa: Название
+Operacja jest nieodwracalna, czy kontynuować?: Операция необратима, или продолжить?
+Opis: Описание
+Postęp: Прогресс
+Proszę czekać...: Пожалуйста, подождите ...
+Rozpoczęto: Работы
+Twoje konto: Ваш аккаунт
+Twój profil: Ваш профиль
 Tytuł: Название
+Usuń: Удалять
+Użytkownik: Пользователь
+'Użytkownik: ': 'Пользователь:'
+Wyloguj się: Выйти
+Zakończono: Завершено
+Zapisz: Экономить
+bar: бар
+error.message: ошибка
+flashMessage: flashMessage
+foo: Foo
+foobar: Foobar
+foobarfoo: foobarfoo
+label: этикетка
 language.changed: Изменен язык
 login.password: Пароль
 login.submit: E-mail
-login.username: Пользователь
+login.username: Имя пользователя
+logout.correct: Выйти
+no translation: нет tóumaczeń
+non-existent: не существует
+single-quoted key: одинарных кавычках ключ

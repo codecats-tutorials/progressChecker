@@ -1,6 +1,38 @@
-Bad credentials: Declaración errónea de
+'''foo'', array(': d>
+Anuluj: Cancelar catálogo
+Czy jesteś pewien: ¿Está seguro de
+Dodaj: Añadir
+Edytuj: Editar
+Języki: Idiomas
+Kategoria: Categoría
+Konfiguracja: Configuración
+Nazwa: Nombre
+Operacja jest nieodwracalna, czy kontynuować?: La operación es irreversible, o continuar?
+Opis: Descripción
+Postęp: Progreso
+Proszę czekać...: Por favor, espere ...
+Rozpoczęto: Iniciado
+Twoje konto: Su cuenta
+Twój profil: Su perfil
 Tytuł: Título
+Usuń: Eliminar
+Użytkownik: Usuario
+'Użytkownik: ': 'Usuario:'
+Wyloguj się: Finalizar la sesión
+Zakończono: Terminado
+Zapisz: Guardar
+bar: bar
+error.message: error
+flashMessage: FlashMessage
+foo: foo
+foobar: foobar
+foobarfoo: foobarfoo
+label: etiqueta
 language.changed: Idioma cambiado
 login.password: Contraseña
 login.submit: Email
-login.username: Usuario
+login.username: Nombre de usuario
+logout.correct: Finalizar la sesión
+no translation: no tóumaczeń
+non-existent: inexistente
+single-quoted key: clave entre comillas simples
