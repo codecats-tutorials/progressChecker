@@ -5,7 +5,9 @@ Ext.define('Pc.model.Progress', {
         'title',
         'description',
         'started',
-        'ended'
+        'ended',
+        'category',
+        'category_id'
     ],
     validations: [
         {
@@ -13,5 +15,8 @@ Ext.define('Pc.model.Progress', {
             field: 'title',
             min: 1
         }
+    ],
+    associations: [
+        {model: 'Pc.model.Category', name: 'category', type: 'hasOne'}
     ]
 });

@@ -61,6 +61,7 @@ class UserController extends Controller
             'locale'        => $locale,
             'flashMessage'  => false
         ));
+        $this->get('session')->getFlashBag()->add('notice', $this->get('translator')->trans('logout.correct'));
 
         return $this->redirect($this->generateUrl('login'));
     }

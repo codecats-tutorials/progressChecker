@@ -24,7 +24,9 @@ class LanguageController extends Controller
         // Match route and get it's arguments
         $route = $router->match($path);
 
-        if ($flashMessage === true) $this->get('session')->getFlashBag()->add('notice', 'language.changed');
+        if ($flashMessage === true) {
+            $this->get('session')->getFlashBag()->add('notice', $this->get('translator')->trans('language.changed'));
+        }
         $this->saveMessagesToJson($locale);
 
         return new RedirectResponse($router->generate($route['_route']));

@@ -36,9 +36,13 @@ class ProgressController extends Controller
         $progress = new Progress();
 
         $form = $factory->createNamed(null, new ProgressType(), $progress);
-        $form->submit(json_decode($request->getContent(), true));
+        $data = json_decode($request->getContent(), true);
+        $form->submit($data);
 
         if ($form->isValid()) {
+            if ( ! empty($data['category_id'])) {
+                $progress->setCategory($em->getRepository('CodeCatsPanelBundle:Category')->find($data['category_id']));
+            }
             $em->persist($progress);
             $em->flush();
 
@@ -57,9 +61,12 @@ class ProgressController extends Controller
         $progress = $em->getRepository('CodeCatsPanelBundle:Progress')->find($id);
 
         $form = $factory->createNamed(null, new ProgressType(), $progress, array('method'=>'PUT'));
-        $form->submit(json_decode($request->getContent(), true));
-
+        $data = json_decode($request->getContent(), true);
+        $form->submit($data);
         if ($form->isValid()) {
+            if ( ! empty($data['category_id'])) {
+                $progress->setCategory($em->getRepository('CodeCatsPanelBundle:Category')->find($data['category_id']));
+            }
             $em->flush();
 
             return new JsonResponse(array('success' => true, 'id' => null));

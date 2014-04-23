@@ -62,6 +62,27 @@ Ext.define('Pc.grid.node_.Progress', {
                 xtype       : 'datefield',
                 format      : 'Y-m-d'
             }
+        },
+        {
+            text        : t('Kategoria'),
+            dataIndex   : 'category_id',
+            field       : {
+                xtype       : 'combobox-category',
+                fieldLabel  : null
+            },
+            renderer    : function (txt, metaData, record) {
+                if ( ! record.get('category')) return txt;
+
+                return record.get('category').name;
+            }
+        },
+        {
+            text        : t('Użytkownik'),
+            dataIndex   : 'user_id',
+            field       : {
+                xtype       : 'combobox-category',
+                fieldLabel  : null
+            }
         }
     ],
     tbar    : [
