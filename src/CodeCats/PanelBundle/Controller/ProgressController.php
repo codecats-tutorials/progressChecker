@@ -43,6 +43,9 @@ class ProgressController extends Controller
             if ( ! empty($data['category_id'])) {
                 $progress->setCategory($em->getRepository('CodeCatsPanelBundle:Category')->find($data['category_id']));
             }
+            if ( ! empty($data['user_id'])) {
+                $progress->setUser($em->getRepository('CodeCatsPanelBundle:User')->find($data['user_id']));
+            }
             $em->persist($progress);
             $em->flush();
 
@@ -66,6 +69,9 @@ class ProgressController extends Controller
         if ($form->isValid()) {
             if ( ! empty($data['category_id'])) {
                 $progress->setCategory($em->getRepository('CodeCatsPanelBundle:Category')->find($data['category_id']));
+            }
+            if ( ! empty($data['user_id'])) {
+                $progress->setUser($em->getRepository('CodeCatsPanelBundle:User')->find($data['user_id']));
             }
             $em->flush();
 

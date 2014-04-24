@@ -29,6 +29,11 @@ test:
   pattern: /test
   defaults: { _controller: CodeCatsPanelBundle:Test:test }
 
+code_cats_panel_user_get:
+  pattern: /user
+  defaults: { _controller: CodeCatsPanelBundle:User:get }
+  methods: [GET]
+
 code_cats_panel_progress_get:
   pattern: /progress
   defaults: { _controller: CodeCatsPanelBundle:Progress:get }
@@ -68,3 +73,5 @@ code_cats_panel_category_delete:
   pattern: /category/{id}
   defaults: { _controller: CodeCatsPanelBundle:Category:delete }
   methods: [DELETE]
+
+

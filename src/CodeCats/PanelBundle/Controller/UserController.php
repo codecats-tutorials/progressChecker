@@ -14,11 +14,21 @@ use Symfony\Component\HttpFoundation\Cookie;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Core\SecurityContext;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Yaml\Parser;
 use Symfony\Component\Yaml\Yaml;
 
 class UserController extends Controller
 {
+    public function getAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository('CodeCatsPanelBundle:User');
+        $all = $user->findAll();
+
+        return new JsonResponse(array('success' => true, 'data' => $all));
+    }
+
 	public function loginAction(Request $request)
 	{
         if ($this->get('security.context')->isGranted('ROLE_USER')) {

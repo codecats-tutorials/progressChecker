@@ -80,8 +80,13 @@ Ext.define('Pc.grid.node_.Progress', {
             text        : t('Użytkownik'),
             dataIndex   : 'user_id',
             field       : {
-                xtype       : 'combobox-category',
+                xtype       : 'combobox-user',
                 fieldLabel  : null
+            },
+            renderer    : function (txt, metaData, record) {
+                if ( ! record.get('user')) return txt;
+
+                return record.get('user').username;
             }
         }
     ],

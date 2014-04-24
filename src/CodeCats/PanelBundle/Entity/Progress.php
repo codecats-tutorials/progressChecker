@@ -56,6 +56,12 @@ class Progress implements \JsonSerializable
      */
     private $category;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="CodeCats\PanelBundle\Entity\User", inversedBy="progresses")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
+     */
+    private $user;
+
     public function __construct()
     {
         $this->setStarted(new DateTime());
@@ -151,6 +157,16 @@ class Progress implements \JsonSerializable
         return $this->category;
     }
 
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+    }
+
+    public function getUser()
+    {
+        return $this->user;
+    }
+
     /**
      * (PHP 5 &gt;= 5.4.0)<br/>
      * Specify data which should be serialized to JSON
@@ -168,7 +184,8 @@ class Progress implements \JsonSerializable
             'description'   => $this->getDescription(),
             'started'       => $this->getStarted()->format($pattern),
             'ended'         => $this->getEnded()->format($pattern),
-            'category'      => $this->getCategory()
+            'category'      => $this->getCategory(),
+            'user'          => $this->getUser()
         );
     }
 }

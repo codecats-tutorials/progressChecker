@@ -2,6 +2,7 @@
 
 namespace CodeCats\PanelBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -11,7 +12,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="CodeCats\PanelBundle\Entity\UserRepository")
  */
-class User implements UserInterface
+class User implements UserInterface, \JsonSerializable
 {
     const GRADE_DEVELOPER   = 'developer';
     const GRADE_ADMIN       = 'admin';
@@ -51,6 +52,16 @@ class User implements UserInterface
      * @ORM\Column(type="string", columnDefinition="ENUM('DEVELOPER', 'ADMIN', 'MODERATOR', 'USER') NOT NULL")
      */
     private $grade;
+
+    /**
+     * @ORM\OneToMany(targetEntity="CodeCats\PanelBundle\Entity\Progress", mappedBy="user")
+     */
+    private $progresses;
+
+    public function __construct()
+    {
+        $this->progresses = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -154,5 +165,33 @@ class User implements UserInterface
     public function getGrade()
     {
         return $this->grade;
+    }
+
+    public function addProgresses(Progress $progress)
+    {
+        $this->progresses->add($progress);
+    }
+
+    public function getProgresses()
+    {
+        return $this->progresses;
+    }
+
+    /**
+     * (PHP 5 &gt;= 5.4.0)<br/>
+     * Specify data which should be serialized to JSON
+     * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+        return array(
+            'id'        => $this->getId(),
+            'username'  => $this->getUsername(),
+            'email'     => $this->getEmail(),
+            'grade'     => $this->getGrade(),
+            'roles'     => $this->getRoles()
+        );
     }
 }
