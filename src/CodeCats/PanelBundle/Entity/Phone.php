@@ -2,6 +2,7 @@
 
 namespace CodeCats\PanelBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -31,10 +32,19 @@ class Phone
     /**
      * @var string
      *
-     * @ORM\Column(name="type", type="string", length=50)
+     * @ORM\Column(name="type", type="string", columnDefinition="ENUM('HOME', 'WORK', 'FAX')")
      */
     private $type;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="CodeCats\PanelBundle\Entity\User")
+     */
+    private $users;
+
+    public function __construct()
+    {
+        $this->users = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -90,5 +100,15 @@ class Phone
     public function getType()
     {
         return $this->type;
+    }
+
+    public function addUser(User $user)
+    {
+        $this->users->add($user);
+    }
+
+    public function getUser()
+    {
+        return $this->users;
     }
 }

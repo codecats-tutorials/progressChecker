@@ -58,9 +58,15 @@ class User implements UserInterface, \JsonSerializable
      */
     private $progresses;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="CodeCats\PanelBundle\Entity\Phone")
+     */
+    private $phones;
+
     public function __construct()
     {
-        $this->progresses = new ArrayCollection();
+        $this->progresses   = new ArrayCollection();
+        $this->phones       = new ArrayCollection();
     }
 
     /**
@@ -177,6 +183,16 @@ class User implements UserInterface, \JsonSerializable
         return $this->progresses;
     }
 
+    public function addPhone(Phone $phone)
+    {
+        $this->phones->add($phone);
+    }
+
+    public function getPhones()
+    {
+        return $this->phones;
+    }
+
     /**
      * (PHP 5 &gt;= 5.4.0)<br/>
      * Specify data which should be serialized to JSON
@@ -191,7 +207,8 @@ class User implements UserInterface, \JsonSerializable
             'username'  => $this->getUsername(),
             'email'     => $this->getEmail(),
             'grade'     => $this->getGrade(),
-            'roles'     => $this->getRoles()
+            'roles'     => $this->getRoles(),
+            'phones'    => $this->getPhones()
         );
     }
 }

@@ -1,77 +1,94 @@
 #-----------------------------------------------------------------------------------------------------------------------
 code_cats_panel_language:
-  pattern: /language/{locale}
-  defaults: { _controller: CodeCatsPanelBundle:Language:switchLanguage }
+    pattern: /language/{locale}
+    defaults: { _controller: CodeCatsPanelBundle:Language:switchLanguage }
 switch_language:
-  pattern: /switch-language
-  defaults: { _controller: CodeCatsPanelBundle:Language:switchLanguage }
+    pattern: /switch-language
+    defaults: { _controller: CodeCatsPanelBundle:Language:switchLanguage }
 
 code_cats_panel_homepage:
-  pattern:  /
-  defaults: { _controller: CodeCatsPanelBundle:Default:index }
+    pattern:  /
+    defaults: { _controller: CodeCatsPanelBundle:Default:index }
 
 login_check:
-  path: /login_check
+    path: /login_check
 login:
-  path: /login
-  defaults: { _controller: CodeCatsPanelBundle:User:login }
+    path: /login
+    defaults: { _controller: CodeCatsPanelBundle:User:login }
 account:
-  path: /
+    path: /
 logout:
-  path: /logout
-  defaults: { _controller: CodeCatsPanelBundle:User:logout }
+    path: /logout
+    defaults: { _controller: CodeCatsPanelBundle:User:logout }
 register:
-  path: /register
-  defaults: { _controller: CodeCatsPanelBundle:User:register }
+    path: /register
+    defaults: { _controller: CodeCatsPanelBundle:User:register }
 #-----------------------------------------------------------------------------------------------------------------------
 
 test:
-  pattern: /test
-  defaults: { _controller: CodeCatsPanelBundle:Test:test }
+    pattern: /test
+    defaults: { _controller: CodeCatsPanelBundle:Test:test }
 
 code_cats_panel_user_get:
-  pattern: /user
-  defaults: { _controller: CodeCatsPanelBundle:User:get }
-  methods: [GET]
+    pattern: /user
+    defaults: { _controller: CodeCatsPanelBundle:User:get }
+    methods: [GET]
 
 code_cats_panel_progress_get:
-  pattern: /progress
-  defaults: { _controller: CodeCatsPanelBundle:Progress:get }
-  methods: [GET]
+    pattern: /progress
+    defaults: { _controller: CodeCatsPanelBundle:Progress:get }
+    methods: [GET]
 
 code_cats_panel_progress_update:
-  pattern: /progress/{id}
-  defaults: { _controller: CodeCatsPanelBundle:Progress:update }
-  methods: [PUT]
+    pattern: /progress/{id}
+    defaults: { _controller: CodeCatsPanelBundle:Progress:update }
+    methods: [PUT]
 
 code_cats_panel_progress_create:
-  pattern: /progress
-  defaults: { _controller: CodeCatsPanelBundle:Progress:create }
-  methods: [POST]
+    pattern: /progress
+    defaults: { _controller: CodeCatsPanelBundle:Progress:create }
+    methods: [POST]
 
 code_cats_panel_progress_delete:
-  pattern: /progress/{id}
-  defaults: { _controller: CodeCatsPanelBundle:Progress:delete }
-  methods: [DELETE]
+    pattern: /progress/{id}
+    defaults: { _controller: CodeCatsPanelBundle:Progress:delete }
+    methods: [DELETE]
 
 code_cats_panel_category_get:
-  pattern: /category
-  defaults: { _controller: CodeCatsPanelBundle:Category:get }
-  methods: [GET]
+    pattern: /category
+    defaults: { _controller: CodeCatsPanelBundle:Category:get }
+    methods: [GET]
 
 code_cats_panel_category_update:
-  pattern: /category/{id}
-  defaults: { _controller: CodeCatsPanelBundle:Category:update }
-  methods: [PUT]
+    pattern: /category/{id}
+    defaults: { _controller: CodeCatsPanelBundle:Category:update }
+    methods: [PUT]
 
 code_cats_panel_category_create:
-  pattern: /category
-  defaults: { _controller: CodeCatsPanelBundle:Category:create }
-  methods: [POST]
+    pattern: /category
+    defaults: { _controller: CodeCatsPanelBundle:Category:create }
+    methods: [POST]
 
 code_cats_panel_category_delete:
-  pattern: /category/{id}
-  defaults: { _controller: CodeCatsPanelBundle:Category:delete }
-  methods: [DELETE]
+    pattern: /category/{id}
+    defaults: { _controller: CodeCatsPanelBundle:Category:delete }
+    methods: [DELETE]
 
+code_cats_panel_phone_get:
+    pattern: /phone
+    defaults: { _controller: CodeCatsPanelBundle:Phone:get }
+    methods: [GET]
 
+code_cats_panel_phone_update:
+    pattern: /phone/{id}
+    defaults: { _controller: CodeCatsPanelBundle:Phone:update }
+    methods: [PUT]
+code_cats_panel_phone_create:
+    pattern: /phone
+    defaults: { _controller: CodeCatsPanelBundle:Phone:create }
+    methods: [POST]
+
+code_cats_panel_phone_delete:
+    pattern: /phone/{id}
+    defaults: { _controller: CodeCatsPanelBundle:Phone:delete }
+    methods: [DELETE]

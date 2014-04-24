@@ -4,7 +4,9 @@ Ext.define('Pc.model.User', {
         'id',
         'username',
         'password',
-        'email'
+        'email',
+        'phone',
+        'phone_id'
     ],
     validations: [
         {
@@ -12,5 +14,8 @@ Ext.define('Pc.model.User', {
             field: 'username',
             min: 1
         }
+    ],
+    associations: [
+        {model: 'Pc.model.Phone', name: 'phones', type: 'hasMany'}
     ]
 });

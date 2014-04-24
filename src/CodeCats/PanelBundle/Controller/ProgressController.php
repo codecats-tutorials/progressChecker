@@ -20,23 +20,23 @@ class ProgressController extends Controller
 {
     public function getAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
-        $progress = $em->getRepository('CodeCatsPanelBundle:Progress');
-        $all = $progress->findFront($request->get('start'), $request->get('limit'));
+        $em         = $this->getDoctrine()->getManager();
+        $progress   = $em->getRepository('CodeCatsPanelBundle:Progress');
+        $all        = $progress->findFront($request->get('start'), $request->get('limit'));
 
         return new JsonResponse(array_merge(array('success' => true), $all));
     }
 
     public function createAction(Request $request)
     {
-        $fb = $this->get('fire_php');
-        $em = $this->getDoctrine()->getManager();
-        $factory = Forms::createFormFactory();
+        $fb         = $this->get('fire_php');
+        $em         = $this->getDoctrine()->getManager();
+        $factory    = Forms::createFormFactory();
 
-        $progress = new Progress();
+        $progress   = new Progress();
 
-        $form = $factory->createNamed(null, new ProgressType(), $progress);
-        $data = json_decode($request->getContent(), true);
+        $form       = $factory->createNamed(null, new ProgressType(), $progress);
+        $data       = json_decode($request->getContent(), true);
         $form->submit($data);
 
         if ($form->isValid()) {
@@ -57,14 +57,14 @@ class ProgressController extends Controller
 
     public function updateAction(Request $request, $id)
     {
-        $fb = $this->get('fire_php');
-        $em = $this->getDoctrine()->getManager();
-        $factory = Forms::createFormFactory();
+        $fb         = $this->get('fire_php');
+        $em         = $this->getDoctrine()->getManager();
+        $factory    = Forms::createFormFactory();
 
-        $progress = $em->getRepository('CodeCatsPanelBundle:Progress')->find($id);
+        $progress   = $em->getRepository('CodeCatsPanelBundle:Progress')->find($id);
 
-        $form = $factory->createNamed(null, new ProgressType(), $progress, array('method'=>'PUT'));
-        $data = json_decode($request->getContent(), true);
+        $form       = $factory->createNamed(null, new ProgressType(), $progress, array('method'=>'PUT'));
+        $data       = json_decode($request->getContent(), true);
         $form->submit($data);
         if ($form->isValid()) {
             if ( ! empty($data['category_id'])) {
@@ -83,8 +83,8 @@ class ProgressController extends Controller
 
     public function deleteAction(Request $request, $id)
     {
-        $em = $this->getDoctrine()->getManager();
-        $progress = $em->getRepository('CodeCatsPanelBundle:Progress')->find($id);
+        $em         = $this->getDoctrine()->getManager();
+        $progress   = $em->getRepository('CodeCatsPanelBundle:Progress')->find($id);
 
         $em->remove($progress);
         $em->flush();

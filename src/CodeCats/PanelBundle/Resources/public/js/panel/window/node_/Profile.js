@@ -4,9 +4,9 @@ Ext.define('Pc.window.node_.Profile', {
     items: [
         {
             xtype   : 'form',
-            width   : '100%',
-            layout  : {
-                anchor : '50%'
+            margin  : '30%',
+            defaults: {
+                anchor: '90%'
             },
             url     : url('user/details'),
             items   : [
@@ -39,8 +39,17 @@ Ext.define('Pc.window.node_.Profile', {
                 },
                 {
                     xtype       : 'image',
-                    fieldLabel  : 'dd',
+                    anchor      : '20%',
                     src         : 'http://www.sencha.com/img/20110215-feat-html5.png'
+                },
+                {
+                    xtype   : 'grid-phone',
+                    flex    : 1,
+                    border  : false,
+                    name    : 'trade',
+                    layout  : 'fit',
+                    height  : '100%',
+                    forceFit: true
                 }
             ],
             buttons : [

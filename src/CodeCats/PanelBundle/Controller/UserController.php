@@ -24,7 +24,11 @@ class UserController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $user = $em->getRepository('CodeCatsPanelBundle:User');
-        $all = $user->findAll();
+        if (empty($request->get('id'))) {
+            $all = $user->findAll();
+        } else {
+            $all = $user->find($request->get('id'));
+        }
 
         return new JsonResponse(array('success' => true, 'data' => $all));
     }
