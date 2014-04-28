@@ -59,7 +59,8 @@ class User implements UserInterface, \JsonSerializable
     private $progresses;
 
     /**
-     * @ORM\ManyToMany(targetEntity="CodeCats\PanelBundle\Entity\Phone")
+     * @ORM\ManyToMany(targetEntity="CodeCats\PanelBundle\Entity\Phone", inversedBy="users", fetch="EAGER")
+     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     private $phones;
 
@@ -202,13 +203,17 @@ class User implements UserInterface, \JsonSerializable
      */
     public function jsonSerialize()
     {
+        $phones = null;
+        foreach($this->getPhones() as $phone) {
+            $phones[] = $phone;
+        }
         return array(
             'id'        => $this->getId(),
             'username'  => $this->getUsername(),
             'email'     => $this->getEmail(),
             'grade'     => $this->getGrade(),
             'roles'     => $this->getRoles(),
-            'phones'    => $this->getPhones()
+            'phones'    => $phones
         );
     }
 }

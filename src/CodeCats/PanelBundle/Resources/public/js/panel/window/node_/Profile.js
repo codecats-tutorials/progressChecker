@@ -40,7 +40,7 @@ Ext.define('Pc.window.node_.Profile', {
                 {
                     xtype       : 'image',
                     anchor      : '20%',
-                    src         : 'http://www.sencha.com/img/20110215-feat-html5.png'
+                    src         : 'https://avatars3.githubusercontent.com/u/4108080?s=460'
                 },
                 {
                     xtype   : 'grid-phone',
@@ -65,7 +65,6 @@ Ext.define('Pc.window.node_.Profile', {
     ],
     listeners: {
         show    : function (me) {
-            console.log('dupa')
         }
     }
 });

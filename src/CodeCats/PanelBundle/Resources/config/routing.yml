@@ -76,7 +76,7 @@ code_cats_panel_category_delete:
 
 code_cats_panel_phone_get:
     pattern: /phone
-    defaults: { _controller: CodeCatsPanelBundle:Phone:get }
+    defaults: { _controller: CodeCatsPanelBundle:Phone:getByUser }
     methods: [GET]
 
 code_cats_panel_phone_update:

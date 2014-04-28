@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c96e0c14-3824-4e79-bd39-617e2c408759" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Avatar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Avatar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Phone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Phone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Phone.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/PhoneType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Phone.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Phone.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/PhoneController.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/PhoneController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/PhoneRepository.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/PhoneRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Profile.js" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Profile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/ProgressController.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/ProgressController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/User.js" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/User.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml" />
@@ -39,46 +34,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Category.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js">
+      <file leaf-file-name="Progress.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Progress.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
+            <state line="166" column="27" selection-start="3009" selection-end="3009" vertical-scroll-proportion="-0.0" vertical-offset="2490" max-vertical-offset="2955">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Phone.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Phone.js">
+      <file leaf-file-name="Category.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Category.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="9" selection-start="1759" selection-end="1759" vertical-scroll-proportion="0.0" vertical-offset="271" max-vertical-offset="1620">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Progress.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="9" selection-start="2403" selection-end="2812" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="2070">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Phone.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Phone.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="45" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/User.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="18" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+            <state line="95" column="49" selection-start="1969" selection-end="1969" vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="1575">
               <folding />
             </state>
           </provider>
@@ -87,34 +55,25 @@
       <file leaf-file-name="Progress.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Progress.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="5" selection-start="371" selection-end="533" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+            <state line="23" column="5" selection-start="371" selection-end="533" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="465">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Avatar.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Avatar.js">
+      <file leaf-file-name="PhoneRepository.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/PhoneRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="10" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="390">
+            <state line="19" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="375">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Avatar.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Avatar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="24" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="315">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhoneController.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="PhoneController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/PhoneController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="30" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.6456693" vertical-offset="265" max-vertical-offset="1125">
+            <state line="20" column="28" selection-start="733" selection-end="733" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="1455">
               <folding>
                 <element signature="e#51#89#0" expanded="true" />
               </folding>
@@ -122,11 +81,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProgressController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/ProgressController.php">
+      <file leaf-file-name="Phone.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Phone.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="17" selection-start="3395" selection-end="3395" vertical-scroll-proportion="-46.25" vertical-offset="0" max-vertical-offset="1320">
+            <state line="33" column="81" selection-start="673" selection-end="673" vertical-scroll-proportion="40.416668" vertical-offset="1450" max-vertical-offset="2085">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Profile.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Profile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="33" selection-start="2147" selection-end="2147" vertical-scroll-proportion="-17.851852" vertical-offset="508" max-vertical-offset="1140">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Phone.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Phone.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="98" column="55" selection-start="3102" selection-end="3102" vertical-scroll-proportion="0.7723824" vertical-offset="961" max-vertical-offset="1620">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="9" selection-start="504" selection-end="585" vertical-scroll-proportion="-9.333333" vertical-offset="91" max-vertical-offset="960">
+              <folding>
+                <element signature="e#51#92#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,12 +132,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/translations/messages.jp.yml" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/css/login.css" />
         <option value="$PROJECT_DIR$/app/Resources/generator/reverseTranslateFromYaml/output/messages.jp.yml" />
         <option value="$PROJECT_DIR$/app/config/languages.yml" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Category.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/ProgressRepository.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Category.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Category.js" />
@@ -157,7 +143,6 @@
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/CategoryType.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Progress.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CategoryController.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/main.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/combobox/Node.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/core/translate.js" />
@@ -180,29 +165,32 @@
         <option value="$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/UserController.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Phone.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Avatar.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Avatar.js" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Profile.js" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Phone.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/ProgressController.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/ProgressType.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/PhoneType.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Phone.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/User.js" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Phone.js" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/UserController.php" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/PhoneRepository.php" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Phone.php" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Profile.js" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/PhoneController.php" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Phone.js" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1280" />
-    <option name="height" value="776" />
+    <option name="height" value="804" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -2277,7 +2265,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1280" height="776" extended-state="6" />
+    <frame x="0" y="-4" width="1280" height="804" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2293,12 +2281,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2318,16 +2306,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/bug.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="3" selection-start="85" selection-end="85" vertical-scroll-proportion="-0.09256449" vertical-offset="61" max-vertical-offset="1035" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Category.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="24" selection-start="340" selection-end="340" vertical-scroll-proportion="0.29590288" vertical-offset="0" max-vertical-offset="659" />
@@ -2346,11 +2324,6 @@
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/Node.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Configuration.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="41" selection-start="12" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Email.php">
@@ -2433,11 +2406,6 @@
         <state line="10" column="46" selection-start="367" selection-end="367" vertical-scroll-proportion="0.2276176" vertical-offset="0" max-vertical-offset="659" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="33" selection-start="228" selection-end="279" vertical-scroll-proportion="0.16535433" vertical-offset="0" max-vertical-offset="1170" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="253" column="20" selection-start="7930" selection-end="7930" vertical-scroll-proportion="5.5511813" vertical-offset="0" max-vertical-offset="3690">
@@ -2445,21 +2413,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Progress.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="27" selection-start="3009" selection-end="3009" vertical-scroll-proportion="3.8976378" vertical-offset="0" max-vertical-offset="2940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Progress.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="10" selection-start="429" selection-end="429" vertical-scroll-proportion="0.38694993" vertical-offset="0" max-vertical-offset="659" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="49" selection-start="1969" selection-end="1969" vertical-scroll-proportion="0.7637795" vertical-offset="925" max-vertical-offset="1560" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/layout.html.twig">
@@ -2484,52 +2440,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Avatar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="10" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="39" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Avatar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Profile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="17" selection-start="1833" selection-end="1833" vertical-scroll-proportion="0.0" vertical-offset="151" max-vertical-offset="1155" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="193" column="5" selection-start="3681" selection-end="3681" vertical-scroll-proportion="-88.958336" vertical-offset="730" max-vertical-offset="3270" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Phone.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="7" selection-start="712" selection-end="712" vertical-scroll-proportion="-10.833333" vertical-offset="310" max-vertical-offset="1800">
-          <folding>
-            <element signature="e#47#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="22" selection-start="2729" selection-end="2729" vertical-scroll-proportion="1.9823788" vertical-offset="0" max-vertical-offset="1500" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="8" selection-start="839" selection-end="1023" vertical-scroll-proportion="-0.11415525" vertical-offset="225" max-vertical-offset="1500" />
+        <state line="14" column="10" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/PhoneType.php">
@@ -2541,7 +2452,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/ProgressType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="7" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.70866144" vertical-offset="0" max-vertical-offset="855">
+        <state line="34" column="7" selection-start="1028" selection-end="1028" vertical-scroll-proportion="0.70866144" vertical-offset="0" max-vertical-offset="855" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="27" selection-start="57" selection-end="57" vertical-scroll-proportion="0.02276176" vertical-offset="0" max-vertical-offset="659" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1320" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Phone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="28" selection-start="390" selection-end="390" vertical-scroll-proportion="0.36418816" vertical-offset="0" max-vertical-offset="659" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/ProgressController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="13" selection-start="2888" selection-end="3043" vertical-scroll-proportion="0.38582677" vertical-offset="685" max-vertical-offset="1320" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Avatar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="24" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="13" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="2070" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="33" selection-start="228" selection-end="279" vertical-scroll-proportion="0.16535433" vertical-offset="0" max-vertical-offset="1170" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="49" selection-start="1969" selection-end="1969" vertical-scroll-proportion="0.0" vertical-offset="1425" max-vertical-offset="1575">
           <folding />
         </state>
       </provider>
@@ -2553,61 +2504,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/Phone.js">
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/PhoneRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="28" selection-start="390" selection-end="390" vertical-scroll-proportion="0.36418816" vertical-offset="0" max-vertical-offset="659">
+        <state line="19" column="0" selection-start="316" selection-end="316" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="375">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/store/User.js">
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Progress.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="27" selection-start="57" selection-end="57" vertical-scroll-proportion="0.02276176" vertical-offset="0" max-vertical-offset="659">
+        <state line="166" column="27" selection-start="3009" selection-end="3009" vertical-scroll-proportion="0.0" vertical-offset="2490" max-vertical-offset="2955">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/User.js">
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Configuration.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+        <state line="0" column="41" selection-start="12" selection-end="41" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="38" selection-start="2295" selection-end="2325" vertical-scroll-proportion="-0.062992126" vertical-offset="865" max-vertical-offset="1500">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/ProgressController.php">
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="17" selection-start="3395" selection-end="3395" vertical-scroll-proportion="-46.25" vertical-offset="0" max-vertical-offset="1320">
+        <state line="77" column="19" selection-start="2352" selection-end="2352" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="1500">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Progress.js">
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Phone.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="9" selection-start="2403" selection-end="2812" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="2070">
+        <state line="33" column="81" selection-start="673" selection-end="673" vertical-scroll-proportion="40.416668" vertical-offset="1450" max-vertical-offset="2085">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Phone.js">
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="45" selection-start="351" selection-end="351" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
+        <state line="21" column="9" selection-start="504" selection-end="585" vertical-scroll-proportion="-9.333333" vertical-offset="91" max-vertical-offset="960">
+          <folding>
+            <element signature="e#51#92#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Phone.js">
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="9" selection-start="1759" selection-end="1759" vertical-scroll-proportion="0.0" vertical-offset="271" max-vertical-offset="1620">
+        <state line="215" column="34" selection-start="4534" selection-end="4534" vertical-scroll-proportion="0.8582677" vertical-offset="2650" max-vertical-offset="3345">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/PhoneController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="30" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.6456693" vertical-offset="265" max-vertical-offset="1125">
+        <state line="20" column="28" selection-start="733" selection-end="733" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="1455">
           <folding>
             <element signature="e#51#89#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="33" selection-start="2147" selection-end="2147" vertical-scroll-proportion="-17.851852" vertical-offset="508" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Phone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="45" selection-start="351" selection-end="351" vertical-scroll-proportion="0.38694993" vertical-offset="0" max-vertical-offset="659">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="18" selection-start="180" selection-end="180" vertical-scroll-proportion="0.18209408" vertical-offset="0" max-vertical-offset="659">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Phone.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="55" selection-start="3102" selection-end="3102" vertical-scroll-proportion="0.7723824" vertical-offset="961" max-vertical-offset="1620">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -11,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="CodeCats\PanelBundle\Entity\PhoneRepository")
  */
-class Phone
+class Phone implements \JsonSerializable
 {
     /**
      * @var integer
@@ -30,14 +30,13 @@ class Phone
     private $number;
 
     /**
-     * @var string
      *
-     * @ORM\Column(name="type", type="string", columnDefinition="ENUM('HOME', 'WORK', 'FAX')")
+     * @ORM\Column(type="string", columnDefinition="ENUM('HOME', 'WORK', 'FAX')")
      */
     private $type;
 
     /**
-     * @ORM\ManyToMany(targetEntity="CodeCats\PanelBundle\Entity\User")
+     * @ORM\ManyToMany(targetEntity="CodeCats\PanelBundle\Entity\User", mappedBy="phones", fetch="EAGER")
      */
     private $users;
 
@@ -80,7 +79,7 @@ class Phone
     }
 
     /**
-     * Set type
+     * Set
      *
      * @param string $type
      * @return Phone
@@ -107,8 +106,29 @@ class Phone
         $this->users->add($user);
     }
 
-    public function getUser()
+    public function getUsers()
     {
         return $this->users;
+    }
+
+    /**
+     * (PHP 5 &gt;= 5.4.0)<br/>
+     * Specify data which should be serialized to JSON
+     * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+//        $users = $this->getUsers();
+//        foreach ($users as $user) {
+//            var_dump($user->getUsername());
+//        }
+        return array(
+            'id'        => $this->getId(),
+            'number'    => $this->getNumber(),
+            'type'      => $this->getType(),
+            'users'     => $this->getUsers()
+        );
     }
 }

@@ -22,8 +22,8 @@ class UserController extends Controller
 {
     public function getAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
-        $user = $em->getRepository('CodeCatsPanelBundle:User');
+        $em     = $this->getDoctrine()->getManager();
+        $user   = $em->getRepository('CodeCatsPanelBundle:User');
         if (empty($request->get('id'))) {
             $all = $user->findAll();
         } else {
