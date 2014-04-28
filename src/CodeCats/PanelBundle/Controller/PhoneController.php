@@ -17,8 +17,8 @@ class PhoneController extends Controller
         $em     = $this->getDoctrine()->getManager();
         $user   = $em->getRepository('CodeCatsPanelBundle:User')->find($this->get('security.context')->getToken()->getUser()->getId());
 
-        foreach($user->getPhones() as $phone) {
-            $all[] = $phone;
+        foreach ($user->getPhones() as $phone) {
+            $all[] = array_merge($phone->jsonSerialize(), array('user' => $user));
         }
 
         return new JsonResponse(array('success' => true, 'data' => $all));

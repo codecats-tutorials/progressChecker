@@ -2,9 +2,11 @@
 
 namespace CodeCats\PanelBundle\Controller;
 
+use CodeCats\PanelBundle\Entity\Avatar;
 use CodeCats\PanelBundle\Form\LanguageType;
 use CodeCats\PanelBundle\Form\Model\Registration;
 use CodeCats\PanelBundle\Form\RegistrationType;
+use CodeCats\PanelBundle\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use CodeCats\PanelBundle\Entity\User;
 use CodeCats\PanelBundle\Form\LoginType;
@@ -31,6 +33,21 @@ class UserController extends Controller
         }
 
         return new JsonResponse(array('success' => true, 'data' => $all));
+    }
+    public function updateAction(Request $request)
+    {
+        $fb = $this->get('fire_php');
+        $em     = $this->getDoctrine()->getManager();
+        $user   = $em->getRepository('CodeCatsPanelBundle:User')->find($this->get('security.context')->getToken()->getUser()->getId());
+        $avatar = $user->getAvatar();
+        if (empty($avatar)) $avatar = new Avatar();
+
+        $form = $this->createForm(new UserType(), $user);
+        $form->add('avatar', new AvatarType());
+//        $form->add(new AvatarType(), $avatar);
+        $fb->log($form->isValid());
+
+        return new JsonResponse(array('success' => true));
     }
 
 	public function loginAction(Request $request)

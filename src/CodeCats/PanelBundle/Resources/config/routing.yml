@@ -34,6 +34,11 @@ code_cats_panel_user_get:
     defaults: { _controller: CodeCatsPanelBundle:User:get }
     methods: [GET]
 
+code_cats_panel_user_update:
+    pattern: /user
+    defaults: { _controller: CodeCatsPanelBundle:User:update }
+    methods: [POST]
+
 code_cats_panel_progress_get:
     pattern: /progress
     defaults: { _controller: CodeCatsPanelBundle:Progress:get }

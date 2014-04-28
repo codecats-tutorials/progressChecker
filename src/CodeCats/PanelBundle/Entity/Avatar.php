@@ -35,6 +35,10 @@ class Avatar
      */
     private $lastChanged;
 
+    /**
+     * @ORM\OneToOne(targetEntity="CodeCats\PanelBundle\Entity\User", mappedBy="avatar")
+     */
+    private $user;
 
     /**
      * Get id
@@ -90,5 +94,15 @@ class Avatar
     public function getLastChanged()
     {
         return $this->lastChanged;
+    }
+
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+    }
+
+    public function getUser()
+    {
+        return $this->user;
     }
 }

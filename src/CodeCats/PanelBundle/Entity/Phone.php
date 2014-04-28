@@ -36,7 +36,7 @@ class Phone implements \JsonSerializable
     private $type;
 
     /**
-     * @ORM\ManyToMany(targetEntity="CodeCats\PanelBundle\Entity\User", mappedBy="phones", fetch="EAGER")
+     * @ORM\ManyToMany(targetEntity="CodeCats\PanelBundle\Entity\User", mappedBy="phones", fetch="LAZY")
      */
     private $users;
 
@@ -120,15 +120,10 @@ class Phone implements \JsonSerializable
      */
     public function jsonSerialize()
     {
-//        $users = $this->getUsers();
-//        foreach ($users as $user) {
-//            var_dump($user->getUsername());
-//        }
         return array(
             'id'        => $this->getId(),
             'number'    => $this->getNumber(),
-            'type'      => $this->getType(),
-            'users'     => $this->getUsers()
+            'type'      => $this->getType()
         );
     }
 }

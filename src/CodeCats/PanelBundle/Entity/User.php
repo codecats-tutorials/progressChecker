@@ -64,6 +64,11 @@ class User implements UserInterface, \JsonSerializable
      */
     private $phones;
 
+    /**
+     * @ORM\OneToOne(targetEntity="CodeCats\PanelBundle\Entity\Avatar", inversedBy="user")
+     */
+    private $avatar;
+
     public function __construct()
     {
         $this->progresses   = new ArrayCollection();
@@ -192,6 +197,16 @@ class User implements UserInterface, \JsonSerializable
     public function getPhones()
     {
         return $this->phones;
+    }
+
+    public function setAvatar(Avatar $avatar)
+    {
+        $this->avatar = $avatar;
+    }
+
+    public function getAvatar()
+    {
+        return $this->avatar;
     }
 
     /**

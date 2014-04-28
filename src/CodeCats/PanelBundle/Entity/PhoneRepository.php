@@ -12,8 +12,4 @@ use Doctrine\ORM\EntityRepository;
  */
 class PhoneRepository extends EntityRepository
 {
-    public function findAllByUserId($id)
-    {
-
-    }
 }
