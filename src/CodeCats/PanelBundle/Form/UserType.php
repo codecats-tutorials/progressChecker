@@ -2,6 +2,7 @@
 
 namespace CodeCats\PanelBundle\Form;
 
+use CodeCats\PanelBundle\Entity\Avatar;
 use CodeCats\PanelBundle\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -28,7 +29,6 @@ class UserType extends AbstractType
                 'required'  => true,
                 'multiple'  => false
             ))
-            ->add('avatar', new AvatarType())
         ;
     }
     

@@ -24,6 +24,11 @@ class Avatar
     private $id;
 
     /**
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="path", type="string", length=255)
@@ -47,6 +52,8 @@ class Avatar
      */
     private $file;
 
+    private $temp;
+
     /**
      * Get id
      *
@@ -57,6 +64,15 @@ class Avatar
         return $this->id;
     }
 
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
     /**
      * Set path
      *
@@ -66,8 +82,6 @@ class Avatar
     public function setPath($path)
     {
         $this->path = $path;
-
-        return $this;
     }
 
     /**
@@ -89,8 +103,6 @@ class Avatar
     public function setLastChanged($lastChanged)
     {
         $this->lastChanged = $lastChanged;
-
-        return $this;
     }
 
     /**
@@ -116,10 +128,81 @@ class Avatar
     public function setFile(UploadedFile $file = null)
     {
         $this->file = $file;
+
+        if (isset($this->path)) {
+            $this->temp = $this->path;
+            $this->path = null;
+        } else {
+            $this->path = 'initial';
+        }
     }
 
     public function getFile()
     {
         return $this->file;
+    }
+
+    /**
+     * @ORM\PrePersist()
+     * @ORM\PreUpdate()
+     */
+    public function preUpload()
+    {
+        if (null !== $this->getFile()) {
+            $filename = sha1(uniqid(mt_rand(), true));
+            $this->path = $filename . '.' . $this->getFile()->guessExtension();
+        }
+    }
+
+    /**
+     * @ORM\PostPersist()
+     * @ORM\PostUpdate()
+     */
+    public function upload()
+    {
+        if (null !== $this->getFile()) {
+            return;
+        }
+
+        $this->getFile()->move($this->getUploadDir(), $this->path);
+
+        if (isset($this->temp)) {
+            unlink($this->getUploadRootDir() . '/' . $this->temp);
+        }
+        $this->file = null;
+    }
+
+    /**
+     * @ORM\PostRemove()
+     */
+    public function removeUpload()
+    {
+        if ($file = $this->getAbsolutePath()) {
+            unlink($file);
+        }
+    }
+
+    public function getAbsolutePath()
+    {
+        return null === $this->path
+            ? null
+            : $this->getUploadRootDir() . '/' . $this->path;
+    }
+
+    public function getWebPath()
+    {
+        return null === $this->path
+            ? null
+            : $this->getUploadDir() . '/' . $this->path;
+    }
+
+    protected function getUploadRootDir()
+    {
+        return __DIR__ . '/../../../../web/' . $this->getUploadDir();
+    }
+
+    protected function getUploadDir()
+    {
+        return 'uploads/avatars';
     }
 }

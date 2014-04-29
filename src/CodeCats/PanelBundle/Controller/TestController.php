@@ -21,11 +21,18 @@ class TestController extends Controller
         $avatar = $user->getAvatar();
         if (empty($avatar)) $avatar = new Avatar();
 
-        $form = $this->createForm(new UserType(), $user);
+        $form = $this->createForm(new AvatarType(), $avatar);
         $form->add('submit', 'submit');
         $form->handleRequest($request);
 
-        $user->getAvatar()->setFile(null);
+        if ($form->isValid()) {
+            $user->getAvatar()->setName('avatar');
+            $user->getAvatar()->setLastChanged(new \DateTime());
+            $em->persist($user);
+
+            $em->flush();
+        }
+
         return $this->render('CodeCatsPanelBundle:Test:test.html.twig', array(
             'form' => $form->createView(),
             //'form' => $this->createForm(new UserType(), $user)->createView(),

@@ -67,7 +67,7 @@ class User implements UserInterface, \JsonSerializable
 
     /**
      * @Assert\Type(type="CodeCats\PanelBundle\Entity\Avatar")
-     * @ORM\OneToOne(targetEntity="CodeCats\PanelBundle\Entity\Avatar", inversedBy="user")
+     * @ORM\OneToOne(targetEntity="CodeCats\PanelBundle\Entity\Avatar", inversedBy="user", cascade={"persist"})
      */
     private $avatar;
 

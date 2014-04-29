@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c96e0c14-3824-4e79-bd39-617e2c408759" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Avatar.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Avatar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/AvatarType.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/AvatarType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/UserController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/UserType.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/UserType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/Test/test.html.twig" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/Test/test.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Symfony.iws" />
@@ -41,32 +38,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="8" selection-start="1379" selection-end="1795" vertical-scroll-proportion="-8.125" vertical-offset="390" max-vertical-offset="1980">
-              <folding>
-                <element signature="e#51#90#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestController.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TestController.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="42" selection-start="973" selection-end="973" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="630">
-              <folding>
-                <element signature="e#51#90#0" expanded="true" />
-              </folding>
+            <state line="23" column="59" selection-start="851" selection-end="851" vertical-scroll-proportion="0.3652968" vertical-offset="0" max-vertical-offset="657">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Avatar.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Avatar.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Avatar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="53" selection-start="1983" selection-end="1983" vertical-scroll-proportion="0.6566929" vertical-offset="1308" max-vertical-offset="1965">
+            <state line="134" column="16" selection-start="2358" selection-end="2358" vertical-scroll-proportion="-39.411766" vertical-offset="0" max-vertical-offset="3210">
               <folding>
                 <element signature="e#47#79#0" expanded="true" />
               </folding>
@@ -74,31 +58,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserType.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/UserType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="63" selection-start="1299" selection-end="1299" vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="840">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="217" column="39" selection-start="4405" selection-end="4405" vertical-scroll-proportion="-104.583336" vertical-offset="745" max-vertical-offset="3630">
-              <folding>
-                <element signature="e#47#95#0" expanded="true" />
-              </folding>
+            <state line="59" column="13" selection-start="1388" selection-end="1388" vertical-scroll-proportion="-13.333333" vertical-offset="520" max-vertical-offset="3585">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PhoneController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/PhoneController.php">
+      <file leaf-file-name="UserType.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/UserType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="9" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="1455">
-              <folding />
+            <state line="30" column="14" selection-start="1025" selection-end="1025" vertical-scroll-proportion="-9.625" vertical-offset="219" max-vertical-offset="885">
+              <folding>
+                <element signature="e#45#84#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,20 +136,20 @@
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/UserUpdateType.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Profile.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/UserController.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/UserType.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/Test/test.html.twig" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/AvatarType.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Avatar.php" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/UserType.php" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1280" />
-    <option name="height" value="776" />
+    <option name="height" value="804" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -2249,7 +2224,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1280" height="776" extended-state="6" />
+    <frame x="0" y="-4" width="1280" height="804" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2265,12 +2240,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2290,11 +2265,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Email.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2850" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/translations/old.messages.en.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="659" />
@@ -2491,9 +2461,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/Model/Login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Progress.php">
@@ -2524,18 +2492,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="8" selection-start="1379" selection-end="1795" vertical-scroll-proportion="-8.125" vertical-offset="390" max-vertical-offset="1980">
-          <folding>
-            <element signature="e#51#90#0" expanded="true" />
-          </folding>
+        <state line="39" column="8" selection-start="1379" selection-end="1795" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="1980">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/Test/test.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="6" selection-start="181" selection-end="181" vertical-scroll-proportion="0.21259843" vertical-offset="0" max-vertical-offset="635">
-          <folding />
-        </state>
+        <state line="9" column="6" selection-start="181" selection-end="181" vertical-scroll-proportion="0.21259843" vertical-offset="0" max-vertical-offset="635" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/AvatarType.php">
@@ -2547,37 +2511,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Avatar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="16" selection-start="2358" selection-end="2358" vertical-scroll-proportion="-39.411766" vertical-offset="0" max-vertical-offset="3210">
+          <folding>
+            <element signature="e#47#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="39" selection-start="4405" selection-end="4405" vertical-scroll-proportion="-104.583336" vertical-offset="745" max-vertical-offset="3630">
-          <folding>
-            <element signature="e#47#95#0" expanded="true" />
-          </folding>
+        <state line="59" column="13" selection-start="1388" selection-end="1388" vertical-scroll-proportion="-13.333333" vertical-offset="520" max-vertical-offset="3585">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/UserType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="63" selection-start="1299" selection-end="1299" vertical-scroll-proportion="-23.125" vertical-offset="0" max-vertical-offset="840">
+        <state line="30" column="14" selection-start="1025" selection-end="1025" vertical-scroll-proportion="-9.625" vertical-offset="219" max-vertical-offset="885">
+          <folding>
+            <element signature="e#45#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/EventListener/UserManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="681">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="42" selection-start="973" selection-end="973" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="630">
-          <folding>
-            <element signature="e#51#90#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Avatar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="53" selection-start="1983" selection-end="1983" vertical-scroll-proportion="0.6566929" vertical-offset="1308" max-vertical-offset="1965">
-          <folding>
-            <element signature="e#47#79#0" expanded="true" />
-          </folding>
+        <state line="23" column="59" selection-start="851" selection-end="851" vertical-scroll-proportion="0.3652968" vertical-offset="0" max-vertical-offset="657">
+          <folding />
         </state>
       </provider>
     </entry>
