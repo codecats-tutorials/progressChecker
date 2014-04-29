@@ -3,6 +3,7 @@
 namespace CodeCats\PanelBundle\Controller;
 
 use CodeCats\PanelBundle\Entity\Avatar;
+use CodeCats\PanelBundle\Form\AvatarType;
 use CodeCats\PanelBundle\Form\LanguageType;
 use CodeCats\PanelBundle\Form\Model\Registration;
 use CodeCats\PanelBundle\Form\RegistrationType;

@@ -18,7 +18,7 @@ class AvatarType extends AbstractType{
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('path')
+            ->add('file')
         ;
     }
     /**

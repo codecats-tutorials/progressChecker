@@ -5,6 +5,7 @@ namespace CodeCats\PanelBundle\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
@@ -65,6 +66,7 @@ class User implements UserInterface, \JsonSerializable
     private $phones;
 
     /**
+     * @Assert\Type(type="CodeCats\PanelBundle\Entity\Avatar")
      * @ORM\OneToOne(targetEntity="CodeCats\PanelBundle\Entity\Avatar", inversedBy="user")
      */
     private $avatar;

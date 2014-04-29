@@ -2,57 +2,35 @@
 
 namespace CodeCats\PanelBundle\Controller;
 
+use CodeCats\PanelBundle\Entity\Avatar;
 use CodeCats\PanelBundle\Entity\Category;
 use CodeCats\PanelBundle\Entity\Progress;
+use CodeCats\PanelBundle\Form\AvatarType;
+use CodeCats\PanelBundle\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
 
 class TestController extends Controller
 {
-    public function testAction()
+    public function testAction(Request $request)
     {
 
-        $em = $this->getDoctrine()->getManager();
-        $user = $em->getRepository('CodeCatsPanelBundle:User');
+        $em     = $this->getDoctrine()->getManager();
+        $user   = $em->getRepository('CodeCatsPanelBundle:User')->find($this->get('security.context')->getToken()->getUser()->getId());
+        $avatar = $user->getAvatar();
+        if (empty($avatar)) $avatar = new Avatar();
 
-        $all = $user->find(1);
-        $allJson = [];
-        foreach($all->getPhones() as $phone) {
-            $allJson[] = $phone;
-        }
-        echo new JsonResponse($allJson);
-        $phone = $em->getRepository('CodeCatsPanelBundle:Phone');
-        $all = $phone->find(2);
+        $form = $this->createForm(new UserType(), $user);
+        $form->add('submit', 'submit');
+        $form->handleRequest($request);
 
-        foreach($all->getUsers() as $user) {
-            var_dump($user->getUsername());
-        }
-//        var_dump($all->getPhones());
-
-
-//        $em = $this->getDoctrine()->getManager();
-//
-//        $category = $em->getRepository('CodeCatsPanelBundle:Category')->find(1);
-//        var_dump($category->getProgresses()[0]);
-
-
-//        $category = new Category();
-//        $progress = new Progress();
-//        $category->setName('C++');
-//        $progress->setTitle('Praca');
-//        $category->addProgress($progress);
-//        $progress->setCategory($category);
-//
-//        $em = $this->getDoctrine()->getManager();
-//        $em->persist($category);
-//        $em->persist($progress);
-//
-//
-//        $em->flush();
-
-
-
-        return $this->render('CodeCatsPanelBundle:Test:test.html.twig');
+        $user->getAvatar()->setFile(null);
+        return $this->render('CodeCatsPanelBundle:Test:test.html.twig', array(
+            'form' => $form->createView(),
+            //'form' => $this->createForm(new UserType(), $user)->createView(),
+            'valid'=> $form->isValid()
+        ));
     }
 
 }

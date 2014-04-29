@@ -3,6 +3,8 @@
 namespace CodeCats\PanelBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Avatar
@@ -39,6 +41,11 @@ class Avatar
      * @ORM\OneToOne(targetEntity="CodeCats\PanelBundle\Entity\User", mappedBy="avatar")
      */
     private $user;
+
+    /**
+     * @Assert\File(maxSize="9666666")
+     */
+    private $file;
 
     /**
      * Get id
@@ -104,5 +111,15 @@ class Avatar
     public function getUser()
     {
         return $this->user;
+    }
+
+    public function setFile(UploadedFile $file = null)
+    {
+        $this->file = $file;
+    }
+
+    public function getFile()
+    {
+        return $this->file;
     }
 }
