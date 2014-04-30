@@ -12,6 +12,7 @@ namespace CodeCats\PanelBundle\EventListener;
 use Doctrine\Common\Persistence\Event\LifecycleEventArgs;
 use CodeCats\PanelBundle\Entity\User;
 
+
 class UserManager {
     protected $container;
 

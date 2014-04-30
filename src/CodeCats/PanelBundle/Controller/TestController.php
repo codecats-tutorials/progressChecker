@@ -6,6 +6,7 @@ use CodeCats\PanelBundle\Entity\Avatar;
 use CodeCats\PanelBundle\Entity\Category;
 use CodeCats\PanelBundle\Entity\Progress;
 use CodeCats\PanelBundle\Form\AvatarType;
+use CodeCats\PanelBundle\Form\UserAvatarType;
 use CodeCats\PanelBundle\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -21,7 +22,7 @@ class TestController extends Controller
         $avatar = $user->getAvatar();
         if (empty($avatar)) $avatar = new Avatar();
 
-        $form = $this->createForm(new AvatarType(), $avatar);
+        $form = $this->createForm(new UserAvatarType(), $user);
         $form->add('submit', 'submit');
         $form->handleRequest($request);
 
