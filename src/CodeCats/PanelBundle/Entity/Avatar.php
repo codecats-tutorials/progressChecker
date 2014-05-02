@@ -3,6 +3,7 @@
 namespace CodeCats\PanelBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -11,6 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="CodeCats\PanelBundle\Entity\AvatarRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class Avatar
 {
@@ -160,16 +162,21 @@ class Avatar
      */
     public function upload()
     {
+
         if (null !== $this->getFile()) {
             return;
         }
 
-        $this->getFile()->move($this->getUploadDir(), $this->path);
+        $this->getFile()->move($this->getUploadRootDir(), $this->path);
 
         if (isset($this->temp)) {
             unlink($this->getUploadRootDir() . '/' . $this->temp);
+            $this->temp = null;
         }
         $this->file = null;
+        var_dump($this->getUploadDir());
+        var_dump($this->getUploadDir() . $this->path);
+
     }
 
     /**

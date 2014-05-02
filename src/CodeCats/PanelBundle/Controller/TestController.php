@@ -29,6 +29,8 @@ class TestController extends Controller
         if ($form->isValid()) {
             $user->getAvatar()->setName('avatar');
             $user->getAvatar()->setLastChanged(new \DateTime());
+           // $user->getAvatar()->preUpload();
+            $user->getAvatar()->upload();
             $em->persist($user);
 
             $em->flush();

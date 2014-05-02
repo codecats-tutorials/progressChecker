@@ -19,6 +19,7 @@ class AvatarType extends AbstractType{
     {
         $builder
             ->add('file')
+          //  ->add('path')
         ;
     }
     /**
