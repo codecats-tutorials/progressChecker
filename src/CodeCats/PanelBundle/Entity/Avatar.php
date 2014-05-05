@@ -2,6 +2,7 @@
 
 namespace CodeCats\PanelBundle\Entity;
 
+use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -38,7 +39,7 @@ class Avatar
     private $path;
 
     /**
-     * @var \DateTime
+     * @var DateTime
      *
      * @ORM\Column(name="lastChanged", type="datetime")
      */
@@ -99,7 +100,7 @@ class Avatar
     /**
      * Set lastChanged
      *
-     * @param \DateTime $lastChanged
+     * @param DateTime $lastChanged
      * @return Avatar
      */
     public function setLastChanged($lastChanged)
@@ -110,7 +111,7 @@ class Avatar
     /**
      * Get lastChanged
      *
-     * @return \DateTime 
+     * @return DateTime
      */
     public function getLastChanged()
     {
@@ -163,19 +164,19 @@ class Avatar
     public function upload()
     {
 
-        if (null !== $this->getFile()) {
+        if (null === $this->getFile()) {
             return;
         }
 
         $this->getFile()->move($this->getUploadRootDir(), $this->path);
+        $this->setName($this->getFile()->getClientOriginalName());
+        $this->setLastChanged(new DateTime());
 
-        if (isset($this->temp)) {
+        if ( ! empty($this->temp)) {
             unlink($this->getUploadRootDir() . '/' . $this->temp);
             $this->temp = null;
         }
         $this->file = null;
-        var_dump($this->getUploadDir());
-        var_dump($this->getUploadDir() . $this->path);
 
     }
 
@@ -203,12 +204,12 @@ class Avatar
             : $this->getUploadDir() . '/' . $this->path;
     }
 
-    protected function getUploadRootDir()
+    public function getUploadRootDir()
     {
         return __DIR__ . '/../../../../web/' . $this->getUploadDir();
     }
 
-    protected function getUploadDir()
+    public function getUploadDir()
     {
         return 'uploads/avatars';
     }

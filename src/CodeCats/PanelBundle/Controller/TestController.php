@@ -19,18 +19,15 @@ class TestController extends Controller
 
         $em     = $this->getDoctrine()->getManager();
         $user   = $em->getRepository('CodeCatsPanelBundle:User')->find($this->get('security.context')->getToken()->getUser()->getId());
-        $avatar = $user->getAvatar();
-        if (empty($avatar)) $avatar = new Avatar();
 
         $form = $this->createForm(new UserAvatarType(), $user);
         $form->add('submit', 'submit');
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            $user->getAvatar()->setName('avatar');
-            $user->getAvatar()->setLastChanged(new \DateTime());
-           // $user->getAvatar()->preUpload();
-            $user->getAvatar()->upload();
+//            $user->getAvatar()->setName('avatar');
+//            $user->getAvatar()->setLastChanged(new \DateTime());
+
             $em->persist($user);
 
             $em->flush();
