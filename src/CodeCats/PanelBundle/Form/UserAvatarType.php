@@ -36,6 +36,7 @@ class UserAvatarType extends AbstractType
         $resolver->setDefaults(array(
             'data_class' => 'CodeCats\PanelBundle\Entity\User',
             'cascade_validation' => true,
+            'csrf_protection' => false
         ));
     }
 
@@ -44,6 +45,6 @@ class UserAvatarType extends AbstractType
      */
     public function getName()
     {
-        return 'codecats_panelbundle_user';
+        return 'user';
     }
 }

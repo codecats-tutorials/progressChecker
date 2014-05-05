@@ -22,7 +22,9 @@ class DefaultController extends Controller
     	
     		return $this->redirect($this->generateUrl('login'));
     	}
-        $user = $this->container->get('security.context')->getToken()->getUser();
+        $user       = $this->container->get('security.context')->getToken()->getUser();
+        $router     = $this->container->get('router')->getContext();
+        $path       = $this->generateUrl('code_cats_panel_avatar_session_get');
 
         return $this->render('CodeCatsPanelBundle:Default:index.html.twig', array(
             'scripts'   => $this->getJsScripts(),
@@ -31,7 +33,9 @@ class DefaultController extends Controller
                 'username'      => $user->getUsername(),
                 'email'         => $user->getEmail(),
                 'logoutUrl'     => $this->generateUrl('logout'),
-                'locale'        => $request->getLocale()
+                'locale'        => $request->getLocale(),
+                'avatar'        => $path,
+                'host'          => $router->getHost()
             ))
         ));
     }

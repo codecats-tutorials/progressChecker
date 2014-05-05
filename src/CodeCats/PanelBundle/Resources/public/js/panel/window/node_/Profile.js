@@ -14,30 +14,32 @@ Ext.define('Pc.window.node_.Profile', {
             items   : [
                 {
                     xtype       : 'textfield',
-                    name        : 'username',
+                    name        : 'user[username]',
+                    selector    : 'user-username',
                     fieldLabel  : t('Nazwa')
                 },
                 {
                     xtype       : 'textfield',
-                    name        : 'email',
+                    name        : 'user[email]',
+                    selector    : 'user-email',
                     fieldLabel  : t('Email'),
                     vtype       : 'email'
                 },
                 {
                     xtype       : 'textfield',
-                    name        : 'password',
+                    name        : 'user[password][password]',
                     inputType   : 'password',
                     fieldLabel  : t('Hasło')
                 },
                 {
                     xtype       : 'textfield',
-                    name        : 'confirm',
+                    name        : 'user[password][confirm]',
                     inputType   : 'password',
                     fieldLabel  : t('Potwierdzenie')
                 },
                 {
                     xtype       : 'fileuploadfield',
-                    name        : 'filedata1',
+                    name        : 'user[avatar][file]',
                     id          : 'filedata1',
                     emptyText   : t('Wybierz plik do przetworzenia...'),
                     fieldLabel  : t('Plik'),
@@ -46,6 +48,7 @@ Ext.define('Pc.window.node_.Profile', {
                 {
                     xtype       : 'fieldset',
                     title       : t('Awatar'),
+                    name        : 'avatar',
                     defaults    : {
                         anchor : '100%'
                     },
@@ -84,7 +87,11 @@ Ext.define('Pc.window.node_.Profile', {
                         var form = me.up('window').down('form');
 
                         if (form.getForm().isValid()) {
-                            form.getForm().submit();
+                            form.getForm().submit({
+                                success: function (f, action) {
+                                    form.down('[name=avatar]').down('image').setSrc(Application.getUser().get('avatar') + '?' + Math.random());
+                                }
+                            });
                         }
                     }
                 }
@@ -93,8 +100,10 @@ Ext.define('Pc.window.node_.Profile', {
     ],
     listeners: {
         show    : function (me) {
-            me.down('[name=username]').setValue(Application.getUser().get('username'));
-            me.down('[name=email]').setValue(Application.getUser().get('email'));
+            window.me = me
+            me.down('[selector=user-username]').setValue(Application.getUser().get('username'));
+            me.down('[selector=user-email]').setValue(Application.getUser().get('email'));
+            me.down('[name=avatar]').down('image').setSrc(Application.getUser().get('avatar') + '?' + Math.random());
         }
     }
 });

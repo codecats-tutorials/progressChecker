@@ -7,6 +7,7 @@ use CodeCats\PanelBundle\Form\AvatarType;
 use CodeCats\PanelBundle\Form\LanguageType;
 use CodeCats\PanelBundle\Form\Model\Registration;
 use CodeCats\PanelBundle\Form\RegistrationType;
+use CodeCats\PanelBundle\Form\UserAvatarType;
 use CodeCats\PanelBundle\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use CodeCats\PanelBundle\Entity\User;
@@ -37,15 +38,19 @@ class UserController extends Controller
     }
     public function updateAction(Request $request)
     {
-        $fb = $this->get('fire_php');
+        $fb     = $this->get('fire_php');
         $em     = $this->getDoctrine()->getManager();
         $user   = $em->getRepository('CodeCatsPanelBundle:User')->find($this->get('security.context')->getToken()->getUser()->getId());
-        $avatar = $user->getAvatar();
-        if (empty($avatar)) $avatar = new Avatar();
 
-        $form = $this->createForm(new UserType(), $user);
-        $form->add('avatar', new AvatarType());
-//        $form->add(new AvatarType(), $avatar);
+        $form = $this->createForm(new UserAvatarType(), $user);
+        $form->add('submit', 'submit');
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            $em->persist($user);
+
+            $em->flush();
+        }
         $fb->log($form->isValid());
 
         return new JsonResponse(array('success' => true));

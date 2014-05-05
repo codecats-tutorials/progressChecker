@@ -88,6 +88,7 @@ code_cats_panel_phone_update:
     pattern: /phone/{id}
     defaults: { _controller: CodeCatsPanelBundle:Phone:update }
     methods: [PUT]
+
 code_cats_panel_phone_create:
     pattern: /phone
     defaults: { _controller: CodeCatsPanelBundle:Phone:create }
@@ -97,3 +98,14 @@ code_cats_panel_phone_delete:
     pattern: /phone/{id}
     defaults: { _controller: CodeCatsPanelBundle:Phone:delete }
     methods: [DELETE]
+
+code_cats_panel_avatar_get:
+    pattern: /uploads/avatars/{name}
+    defaults: { _controller: CodeCatsPanelBundle:Avatar:get }
+    methods: [GET]
+
+code_cats_panel_avatar_session_get:
+    pattern: /user-avatar
+    defaults: { _controller: CodeCatsPanelBundle:Avatar:getByUserSession }
+    methods: [GET]
+
