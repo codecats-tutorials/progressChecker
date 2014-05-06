@@ -45,22 +45,16 @@ Ext.define('Pc.window.node_.Configuration', {
                         {
                             xtype       : 'textfield',
                             inputType   : 'password',
-                            name        : 'emailType[password]',
-                            selector    : 'emailType-password',
+                            name        : 'emailType[password][password]',
+                            selector    : 'emailType-password-password',
                             fieldLabel  : t('Hasło')
                         },
                         {
                             xtype       : 'textfield',
                             inputType   : 'password',
-                            name        : 'emailType[confirm]',
-                            selector    : 'emailType-confirm',
+                            name        : 'emailType[password][confirm]',
+                            selector    : 'emailType-password-confirm',
                             fieldLabel  : t('Powtórz')
-                        },
-                        {
-                            xtype       : 'textfield',
-                            name        : '_method',
-                            value       : 'POST'/*,
-                            hidden      : true*/
                         }
                     ],
                     buttons: [
@@ -93,10 +87,13 @@ Ext.define('Pc.window.node_.Configuration', {
                     form.items.each(function(it) {
                         console.log(it);
                     });
-                    if (resp.data === null) {
-                        form.down('[name=_method]').setValue('POST');
-                    } else {
-                        form.down('[name=_method]').setValue('PUT');
+                    if (resp.data !== null) {
+                        form.add({
+                            xtype       : 'textfield',
+                            name        : '_method',
+                            value       : 'PUT',
+                            hidden      : true
+                        });
                         form.getForm().url += '/' + resp.data.id;
                     }
                 }

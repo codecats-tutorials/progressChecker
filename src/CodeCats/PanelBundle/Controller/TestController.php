@@ -23,7 +23,7 @@ class TestController extends Controller
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            $em->persist($email);
+
 
             //$em->flush();
         }

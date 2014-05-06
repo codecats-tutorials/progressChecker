@@ -4,11 +4,7 @@
     <list default="true" id="c96e0c14-3824-4e79-bd39-617e2c408759" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CompanyEmailController.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CompanyEmailController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Configuration.js" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Configuration.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Email.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Email.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/EmailType.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/EmailType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Profile.js" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Profile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/Test/test.html.twig" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/Test/test.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Symfony.iws" />
@@ -41,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Configuration.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Configuration.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Configuration.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="12" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1680">
+            <state line="93" column="47" selection-start="3909" selection-end="3909" vertical-scroll-proportion="0.66079295" vertical-offset="945" max-vertical-offset="1635">
               <folding />
             </state>
           </provider>
@@ -53,25 +49,16 @@
       <file leaf-file-name="CompanyEmailController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CompanyEmailController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="24" selection-start="1462" selection-end="1462" vertical-scroll-proportion="-15.5" vertical-offset="213" max-vertical-offset="870">
+            <state line="19" column="5" selection-start="689" selection-end="689" vertical-scroll-proportion="-7.5" vertical-offset="45" max-vertical-offset="855">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Email.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Email.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Email.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="5" selection-start="1432" selection-end="1432" vertical-scroll-proportion="0.7637795" vertical-offset="505" max-vertical-offset="3405">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EmailType.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/EmailType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="37" selection-start="1270" selection-end="1270" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="960">
+            <state line="67" column="5" selection-start="1432" selection-end="1432" vertical-scroll-proportion="-29.583334" vertical-offset="280" max-vertical-offset="3405">
               <folding />
             </state>
           </provider>
@@ -80,7 +67,7 @@
       <file leaf-file-name="TestController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="66" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="660">
+            <state line="21" column="0" selection-start="636" selection-end="636" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="570">
               <folding />
             </state>
           </provider>
@@ -144,12 +131,12 @@
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/views/Test/test.html.twig" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Profile.js" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Email.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/EmailType.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Profile.js" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Configuration.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CompanyEmailController.php" />
-        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Email.php" />
+        <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Configuration.js" />
       </list>
     </option>
   </component>
@@ -1905,7 +1892,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/UserType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="14" selection-start="578" selection-end="768" vertical-scroll-proportion="0.496063" vertical-offset="0" max-vertical-offset="825" />
+        <state line="25" column="14" selection-start="578" selection-end="768" vertical-scroll-proportion="0.496063" vertical-offset="0" max-vertical-offset="825">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/config/routing.yml">
@@ -1916,20 +1905,6 @@
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/PhoneType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="35" column="37" selection-start="1060" selection-end="1140" vertical-scroll-proportion="0.7322835" vertical-offset="0" max-vertical-offset="780" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/EmailType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="37" selection-start="1270" selection-end="1270" vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="66" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="660">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Profile.js">
@@ -1946,30 +1921,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Configuration.js">
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/EmailType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="12" selection-start="1771" selection-end="1771" vertical-scroll-proportion="0.0" vertical-offset="600" max-vertical-offset="1680">
+        <state line="34" column="14" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.4520548" vertical-offset="183" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/TestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="636" selection-end="636" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="570">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Progress.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="79" selection-start="648" selection-end="663" vertical-scroll-proportion="0.42519686" vertical-offset="225" max-vertical-offset="2940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CompanyEmailController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="24" selection-start="1462" selection-end="1462" vertical-scroll-proportion="-15.5" vertical-offset="213" max-vertical-offset="870">
+        <state line="35" column="7" selection-start="672" selection-end="672" vertical-scroll-proportion="0.8031496" vertical-offset="0" max-vertical-offset="2940">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Email.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="5" selection-start="1432" selection-end="1432" vertical-scroll-proportion="0.7637795" vertical-offset="505" max-vertical-offset="3405">
+        <state line="67" column="5" selection-start="1432" selection-end="1432" vertical-scroll-proportion="-29.583334" vertical-offset="280" max-vertical-offset="3405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Controller/CompanyEmailController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="5" selection-start="689" selection-end="689" vertical-scroll-proportion="-7.5" vertical-offset="45" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/window/node_/Configuration.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="47" selection-start="3909" selection-end="3909" vertical-scroll-proportion="0.66079295" vertical-offset="945" max-vertical-offset="1635">
           <folding />
         </state>
       </provider>

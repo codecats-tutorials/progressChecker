@@ -17,12 +17,6 @@ class CompanyEmailController extends Controller
         $user   = $em->getRepository('CodeCatsPanelBundle:User')->find($id);
 
         return new JsonResponse(array('success' => true, 'data' => $user->getCompanyEmail()));
-        $email->setUsername('jan@volswagen.pl');
-        $user->setCompanyEmail($email);
-        $email->addUser($user);
-        $em->persist($email);
-        $em->persist($user);
-        $em->flush();
     }
 
     public function updateAction(Request $request, $id)
@@ -32,11 +26,16 @@ class CompanyEmailController extends Controller
 
     public function createAction(Request $request)
     {
+        $fb = $this->get('fire_php');
         $em     = $this->getDoctrine()->getManager();
         $email  = new Email();
         $form   = $this->createForm(new EmailType(), $email);
 
+        $fb->log($form->isValid());
+        $fb->log($form->getErrorsAsString());
+        $form->handleRequest($request);
         if ($form->isValid()) {
+
             $user = $this->get('security.context')->getToken()->getUser();
             $user->setCompanyEmail($email);
             $email->addUser($user);
