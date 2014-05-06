@@ -25,37 +25,37 @@ class Email implements \JsonSerializable
     /**
      * @var string
      *
-     * @ORM\Column(name="username", type="string", length=255)
+     * @ORM\Column(name="username", type="string", length=255, nullable=true)
      */
-    private $username;
+    private $username = null;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="password", type="string", length=255)
+     * @ORM\Column(name="password", type="string", length=255, nullable=true)
      */
-    private $password;
+    private $password = null;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="transfer_protocol", type="string", length=255)
+     * @ORM\Column(name="transfer_protocol", type="string", length=255, nullable=true)
      */
-    private $transferProtocol;
+    private $transferProtocol = null;
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="port", type="integer")
+     * @ORM\Column(name="port", type="integer", nullable=true)
      */
-    private $port;
+    private $port = null;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="send_from", type="string", length=255)
+     * @ORM\Column(name="send_from", type="string", length=255, nullable=true)
      */
-    private $sendFrom;
+    private $sendFrom = null;
 
     /**
      * @ORM\OneToMany(targetEntity="CodeCats\PanelBundle\Entity\User", mappedBy="companyEmail")

@@ -100,7 +100,6 @@ Ext.define('Pc.window.node_.Profile', {
     ],
     listeners: {
         show    : function (me) {
-            window.me = me
             me.down('[selector=user-username]').setValue(Application.getUser().get('username'));
             me.down('[selector=user-email]').setValue(Application.getUser().get('email'));
             me.down('[name=avatar]').down('image').setSrc(Application.getUser().get('avatar') + '?' + Math.random());

@@ -2,11 +2,9 @@
 
 namespace CodeCats\PanelBundle\Controller;
 
-use CodeCats\PanelBundle\Entity\Avatar;
-use CodeCats\PanelBundle\Entity\Category;
-use CodeCats\PanelBundle\Entity\Progress;
-use CodeCats\PanelBundle\Form\AvatarType;
-use CodeCats\PanelBundle\Form\UserAvatarType;
+use CodeCats\PanelBundle\Entity\Email;
+use CodeCats\PanelBundle\Entity\User;
+use CodeCats\PanelBundle\Form\EmailType;
 use CodeCats\PanelBundle\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -18,16 +16,16 @@ class TestController extends Controller
     {
 
         $em     = $this->getDoctrine()->getManager();
-        $user   = $em->getRepository('CodeCatsPanelBundle:User')->find($this->get('security.context')->getToken()->getUser()->getId());
+        $email   = new Email();
 
-        $form = $this->createForm(new UserAvatarType(), $user);
+        $form = $this->createForm(new EmailType(), $email, array('method' => 'PUT'));
         $form->add('submit', 'submit');
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            $em->persist($user);
+            $em->persist($email);
 
-            $em->flush();
+            //$em->flush();
         }
 
         return $this->render('CodeCatsPanelBundle:Test:test.html.twig', array(
