@@ -71,6 +71,12 @@ class User implements UserInterface, \JsonSerializable, \Serializable
      */
     private $avatar;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="CodeCats\PanelBundle\Entity\Email", inversedBy="users")
+     * @ORM\JoinColumn(referencedColumnName="id")
+     */
+    private $companyEmail;
+
     public function __construct()
     {
         $this->progresses   = new ArrayCollection();
@@ -209,6 +215,16 @@ class User implements UserInterface, \JsonSerializable, \Serializable
     public function getAvatar()
     {
         return $this->avatar;
+    }
+
+    public function setCompanyEmail(Email $email)
+    {
+        $this->companyEmail = $email;
+    }
+
+    public function getCompanyEmail()
+    {
+        return $this->companyEmail;
     }
 
     /**

@@ -29,6 +29,7 @@ test:
     pattern: /test
     defaults: { _controller: CodeCatsPanelBundle:Test:test }
 
+
 code_cats_panel_user_get:
     pattern: /user
     defaults: { _controller: CodeCatsPanelBundle:User:get }
@@ -38,6 +39,7 @@ code_cats_panel_user_update:
     pattern: /user
     defaults: { _controller: CodeCatsPanelBundle:User:update }
     methods: [POST]
+
 
 code_cats_panel_progress_get:
     pattern: /progress
@@ -59,6 +61,7 @@ code_cats_panel_progress_delete:
     defaults: { _controller: CodeCatsPanelBundle:Progress:delete }
     methods: [DELETE]
 
+
 code_cats_panel_category_get:
     pattern: /category
     defaults: { _controller: CodeCatsPanelBundle:Category:get }
@@ -78,6 +81,7 @@ code_cats_panel_category_delete:
     pattern: /category/{id}
     defaults: { _controller: CodeCatsPanelBundle:Category:delete }
     methods: [DELETE]
+
 
 code_cats_panel_phone_get:
     pattern: /phone
@@ -99,6 +103,7 @@ code_cats_panel_phone_delete:
     defaults: { _controller: CodeCatsPanelBundle:Phone:delete }
     methods: [DELETE]
 
+
 code_cats_panel_avatar_get:
     pattern: /uploads/avatars/{name}
     defaults: { _controller: CodeCatsPanelBundle:Avatar:get }
@@ -109,3 +114,23 @@ code_cats_panel_avatar_session_get:
     defaults: { _controller: CodeCatsPanelBundle:Avatar:getByUserSession }
     methods: [GET]
 
+
+code_cats_panel_company_email_get:
+    pattern: /company-email
+    defaults: { _controller: CodeCatsPanelBundle:CompanyEmail:get }
+    methods: [GET]
+
+code_cats_panel_company_email_update:
+    pattern: /company-email/{id}
+    defaults: { _controller: CodeCatsPanelBundle:CompanyEmail:update }
+    methods: [PUT]
+
+code_cats_panel_company_email_create:
+    pattern: /company-email
+    defaults: { _controller: CodeCatsPanelBundle:CompanyEmail:create }
+    methods: [POST]
+
+code_cats_panel_company_email_delete:
+    pattern: /company-email/{id}
+    defaults: { _controller: CodeCatsPanelBundle:CompanyEmail:delete }
+    methods: [DELETE]

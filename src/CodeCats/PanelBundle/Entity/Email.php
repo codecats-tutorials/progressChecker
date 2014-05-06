@@ -2,6 +2,7 @@
 
 namespace CodeCats\PanelBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -56,7 +57,15 @@ class Email
      */
     private $sendFrom;
 
+    /**
+     * @ORM\OneToMany(targetEntity="CodeCats\PanelBundle\Entity\User", mappedBy="companyEmail")
+     */
+    private $users;
 
+    public function __construct()
+    {
+        $this->users = new ArrayCollection();
+    }
     /**
      * Get id
      *
@@ -180,5 +189,15 @@ class Email
     public function getSendFrom()
     {
         return $this->sendFrom;
+    }
+
+    public function addUser(User $user)
+    {
+        $this->users->add($user);
+    }
+
+    public function getUsers()
+    {
+        return $this->users;
     }
 }
