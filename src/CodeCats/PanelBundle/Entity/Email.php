@@ -11,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="CodeCats\PanelBundle\Entity\EmailRepository")
  */
-class Email
+class Email implements \JsonSerializable
 {
     /**
      * @var integer
@@ -199,5 +199,24 @@ class Email
     public function getUsers()
     {
         return $this->users;
+    }
+
+    /**
+     * (PHP 5 &gt;= 5.4.0)<br/>
+     * Specify data which should be serialized to JSON
+     * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+        return array(
+            'id'                => $this->getId(),
+            'username'          => $this->getUsername(),
+            'password'          => $this->getPassword(),
+            'transferProtocol'  => $this->getTransferProtocol(),
+            'port'              => $this->getPort(),
+            'sendFrom'          => $this->getSendFrom()
+        );
     }
 }
