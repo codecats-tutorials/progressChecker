@@ -137,3 +137,8 @@ code_cats_panel_company_email_delete:
     pattern: /company-email/{id}
     defaults: { _controller: CodeCatsPanelBundle:CompanyEmail:delete }
     methods: [DELETE]
+
+code_cats_panel_email_send:
+    pattern: send/email
+    defaults: { _controller: CodeCatsPanelBundle:Send:email }
+    methods: [POST]

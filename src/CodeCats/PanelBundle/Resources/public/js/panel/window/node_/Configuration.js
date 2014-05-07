@@ -39,7 +39,7 @@ Ext.define('Pc.window.node_.Configuration', {
                         {
                             xtype       : 'textfield',
                             name        : 'emailType[sendFrom]',
-                            selector    : 'emailType-sendForm',
+                            selector    : 'emailType-sendFrom',
                             fieldLabel  : t('Nadawca')
                         },
                         {
@@ -84,10 +84,7 @@ Ext.define('Pc.window.node_.Configuration', {
                 success : function (response) {
                     var resp = JSON.parse(response.responseText);
 
-                    window.form = form;
-                    window.data = resp.data
                     for (var i in resp.data) {
-                        console.log(i);
                         var field = form.down('[selector=emailType-' + i + ']');
                         if (field !== null) {
                             field.setValue(resp.data[i]);

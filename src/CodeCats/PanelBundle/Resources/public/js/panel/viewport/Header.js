@@ -6,7 +6,10 @@ Ext.define('Pc.viewport.Header', {
     title       : 'abc',
     items       : [
         {
-            html : 'aaa'
+            html        : t('Wyślij e-mail'),
+            handler     : function (btn) {
+                Ext.create('Pc.window.node_.SendEmail').show();
+            }
         },
         '->',
         {
