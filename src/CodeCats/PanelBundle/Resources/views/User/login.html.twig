@@ -9,7 +9,7 @@
 {% block body %}
     <div class="languages message">
     {% for locale, language in languages %}
-        <a class="button-link" href="{{ path('code_cats_panel_language', {locale: locale}) }}">{{ language }}</a>
+        <a class="button-link" href="{{ path('code_cats_panel_language', {locale: locale}) }}" tabindex={{ loop.index + 3 }}>{{ language }}</a>
     {% else %}
     {% endfor %}
     </div>
@@ -23,17 +23,17 @@
     <form class="center form" action="{{ path('login_check') }}" method="post">
         <p>
             <label for="username">{{ 'login.username' | trans }}</label>
-            <input type="text" id="username" name="_username" value="" placeholder="{{ 'login.username' | trans }}" required="required" />
+            <input type="text" id="username" name="_username" value="" placeholder="{{ 'login.username' | trans }}" required="required" tabindex=1 />
         </p>
         <p>
             <label for="password">{{ 'login.password' | trans }}</label>
-            <input type="password" id="password" name="_password" placeholder="{{ 'login.password' | trans }}" required="required" />
+            <input type="password" id="password" name="_password" placeholder="{{ 'login.password' | trans }}" required="required" tabindex=2 />
         </p>
         <div>
             <input type="hidden" name="_target_path" value="account" />
         </div>
         <p>
-            <input type="submit" name="login" class="button-link form-submit" value="{{ 'login.submit' | trans }}" />
+            <input type="submit" name="login" class="button-link form-submit" value="{{ 'login.submit' | trans }}" tabindex=3 />
         </p>
         {% if error %}
             <div class="error message form-error">

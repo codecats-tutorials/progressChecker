@@ -21,18 +21,26 @@ class CompanyEmailController extends Controller
 
     public function updateAction(Request $request, $id)
     {
-        $em = $this->getDoctrine()->getManager();
+        $em     = $this->getDoctrine()->getManager();
+        $email  = $em->getRepository('CodeCatsPanelBundle:Email')->find($id);
+        $form   = $this->createForm(new EmailType(), $email, array('method' => 'PUT'));
+
+        $form->handleRequest($request);
+        if ($form->isValid()) {
+            $em->persist($email);
+
+            $em->flush();
+        }
+
+        return new JsonResponse(array('success' => true, 'id' => null));
     }
 
     public function createAction(Request $request)
     {
-        $fb = $this->get('fire_php');
         $em     = $this->getDoctrine()->getManager();
         $email  = new Email();
         $form   = $this->createForm(new EmailType(), $email);
 
-        $fb->log($form->isValid());
-        $fb->log($form->getErrorsAsString());
         $form->handleRequest($request);
         if ($form->isValid()) {
 

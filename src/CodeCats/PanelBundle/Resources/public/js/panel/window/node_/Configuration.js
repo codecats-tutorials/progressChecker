@@ -84,9 +84,16 @@ Ext.define('Pc.window.node_.Configuration', {
                 success : function (response) {
                     var resp = JSON.parse(response.responseText);
 
-                    form.items.each(function(it) {
-                        console.log(it);
-                    });
+                    window.form = form;
+                    window.data = resp.data
+                    for (var i in resp.data) {
+                        console.log(i);
+                        var field = form.down('[selector=emailType-' + i + ']');
+                        if (field !== null) {
+                            field.setValue(resp.data[i]);
+                        }
+                    }
+
                     if (resp.data !== null) {
                         form.add({
                             xtype       : 'textfield',

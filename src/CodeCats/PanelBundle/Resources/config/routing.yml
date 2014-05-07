@@ -28,6 +28,9 @@ register:
 test:
     pattern: /test
     defaults: { _controller: CodeCatsPanelBundle:Test:test }
+test2:
+    pattern: /testid/{id}
+    defaults: { _controller: CodeCatsPanelBundle:Test:testId }
 
 
 code_cats_panel_user_get:

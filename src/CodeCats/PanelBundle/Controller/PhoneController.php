@@ -16,6 +16,7 @@ class PhoneController extends Controller
         $fb     = $this->get('fire_php');
         $em     = $this->getDoctrine()->getManager();
         $user   = $em->getRepository('CodeCatsPanelBundle:User')->find($this->get('security.context')->getToken()->getUser()->getId());
+        $all    = [];
 
         foreach ($user->getPhones() as $phone) {
             $all[] = array_merge($phone->jsonSerialize(), array('user' => $user));

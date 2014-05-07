@@ -14,25 +14,19 @@ class EmailType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $opt = array('required' => false);
+
         $builder
-            ->add('username', 'text', array(
-                'required' => false
-            ))
+            ->add('username', 'text', $opt)
             ->add('password', 'repeated', array(
                 'first_name'    => 'password',
                 'second_name'   => 'confirm',
                 'type'          => 'password',
                 'required'      => false
             ))
-            ->add('transferProtocol', 'text', array(
-                'required' => false
-            ))
-            ->add('port', 'number', array(
-                'required' => false
-            ))
-            ->add('sendFrom', 'text', array(
-                'required' => false
-            ))
+            ->add('transferProtocol', 'text', $opt)
+            ->add('port', 'number', $opt)
+            ->add('sendFrom', 'text', $opt)
         ;
     }
     
