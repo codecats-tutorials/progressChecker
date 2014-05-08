@@ -1,3 +1,58 @@
-body{
-    background-image: url('../images/python-bg.png');
+.right-brick{
+    height:300px;
+    width:500px;
+    position:absolute;
+    top:-20px;
+    right:0;
+    *z-index:-1;
+}
+.carousel-inner img{
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+.carousel-control.left {
+    background-image: linear-gradient(to right, rgba(230, 230, 230, 0.5) 0px, rgba(230, 230, 230, 0) 100%);
+}
+.carousel-control.right {
+    background-image: linear-gradient(to right, rgba(230, 230, 230, 0) 0px, rgba(230, 230, 230, 0.5) 100%);
+}
+.background-azure{
+    background: azure;
+}
+.b{
+    border: 1px solid #000000;
+}
+.fixed-bg-pure {
+
+    position: relative;
+    background: #f7e1b5;
+    z-index: 1;
+    *background-image: url('../images/carbonHeader.png');
+    width:100%;
+}
+.bg1 {
+    min-height: 200px;
+    *background-color: red;
+    background: url(../images/python-bg.png) fixed;
+    background-size: 100% 100%;
+}
+.bg2 {
+    min-height: 200px;
+    *background-color: yellow;
+    background: url(../images/php-bg.png) fixed;
+    background-size: 100% 100%;
+
+}
+.bg3 {
+    min-height: 200px;
+    *background-color: blue;
+    background: url(../images/ninja-coder.jpg) fixed;
+    *background-position: 100% 0%;
+    background-size: 100% 100%;
+}
+@media (max-width : 940px) {
+    .bg1, .bg2, .bg3, .project-thumbnail, header+section.container {
+        background-attachment: scroll;
+    }
 }
