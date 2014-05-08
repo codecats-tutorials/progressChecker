@@ -1,0 +1,38 @@
+{% extends "::base.html.twig" %}
+{% block stylesheets %}
+    <link type="text/css"
+          href="{{ asset('bundles/codecatsfront/bootstrap-3.1.1-dist/css/bootstrap.min.css') }}"
+          rel="stylesheet"
+    />
+    <link type="text/css"
+          href="{{ asset('bundles/codecatsfront/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css') }}"
+          rel="stylesheet"
+    />
+{% endblock %}
+{% block body %}
+    {% block items %}
+    {% endblock %}
+{% endblock %}
+
+
+{% block javascripts %}
+    {% block bootstrap %}
+        <script type="text/javascript"
+                src="{{ asset('bundles/codecatspanel/js/core/config.js') }}">
+        </script>
+        <script type="text/javascript"
+                src="{{ asset('bundles/codecatspanel/js/core/translate.js') }}">
+        </script>
+    {% endblock %}
+    {% block libs %}
+        <script type="text/javascript"
+                src="{{ asset('bundles/codecatsfront/jquery/jquery-2.1.1.min.js') }}">
+        </script>
+        <script type="text/javascript"
+                src="{{ asset('bundles/codecatsfront/bootstrap-3.1.1-dist/js/bootstrap.min.js') }}">
+        </script>
+    {% endblock %}
+
+    {% block app %}
+    {% endblock %}
+{% endblock %}

@@ -23,7 +23,7 @@ class SendController extends Controller
                 $receiverBag[] = $email;
             }
         }
-     
+
         $transport = Swift_SmtpTransport::newInstance($emailConfig->getTransferProtocol(), (int)$emailConfig->getPort(), 'ssl')
             ->setUsername($emailConfig->getSendFrom())
             ->setPassword($emailConfig->getPassword())
