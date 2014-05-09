@@ -3,6 +3,7 @@
 namespace CodeCats\PanelBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Query\ResultSetMapping;
 
 /**
  * UserRepository
@@ -12,4 +13,21 @@ use Doctrine\ORM\EntityRepository;
  */
 class UserRepository extends EntityRepository
 {
+    public function getMostActive()
+    {
+        $sql = '
+SELECT *, sum(datediff(p.ended, p.started)) as progress_days FROM User u
+left join Progress p
+on  p.user_id = u.id
+group by u.id
+order by progress_days DESC
+        ';
+
+        $em = $this->getEntityManager();
+
+        $stmt = $em->getConnection()->prepare($sql);
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+    }
 }
