@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new CodeCats\PanelBundle\CodeCatsPanelBundle(),
             new CodeCats\FrontBundle\CodeCatsFrontBundle(),
             new CodeCats\TestBundle\CodeCatsTestBundle(),
+            new Liip\ImagineBundle\LiipImagineBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
