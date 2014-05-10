@@ -13,21 +13,22 @@ use Doctrine\ORM\Query\ResultSetMapping;
  */
 class UserRepository extends EntityRepository
 {
-    public function getMostActive()
+    /**
+    SELECT *, sum(datediff(p.ended, p.started)) as progress_days FROM User u
+    left join Progress p
+    on  p.user_id = u.id
+    group by u.id
+    order by progress_days DESC
+     *
+     * @param int $max
+     * @return array
+     */
+    public function getMostActive($max = 10)
     {
-        $sql = '
-SELECT *, sum(datediff(p.ended, p.started)) as progress_days FROM User u
-left join Progress p
-on  p.user_id = u.id
-group by u.id
-order by progress_days DESC
-        ';
+        $qb = $this->createQueryBuilder('u')
+            ->select('u', 'p')->addSelect('SUM(DATEDIFF(p.ended, p.started)) as progress_days')
+            ->leftJoin('u.progresses', 'p')->groupBy('u.id')->orderBy('p.id', 'desc')->setMaxResults($max);
 
-        $em = $this->getEntityManager();
-
-        $stmt = $em->getConnection()->prepare($sql);
-        $stmt->execute();
-
-        return $stmt->fetchAll();
+        return $qb->getQuery()->getResult();
     }
 }

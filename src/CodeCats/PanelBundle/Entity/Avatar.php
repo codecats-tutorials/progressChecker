@@ -154,6 +154,8 @@ class Avatar
         if (null !== $this->getFile()) {
             $filename = sha1(uniqid(mt_rand(), true));
             $this->path = $filename . '.' . $this->getFile()->guessExtension();
+            $this->setName($this->getFile()->getClientOriginalName());
+            $this->setLastChanged(new DateTime());
         }
     }
 
@@ -169,8 +171,6 @@ class Avatar
         }
 
         $this->getFile()->move($this->getUploadRootDir(), $this->path);
-        $this->setName($this->getFile()->getClientOriginalName());
-        $this->setLastChanged(new DateTime());
 
         if ( ! empty($this->temp)) {
             unlink($this->getUploadRootDir() . '/' . $this->temp);

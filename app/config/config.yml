@@ -65,6 +65,10 @@ doctrine:
     orm:
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
+        dql:
+            datetime_functions:
+                date:     Luxifer\DQL\Datetime\Date
+                datediff: Luxifer\DQL\Datetime\DateDiff
 
 # Swiftmailer Configuration
 swiftmailer:

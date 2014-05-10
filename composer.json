@@ -21,7 +21,8 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "dvelopment/firephp-bundle": "dev-master",
         "symfony/serializer": "2.5.*@dev",
-        "liip/imagine-bundle": "dev-master"
+        "liip/imagine-bundle": "dev-master",
+        "luxifer/doctrine-functions": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
