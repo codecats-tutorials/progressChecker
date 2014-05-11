@@ -12,4 +12,24 @@ use Doctrine\ORM\EntityRepository;
  */
 class CategoryRepository extends EntityRepository
 {
+    /**
+    SELECT
+     *,
+    SUM(datediff(ended, started)) countDays
+    FROM
+    pc.Progress
+    join
+    Category c ON c.id = category_id
+    group by category_id
+    order by countDays desc;
+     */
+    public function findMostUsed($limit = 1)
+    {
+        $qb = $this->createQueryBuilder('c');
+        $qb = $this->getEntityManager()->getRepository('CodeCatsPanelBundle:Progress')->createQueryBuilder('p');
+        $qb->select('p as progress')->addSelect('SUM(DATEDIFF(p.ended, p.started)) as countDays')
+            ->join('p.category', 'cat')->groupBy('p.category')->orderBy('countDays', 'DESC')->setMaxResults($limit);
+
+        return $qb->getQuery()->getResult();
+    }
 }

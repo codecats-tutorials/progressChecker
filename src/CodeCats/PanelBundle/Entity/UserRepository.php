@@ -23,11 +23,11 @@ class UserRepository extends EntityRepository
      * @param int $max
      * @return array
      */
-    public function getMostActive($max = 10)
+    public function findMostActive($max = 10)
     {
         $qb = $this->createQueryBuilder('u')
             ->select('u', 'p')->addSelect('SUM(DATEDIFF(p.ended, p.started)) as progress_days')
-            ->leftJoin('u.progresses', 'p')->groupBy('u.id')->orderBy('p.id', 'desc')->setMaxResults($max);
+            ->leftJoin('u.progresses', 'p')->groupBy('u.id')->orderBy('progress_days', 'desc')->setMaxResults($max);
 
         return $qb->getQuery()->getResult();
     }

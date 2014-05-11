@@ -12,6 +12,29 @@ use Doctrine\ORM\EntityRepository;
  */
 class ProgressRepository extends EntityRepository
 {
+    public function findMostUsed($limit = 1)
+    {
+        $qb = $this->createQueryBuilder('p')->select('p as progress')->addSelect('cat as category')
+            ->addSelect('SUM(DATEDIFF(p.ended, p.started)) as countDays')
+            ->join('p.category', 'cat')->groupBy('p.category')->orderBy('countDays', 'DESC')->setMaxResults($limit);
+
+        return $qb->getQuery()->getResult();
+    }
+
+    public function findLongestStrike()
+    {
+        $qb = $this->createQueryBuilder('p')->select('p as progress')->addSelect('DATEDIFF(p.ended, p.started) as strike')
+            ->orderBy('strike', 'desc')->setMaxResults(1);
+
+        return $qb->getQuery()->getSingleResult();
+    }
+    public function countDays()
+    {
+        $qb = $this->createQueryBuilder('p')->select('SUM(DATEDIFF(p.ended, p.started)) as daysCount');
+
+        return $qb->getQuery()->getSingleScalarResult();
+    }
+
     public function findFront($start = 0, $limit = 25)
     {
         $qb = $this->createQueryBuilder('p');

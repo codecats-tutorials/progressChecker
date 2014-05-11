@@ -75,7 +75,7 @@
                             {% endif %}
                             <hr>
                             <p class="center-block well shadow">
-                                {{ 'Ilość dni spędzonych na programowaniu' | trans }}:
+                                {{ 'Ilość dni spędzonych podczas projektu' | trans }}:
                                 {% if user.progress_days %}<span class="text-danger">{{ user.progress_days }}</span>{% else %} - {% endif %}
                             </p>
                             <a class="btn btn-primary center-block" href="#">{{ 'Zobacz szczegóły' | trans }}</a>
@@ -145,17 +145,81 @@
         </div>
     </section>
     <section class="fixed-bg-pure">
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
+        <h3 class="text-danger well shadow">{{ 'Statystyki' | trans }}</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="opacity border shadow well">
+                    <h5>{{ 'Dni ogółem' | trans }} <small>{{ 'Suma dla wszystkich użytkowiników' | trans }}:</small> <span class="text-danger">{{ countDays }}</span></h5>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="opacity border shadow well">
+                    <h4>{{ 'Najdłużej używany język' | trans }}</h4>
+                    {% if categoryMostUsed[0].progress is defined %}
+                        <div class="text-muted">
+                            {{ 'Nazwa' | trans }}:
+                            <a class="btn btn-primary center-block" href="#">{{ categoryMostUsed[0].progress.category.name }}</a>
+                        </div>
+                        <p>
+                            <span class="text-muted">{{ 'Liczba dni' }}: </span><span class="text-danger">{{ categoryMostUsed[0].countDays }}</span>
+                        </p>
+                    {% else %}
+                        {{ 'Brak danych' | trans }}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="opacity border shadow well">
+                    <h4>{{ 'Najaktywniejszy użytkownik' | trans }}</h4>
+                    {% if users[0][0] is defined %}
+                        <a class="btn btn-primary center-block" href="#">{{ users[0][0].username }}</a>
+                        <br>
+                        <p>
+                            <span class="text-muted">{{ 'Liczba dni' }}: </span><span class="text-danger">{{ users[0].progress_days }}</span>
+                        </p>
+                    {% else %}
+                        {{ 'Brak danych' | trans }}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="opacity border shadow well">
+                    <h4>{{ 'Liczba kategorii' | trans }}</h4>
+                    <p>
+                        <span class="text-muted">{{ 'Razem' }}: </span><span class="text-danger">{{ categories | length }}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="opacity border shadow well">
+                    <h4>{{ 'Najdłuższe przyłożenie' | trans }}</h4>
+                    <div>
+                        <span class="text-muted">{{ 'Liczba dni' }}: </span><span class="text-danger">{{ progressStrike.strike }}</span>
+                        <div class="text-muted">
+                            {{ 'Tytuł' | trans }}:
+                            <a class="btn btn-primary center-block" href="#">{{ progressStrike.progress.title }}</a>
+                        </div>
+                        <br>
+                        <div class="text-muted">
+                            {{ 'Użytkownik' | trans }}:
+                            <a class="btn btn-primary center-block" href="#">{{ progressStrike.progress.user.username }}</a>
+                        </div>
+                        <br>
+                        <p>
+                            <span class="text-muted">{{ 'Od' }}: </span><span class="text-danger">{{ progressStrike.progress.started | date('Y-m-d') }}</span>
+                        </p>
+                        <p>
+                            <span class="text-muted">{{ 'Do' }}: </span><span class="text-danger">{{ progressStrike.progress.ended | date('Y-m-d') }}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section class="bg3">
+        <h1>Tu mogę dać użytkowników</h1>
         <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
         Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
         Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum

@@ -130,7 +130,7 @@ div.bgtriangle {
     border-style: solid;
     border-width: 500px 900px 0px 0;
     border-color: transparent #f7e1b5 transparent transparent;
-    background: url(../images/python-bg.png) fixed;
+    background: url(../images/php-bg.png) fixed;
     background-size: 100% 100%;
 }
 div.bgtriangle-pure {
@@ -143,11 +143,10 @@ div.bgtriangle-pure {
     border-style: solid;
     border-width: 1200px 800px 0px 0;
     border-color: #f7e1b5 transparent transparent transparent;
-    *background: url(../images/python-bg.png) fixed;
     background-size: 100% 100%;
 }
 div.bgtriangle-fix {
-    min-height: 500px;
+    min-height: 400px;
 }
 .bg2 {
     min-height: 200px;

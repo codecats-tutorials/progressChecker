@@ -14,11 +14,13 @@ class DefaultController extends Controller
         $category   = $em->getRepository('CodeCatsPanelBundle:Category');
         $progress   = $em->getRepository('CodeCatsPanelBundle:Progress');
 
-
         return $this->render('CodeCatsFrontBundle:Default:index.html.twig', array(
-            'users'         => $user->getMostActive(3),
+            'users'         => $user->findMostActive(3),
             'categories'    => $category->findAll(),
-            'progresses'    => $progress->findBy(array(), array('ended' => 'DESC'), 5)
+            'progresses'    => $progress->findBy(array(), array('ended' => 'DESC'), 5),
+            'progressStrike'=> $progress->findLongestStrike(),
+            'countDays'     => $progress->countDays(),
+            'categoryMostUsed' => $category->findMostUsed()
         ));
     }
 }
