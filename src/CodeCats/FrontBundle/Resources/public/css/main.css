@@ -1,3 +1,29 @@
+.shadow{
+    -webkit-box-shadow: 7px 7px 12px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    7px 7px 12px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         7px 7px 12px 0px rgba(50, 50, 50, 0.75);
+}
+.opacity{
+    background: -moz-linear-gradient(45deg,  rgba(236,237,225,0.8) 0%, rgba(236,237,225,0.8) 2%, rgba(234,239,181,0.8) 16%, rgba(225,233,160,0.8) 83%, rgba(232,238,186,0.8) 88%, rgba(248,249,247,0.8) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(236,237,225,0.8)), color-stop(2%,rgba(236,237,225,0.8)), color-stop(16%,rgba(234,239,181,0.8)), color-stop(83%,rgba(225,233,160,0.8)), color-stop(88%,rgba(232,238,186,0.8)), color-stop(100%,rgba(248,249,247,0.8))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  rgba(236,237,225,0.8) 0%,rgba(236,237,225,0.8) 2%,rgba(234,239,181,0.8) 16%,rgba(225,233,160,0.8) 83%,rgba(232,238,186,0.8) 88%,rgba(248,249,247,0.8) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  rgba(236,237,225,0.8) 0%,rgba(236,237,225,0.8) 2%,rgba(234,239,181,0.8) 16%,rgba(225,233,160,0.8) 83%,rgba(232,238,186,0.8) 88%,rgba(248,249,247,0.8) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  rgba(236,237,225,0.8) 0%,rgba(236,237,225,0.8) 2%,rgba(234,239,181,0.8) 16%,rgba(225,233,160,0.8) 83%,rgba(232,238,186,0.8) 88%,rgba(248,249,247,0.8) 100%); /* IE10+ */
+    background: linear-gradient(45deg,  rgba(236,237,225,0.8) 0%,rgba(236,237,225,0.8) 2%,rgba(234,239,181,0.8) 16%,rgba(225,233,160,0.8) 83%,rgba(232,238,186,0.8) 88%,rgba(248,249,247,0.8) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccecede1', endColorstr='#ccf8f9f7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+}
+.navbar-text img{
+    height: 200px;
+    width: 200px;
+    border: 1px solid #06070a;
+    border-style: ridge groove groove ridge;
+}
+.front-header{
+    padding-top: 10%;
+    padding-bottom: 15%;
+}
 .right-brick{
     height:300px;
     width:500px;
@@ -10,6 +36,7 @@
     width: 40%;
     margin-left: 30%;
     margin-right: 30%;
+    min-height: 350px;
 }
 .carousel-control.left {
     background-image: linear-gradient(to right, rgba(230, 230, 230, 0.5) 0px, rgba(230, 230, 230, 0) 100%);
@@ -24,12 +51,13 @@
     border: 1px solid #000000;
 }
 .fixed-bg-pure {
-
+    padding: 10%;
     position: relative;
     background: #f7e1b5;
-    z-index: 1;
     *background-image: url('../images/carbonHeader.png');
-    width:100%;
+}
+.bg1, .bg2, .bg3 {
+    padding: 5%;
 }
 .bg1 {
     min-height: 200px;

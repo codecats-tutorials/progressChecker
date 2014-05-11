@@ -11,13 +11,8 @@ class DefaultController extends Controller
         $em     = $this->getDoctrine()->getManager();
         $user   = $em->getRepository('CodeCatsPanelBundle:User');
 
-//        var_dump();
-        $items = $user->getMostActive();
-
-//        foreach ($items as $item) {
-//            var_dump($item);
-//        }
-var_dump($items);
-        return $this->render('CodeCatsFrontBundle:Default:index.html.twig');
+        return $this->render('CodeCatsFrontBundle:Default:index.html.twig', array(
+            'users' => $user->getMostActive(3)
+        ));
     }
 }

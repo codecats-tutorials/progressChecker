@@ -10,7 +10,7 @@
             </ul>
         </nav>
     </header>
-    <section>
+    <section class="front-header">
         <div>
             <div class="container">
                 <div id="carousel-generic" class="carousel slide" data-ride="carousel">
@@ -24,13 +24,13 @@
                         <div class="item active">
                             <img src="{{ asset('bundles/codecatsfront/images/php-bg.png') | imagine_filter('my_thumb') }}" alt="...">
                             <div class="carousel-caption">
-                                llllllllllllllllllllll
+                                {{ 'PHP jest najczęściej stosowany do tworzenia skryptów po stronie serwera WWW, ale może być on również używany do przetwarzania danych z poziomu wiersza poleceń, a nawet do pisania programów pracujących w trybie graficznym (np. za pomocą biblioteki GTK+, używając rozszerzenia PHP-GTK). Implementacja PHP wraz z serwerem WWW Apache oraz serwerem baz danych MySQL określana jest jako platforma AMP (w środowisku Linux – LAMP, w Windows – WAMP). Ponadto PHP można uruchomić na serwerze IIS (Windows) oraz w chmurze Windows Azure.' | trans }}
                             </div>
                         </div>
                         <div class="item">
                             <img src="{{ asset('bundles/codecatsfront/images/python-bg.png') | imagine_filter('my_thumb') }}" alt="...">
                             <div class="carousel-caption">
-                                llllllllllllllllllllll
+                                {{ 'Python – język programowania wysokiego poziomu ogólnego przeznaczenia[4] i rozbudowanym pakiecie bibliotek standardowych[5], którego ideą przewodnią jest czytelność i klarowność kodu źródłowego. Jego składnia cechuje się przejrzystością i zwięzłością[6][7]. Python wspiera różne paradygmaty programowania: obiektowy, imperatywny oraz w mniejszym stopniu funkcyjny. Posiada w pełni dynamiczny system typów i automatyczne zarządzanie pamięcią, będąc w tym podobnym do języków Perl, Ruby, Scheme czy Tcl. Podobnie jak inne języki dynamiczne jest często używany jako język skryptowy. Interpretery Pythona są dostępne na wiele systemów operacyjnych. Python rozwijany jest jako projekt Open Source zarządzany przez Python Software Foundation, która jest organizacją non-profit. Standardową implementacja języka jest CPython (napisany w C), ale istnieją też inne, np. Jython (napisany w Javie), CLPython napisany w Common Lisp, IronPython (na platformę .NET) i PyPy (napisany w Pythonie, zob. bootstrap).' | trans }}
                             </div>
                         </div>
                     </div>
@@ -47,27 +47,40 @@
             </div>
         </div>
     </section>
-    <section class="fixed-bg-pure">
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
-    </section>
     <section class="bg1">
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
+        <article>
+            <div class="row">
+        {% for user in users %}
+                <div class="col-xs-4">
+                    <p>
+                        <div class="pull-right navbar-text well text-muted center-block opacity shadow">
+                            <div class="text-center well shadow">
+                                {{ 'Użytkownik' | trans }}: <span class="text-primary">{{ user[0].username }}</span>
+                                <span class="bg-warning clearfix">{{ 'E-mail' | trans }}: {{ user[0].email }}</span>
+                                <span class="bg-warning clearfix">{{ 'Rola' | trans }}: {{ user[0].grade }}</span>
+                                {% for phone in user[0].phones %}
+                                    <ol class="well">
+                                        <li class="">{{ 'Telefon' | trans }}: {{ phone.number }}</li>
+                                    </ol>
+                                {% endfor %}
+                            </div>
+                            {% if user[0].avatar.path %}
+                                <div>
+                                    <img class="img-circle center-block shadow" src="{{ path('code_cats_panel_avatar_get', {name: user[0].avatar.path}) }}" alt="avatar for {{ user[0].username }}"/>
+                                </div>
+                            {% endif %}
+                            <hr>
+                            <p class="center-block well shadow">
+                                {{ 'Ilość dni spędzonych na programowaniu' | trans }}:
+                                {% if user.progress_days %}<span class="text-danger">{{ user.progress_days }}</span>{% else %} - {% endif %}
+                            </p>
+                            <a class="btn btn-primary center-block" href="#">{{ 'Zobacz szczegóły' | trans }}</a>
+                        </div>
+                    </p>
+                </div>
+        {% endfor %}
+            </div>
+        </article>
     </section>
     <section class="fixed-bg-pure">
         <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum

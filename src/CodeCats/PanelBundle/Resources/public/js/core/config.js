@@ -10,3 +10,6 @@ function url(dest, base) {
     if (typeof(base) === 'undefined') base = base_url;
     return (base_url + '/' + dest);
 }
+window.onbeforeunload = function(){
+    return t('Are you sure you want to leave?');
+};
