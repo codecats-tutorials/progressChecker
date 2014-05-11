@@ -12,8 +12,9 @@
     </header>
     <section class="front-header">
         <div>
-            <div class="container">
-                <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+            <h1 class="text-center title">Progress Checker</h1>
+            <div class="container carousel-container">
+                <div id="carousel-generic" class="carousel slide border shadow opacity-dark" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
                         <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
@@ -23,7 +24,7 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <img src="{{ asset('bundles/codecatsfront/images/php-bg.png') | imagine_filter('my_thumb') }}" alt="...">
-                            <div class="carousel-caption">
+                            <div class="carousel-caption border opacity shadow">
                                 {{ 'PHP jest najczęściej stosowany do tworzenia skryptów po stronie serwera WWW, ale może być on również używany do przetwarzania danych z poziomu wiersza poleceń, a nawet do pisania programów pracujących w trybie graficznym (np. za pomocą biblioteki GTK+, używając rozszerzenia PHP-GTK). Implementacja PHP wraz z serwerem WWW Apache oraz serwerem baz danych MySQL określana jest jako platforma AMP (w środowisku Linux – LAMP, w Windows – WAMP). Ponadto PHP można uruchomić na serwerze IIS (Windows) oraz w chmurze Windows Azure.' | trans }}
                             </div>
                         </div>
@@ -36,10 +37,10 @@
                     </div>
 
                     <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <a class="left carousel-control hidden" href="#carousel-example-generic" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <a class="right carousel-control hidden" href="#carousel-example-generic" data-slide="next">
                         <span class="glyphicon glyphicon-chevron-right"></span>
                     </a>
                 </div>
@@ -51,8 +52,8 @@
         <article>
             <div class="row">
         {% for user in users %}
-                <div class="col-xs-4">
-                    <p>
+                <div class="col-md-4">
+                    <div>
                         <div class="pull-right navbar-text well text-muted center-block opacity shadow">
                             <div class="text-center well shadow">
                                 {{ 'Użytkownik' | trans }}: <span class="text-primary">{{ user[0].username }}</span>
@@ -76,22 +77,38 @@
                             </p>
                             <a class="btn btn-primary center-block" href="#">{{ 'Zobacz szczegóły' | trans }}</a>
                         </div>
-                    </p>
+                    </div>
                 </div>
         {% endfor %}
             </div>
         </article>
     </section>
     <section class="fixed-bg-pure">
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
+        <div class="bgtriangle"></div>
+        <div class="on-top bgtriangle-fix">
+
+                {% set rowCounter = '0' %}
+                {% for category in categories %}
+                    {% if rowCounter == 0 %}
+                        <div class="row">
+                    {% endif %}
+                    <div class="col-md-4">
+                        <dl class="opacity well shadow border">
+                            <dt>{{ category.name }}</dt>
+                            <dd>{{ category.description }}</dd>
+                            <dd><a class="btn btn-primary center-block" href="#">{{ 'Zobacz szczegóły' | trans }}</a></dd>
+                        </dl>
+                    </div>
+                    {% set rowCounter = rowCounter + 1 %}
+                    {% if rowCounter == 3 %}
+                        </div>
+                    {% endif %}
+                    {% if rowCounter == 3 %}
+                        {% set rowCounter = 0 %}
+                    {% endif %}
+                {% endfor %}
+
+        </div>
     </section>
     <section class="bg2">
         <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum

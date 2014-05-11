@@ -1,7 +1,28 @@
+.title{
+    position: relative;
+    top: 60px;
+    font-size: 4.2em;
+    font-weight: 900;
+    text-shadow: -1px -1px 6px rgba(0, 0, 0, 1),
+    -1px 0 #595B5B, 0 1px #595B5B, 1px 0 #595B5B, 0 -1px #595B5B;
+    color: red;
+    z-index: 1;
+}
+.border{
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 1px ridge #362e36;
+}
 .shadow{
     -webkit-box-shadow: 7px 7px 12px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:    7px 7px 12px 0px rgba(50, 50, 50, 0.75);
     box-shadow:         7px 7px 12px 0px rgba(50, 50, 50, 0.75);
+}
+.shadow-inset{
+    -webkit-box-shadow: inset 10px 10px 49px 15px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 10px 10px 49px 15px rgba(0,0,0,0.75);
+    box-shadow: inset 10px 10px 49px 15px rgba(0,0,0,0.75);
 }
 .opacity{
     background: -moz-linear-gradient(45deg,  rgba(236,237,225,0.8) 0%, rgba(236,237,225,0.8) 2%, rgba(234,239,181,0.8) 16%, rgba(225,233,160,0.8) 83%, rgba(232,238,186,0.8) 88%, rgba(248,249,247,0.8) 100%); /* FF3.6+ */
@@ -11,7 +32,15 @@
     background: -ms-linear-gradient(45deg,  rgba(236,237,225,0.8) 0%,rgba(236,237,225,0.8) 2%,rgba(234,239,181,0.8) 16%,rgba(225,233,160,0.8) 83%,rgba(232,238,186,0.8) 88%,rgba(248,249,247,0.8) 100%); /* IE10+ */
     background: linear-gradient(45deg,  rgba(236,237,225,0.8) 0%,rgba(236,237,225,0.8) 2%,rgba(234,239,181,0.8) 16%,rgba(225,233,160,0.8) 83%,rgba(232,238,186,0.8) 88%,rgba(248,249,247,0.8) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccecede1', endColorstr='#ccf8f9f7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
+}
+.opacity-dark{
+    background: -moz-linear-gradient(45deg,  rgba(135,137,130,0.8) 0%, rgba(135,137,130,0.8) 2%, rgba(82,88,89,0.8) 10%, rgba(35,51,46,0.8) 89%, rgba(150,150,150,0.8) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(135,137,130,0.8)), color-stop(2%,rgba(135,137,130,0.8)), color-stop(10%,rgba(82,88,89,0.8)), color-stop(89%,rgba(35,51,46,0.8)), color-stop(100%,rgba(150,150,150,0.8))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  rgba(135,137,130,0.8) 0%,rgba(135,137,130,0.8) 2%,rgba(82,88,89,0.8) 10%,rgba(35,51,46,0.8) 89%,rgba(150,150,150,0.8) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  rgba(135,137,130,0.8) 0%,rgba(135,137,130,0.8) 2%,rgba(82,88,89,0.8) 10%,rgba(35,51,46,0.8) 89%,rgba(150,150,150,0.8) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  rgba(135,137,130,0.8) 0%,rgba(135,137,130,0.8) 2%,rgba(82,88,89,0.8) 10%,rgba(35,51,46,0.8) 89%,rgba(150,150,150,0.8) 100%); /* IE10+ */
+    background: linear-gradient(45deg,  rgba(135,137,130,0.8) 0%,rgba(135,137,130,0.8) 2%,rgba(82,88,89,0.8) 10%,rgba(35,51,46,0.8) 89%,rgba(150,150,150,0.8) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc878982', endColorstr='#cc969696',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
 .navbar-text img{
@@ -21,7 +50,7 @@
     border-style: ridge groove groove ridge;
 }
 .front-header{
-    padding-top: 10%;
+    padding-top: 0%;
     padding-bottom: 15%;
 }
 .right-brick{
@@ -32,11 +61,20 @@
     right:0;
     *z-index:-1;
 }
+.carousel-container{
+    width: 80%;
+    -webkit-perspective:250px; /* Chrome, Safari, Opera  */
+    perspective:250px;
+}
+.carousel{
+    -webkit-transform: rotateX(15deg); /* Chrome, Safari, Opera  */
+    transform: rotateX(15deg);
+}
 .carousel-inner img{
-    width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
-    min-height: 350px;
+    width: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
+    min-height: 400px;
 }
 .carousel-control.left {
     background-image: linear-gradient(to right, rgba(230, 230, 230, 0.5) 0px, rgba(230, 230, 230, 0) 100%);
@@ -45,7 +83,21 @@
     background-image: linear-gradient(to right, rgba(230, 230, 230, 0) 0px, rgba(230, 230, 230, 0.5) 100%);
 }
 .background-azure{
-    background: azure;
+    background: rgb(179,220,237); /* Old browsers */
+    background-image: url('../images/bg-azure.png');
+
+
+    background: -moz-linear-gradient(45deg,  rgba(242,249,248,1) 0%, rgba(237,242,232,1) 50%, rgba(242,248,255,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(242,249,248,1)), color-stop(50%,rgba(237,242,232,1)), color-stop(100%,rgba(242,248,255,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  rgba(242,249,248,1) 0%,rgba(237,242,232,1) 50%,rgba(242,248,255,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  rgba(242,249,248,1) 0%,rgba(237,242,232,1) 50%,rgba(242,248,255,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  rgba(242,249,248,1) 0%,rgba(237,242,232,1) 50%,rgba(242,248,255,1) 100%); /* IE10+ */
+    background: linear-gradient(45deg,  rgba(242,249,248,1) 0%,rgba(237,242,232,1) 50%,rgba(242,248,255,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f9f8', endColorstr='#f2f8ff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+    background-attachment: fixed;;
+
 }
 .b{
     border: 1px solid #000000;
@@ -54,7 +106,6 @@
     padding: 10%;
     position: relative;
     background: #f7e1b5;
-    *background-image: url('../images/carbonHeader.png');
 }
 .bg1, .bg2, .bg3 {
     padding: 5%;
@@ -64,6 +115,25 @@
     *background-color: red;
     background: url(../images/python-bg.png) fixed;
     background-size: 100% 100%;
+}
+div.on-top{
+    position: relative;
+}
+div.bgtriangle {
+    position: absolute;
+    margin-left: 2%;
+    margin-top: 10%;
+    z-index: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 500px 900px 0px 0;
+    border-color: transparent #f7e1b5 transparent transparent;
+    background: url(../images/python-bg.png) fixed;
+    background-size: 100% 100%;
+}
+div.bgtriangle-fix {
+    min-height: 500px;
 }
 .bg2 {
     min-height: 200px;
@@ -80,7 +150,7 @@
     background-size: 100% 100%;
 }
 @media (max-width : 940px) {
-    .bg1, .bg2, .bg3, .project-thumbnail, header+section.container {
+    .bg1, .bg2, .bg3, .project-thumbnail, header+section.container, .background-azure {
         background-attachment: scroll;
     }
 }

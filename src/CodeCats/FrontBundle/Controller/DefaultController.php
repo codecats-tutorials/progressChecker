@@ -8,11 +8,13 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        $em     = $this->getDoctrine()->getManager();
-        $user   = $em->getRepository('CodeCatsPanelBundle:User');
+        $em         = $this->getDoctrine()->getManager();
+        $user       = $em->getRepository('CodeCatsPanelBundle:User');
+        $category   = $em->getRepository('CodeCatsPanelBundle:Category');
 
         return $this->render('CodeCatsFrontBundle:Default:index.html.twig', array(
-            'users' => $user->getMostActive(3)
+            'users'         => $user->getMostActive(3),
+            'categories'    => $category->findAll()
         ));
     }
 }

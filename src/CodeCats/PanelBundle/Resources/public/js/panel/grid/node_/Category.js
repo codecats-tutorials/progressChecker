@@ -38,6 +38,14 @@ Ext.define('Pc.grid.node_.Category', {
                 xtype       : 'textfield',
                 allowBlank  : true
             }
+        },
+        {
+            header      : t('Opis'),
+            dataIndex   : 'description',
+            field       : {
+                xtype       : 'textfield',
+                allowBlank  : true
+            }
         }
     ],
     tbar    : [

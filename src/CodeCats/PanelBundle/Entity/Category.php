@@ -30,6 +30,12 @@ class Category implements \JsonSerializable
     private $name;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text", nullable=true)
+     */
+    private $description;
+    /**
      * @ORM\OneToMany(targetEntity="CodeCats\PanelBundle\Entity\Progress", mappedBy="category")
      */
     private $progresses;
@@ -57,8 +63,6 @@ class Category implements \JsonSerializable
     public function setName($name)
     {
         $this->name = $name;
-
-        return $this;
     }
 
     /**
@@ -70,7 +74,28 @@ class Category implements \JsonSerializable
     {
         return $this->name;
     }
+    
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Category
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
 
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    
     public function addProgress(Progress $progress)
     {
         $this->progresses->add($progress);
@@ -93,6 +118,7 @@ class Category implements \JsonSerializable
         return array(
             'id'        => $this->getId(),
             'name'      => $this->getName(),
+            'description' => $this->getDescription(),
             'progress'  => $this->getProgresses()
         );
     }

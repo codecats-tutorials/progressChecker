@@ -2,7 +2,8 @@ Ext.define('Pc.model.Category', {
     extend: 'Ext.data.Model',
     fields: [
         'id',
-        'name'
+        'name',
+        'description'
     ],
     validations: [
         {
