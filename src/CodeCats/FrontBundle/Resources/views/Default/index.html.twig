@@ -50,6 +50,7 @@
     </section>
     <section class="bg1">
         <article>
+            <h3 class="text-danger well shadow">{{ 'Najaktywniejsi użytkownicy' | trans }}</h3>
             <div class="row">
         {% for user in users %}
                 <div class="col-md-4">
@@ -59,11 +60,13 @@
                                 {{ 'Użytkownik' | trans }}: <span class="text-primary">{{ user[0].username }}</span>
                                 <span class="bg-warning clearfix">{{ 'E-mail' | trans }}: {{ user[0].email }}</span>
                                 <span class="bg-warning clearfix">{{ 'Rola' | trans }}: {{ user[0].grade }}</span>
-                                {% for phone in user[0].phones %}
-                                    <ol class="well">
-                                        <li class="">{{ 'Telefon' | trans }}: {{ phone.number }}</li>
-                                    </ol>
-                                {% endfor %}
+                                <ol class="well">
+                                    {% for phone in user[0].phones %}
+                                        <li>{{ 'Telefon' | trans }}: {{ phone.number }}</li>
+                                    {% else %}
+                                        <li>{{ 'Brak numeru telefonu' | trans }}</li>
+                                    {% endfor %}
+                                </ol>
                             </div>
                             {% if user[0].avatar.path %}
                                 <div>
@@ -86,7 +89,7 @@
     <section class="fixed-bg-pure">
         <div class="bgtriangle"></div>
         <div class="on-top bgtriangle-fix">
-
+            <h3 class="text-danger well shadow">{{ 'Kategorie' | trans }}</h3>
                 {% set rowCounter = '0' %}
                 {% for category in categories %}
                     {% if rowCounter == 0 %}
@@ -94,7 +97,7 @@
                     {% endif %}
                     <div class="col-md-4">
                         <dl class="opacity well shadow border">
-                            <dt>{{ category.name }}</dt>
+                            <dt id="category{{ category.name }}">{{ category.name }}</dt>
                             <dd>{{ category.description }}</dd>
                             <dd><a class="btn btn-primary center-block" href="#">{{ 'Zobacz szczegóły' | trans }}</a></dd>
                         </dl>
@@ -111,15 +114,35 @@
         </div>
     </section>
     <section class="bg2">
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
+        <div class="bgtriangle-pure"></div>
+        <div class="on-top bgtriangle-fix">
+            <h3 class="text-danger well shadow">{{ 'Ostatnia aktywność' | trans }}</h3>
+            <ul class="list-unstyled">
+                {% for progress in progresses %}
+                    <li class="well">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <dl class="dl-horizontal">
+                                    <dt>{{ progress.title }}</dt>
+                                    <dd>{{ progress.description }}</dd>
+                                    <dt>{{ 'Początek' | trans }}</dt>
+                                    <dd>{{ progress.started | date('Y-m-d') }}</dd>
+                                    <dt>{{ 'Koniec' | trans }}</dt>
+                                    <dd>{{ progress.ended | date('Y-m-d') }}</dd>
+                                </dl>
+                            </div>
+                            <div class="col-md-2"><a href="#category{{ progress.category.name }}" class="btn btn-primary">{{ progress.category.name }}</a></div>
+                            <div class="col-md-2">
+                                <a href="#" class="btn btn-primary">{{ progress.user.username }}</a>
+                            </div>
+                        </div>
+
+                    </li>
+                {% else %}
+                    <li>{{ 'Brak aktywności' | trans }}</li>
+                {% endfor %}
+            </ul>
+        </div>
     </section>
     <section class="fixed-bg-pure">
         <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum

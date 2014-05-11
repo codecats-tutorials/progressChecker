@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c96e0c14-3824-4e79-bd39-617e2c408759" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/public/images/php-bg.png" afterPath="$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/public/images/php-bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Category.js" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Category.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Category.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/CategoryType.php" afterPath="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/CategoryType.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/FrontBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/CodeCats/FrontBundle/Controller/DefaultController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/views/Default/index.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/public/css/main.css" afterPath="$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/public/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Symfony.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,19 +27,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.twig" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/views/Default/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="57" selection-start="6837" selection-end="6837" vertical-scroll-proportion="-7.098039" vertical-offset="1153" max-vertical-offset="2565">
+            <state line="135" column="92" selection-start="8762" selection-end="8762" vertical-scroll-proportion="0.61102104" vertical-offset="1648" max-vertical-offset="2910">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/public/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="18" selection-start="6371" selection-end="6371" vertical-scroll-proportion="0.15756631" vertical-offset="1759" max-vertical-offset="2415">
+            <state line="106" column="19" selection-start="6039" selection-end="6039" vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="2625">
               <folding />
             </state>
           </provider>
@@ -54,8 +48,10 @@
       <file leaf-file-name="DefaultController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/FrontBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="28" selection-start="565" selection-end="565" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="390">
-              <folding />
+            <state line="20" column="85" selection-start="792" selection-end="792" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="450">
+              <folding>
+                <element signature="e#51#92#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,7 +59,7 @@
       <file leaf-file-name="Progress.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Progress.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="64" selection-start="648" selection-end="663" vertical-scroll-proportion="-5.625" vertical-offset="360" max-vertical-offset="2940">
+            <state line="34" column="64" selection-start="648" selection-end="663" vertical-scroll-proportion="-0.0" vertical-offset="510" max-vertical-offset="2955">
               <folding />
             </state>
           </provider>
@@ -130,9 +126,9 @@
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Category.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js" />
         <option value="$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/CategoryType.php" />
+        <option value="$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/public/css/main.css" />
         <option value="$PROJECT_DIR$/src/CodeCats/FrontBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/views/Default/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/public/css/main.css" />
       </list>
     </option>
   </component>
@@ -1707,12 +1703,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1936,53 +1932,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Form/CategoryType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="44" selection-start="632" selection-end="632" vertical-scroll-proportion="0.35433072" vertical-offset="0" max-vertical-offset="690">
-          <folding />
-        </state>
+        <state line="19" column="44" selection-start="632" selection-end="632" vertical-scroll-proportion="0.35433072" vertical-offset="0" max-vertical-offset="690" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/grid/node_/Category.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="38" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.77389985" vertical-offset="135" max-vertical-offset="1440">
-          <folding />
-        </state>
+        <state line="43" column="38" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.77389985" vertical-offset="135" max-vertical-offset="1440" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/js/panel/model/Category.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="193" selection-end="260" vertical-scroll-proportion="0.3414264" vertical-offset="0" max-vertical-offset="659">
-          <folding />
-        </state>
+        <state line="15" column="0" selection-start="193" selection-end="260" vertical-scroll-proportion="0.3414264" vertical-offset="0" max-vertical-offset="659" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Category.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="53" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.8502496" vertical-offset="1289" max-vertical-offset="1965">
-          <folding>
-            <element signature="e#47#95#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Progress.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="64" selection-start="648" selection-end="663" vertical-scroll-proportion="-5.625" vertical-offset="360" max-vertical-offset="2940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/FrontBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="28" selection-start="565" selection-end="565" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
+        <state line="120" column="53" selection-start="2455" selection-end="2455" vertical-scroll-proportion="0.8502496" vertical-offset="1289" max-vertical-offset="1965" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Resources/public/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="28" selection-end="146" vertical-scroll-proportion="-0.5555556" vertical-offset="0" max-vertical-offset="3465">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="28" selection-end="146" vertical-scroll-proportion="-0.5555556" vertical-offset="0" max-vertical-offset="3465" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/public/images/php-bg.png">
@@ -1995,16 +1965,32 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/views/Default/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/PanelBundle/Entity/Progress.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="57" selection-start="6837" selection-end="6837" vertical-scroll-proportion="-7.098039" vertical-offset="1153" max-vertical-offset="2565">
+        <state line="34" column="64" selection-start="648" selection-end="663" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="2955">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/public/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="18" selection-start="6371" selection-end="6371" vertical-scroll-proportion="0.15756631" vertical-offset="1759" max-vertical-offset="2415">
+        <state line="106" column="19" selection-start="6039" selection-end="6039" vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="2625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/FrontBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="85" selection-start="792" selection-end="792" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="450">
+          <folding>
+            <element signature="e#51#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeCats/FrontBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="92" selection-start="8762" selection-end="8762" vertical-scroll-proportion="0.61102104" vertical-offset="1648" max-vertical-offset="2910">
           <folding />
         </state>
       </provider>

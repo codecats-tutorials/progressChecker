@@ -104,6 +104,7 @@
 }
 .fixed-bg-pure {
     padding: 10%;
+    padding-top: 2%;
     position: relative;
     background: #f7e1b5;
 }
@@ -130,6 +131,19 @@ div.bgtriangle {
     border-width: 500px 900px 0px 0;
     border-color: transparent #f7e1b5 transparent transparent;
     background: url(../images/python-bg.png) fixed;
+    background-size: 100% 100%;
+}
+div.bgtriangle-pure {
+    position: absolute;
+    margin-left: -20%;
+    margin-top: -10%;
+    z-index: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 1200px 800px 0px 0;
+    border-color: #f7e1b5 transparent transparent transparent;
+    *background: url(../images/python-bg.png) fixed;
     background-size: 100% 100%;
 }
 div.bgtriangle-fix {
