@@ -1,15 +1,7 @@
 {% extends "CodeCatsFrontBundle::layout.html.twig" %}
-{% block body %}
-<section class="background-azure">
-    <header class="navbar navbar-default" role="navigation">
-        <nav class="container">
-            <ul class="nav nav-justified">
-                <li><a href="#">{{ 'Statystyki' | trans }}</a></li>
-                <li><a href="#">{{ 'Użytkownicy' | trans }}</a></li>
-                <li><a href="#">{{ 'Technologie' | trans }}</a></li>
-            </ul>
-        </nav>
-    </header>
+{% block title %}{{ 'Strona główna' | trans }}{% endblock %}
+{% block content %}
+
     <section class="front-header">
         <div>
             <h1 class="text-center title">Progress Checker</h1>
@@ -24,18 +16,17 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <img src="{{ asset('bundles/codecatsfront/images/php-bg.png') | imagine_filter('my_thumb') }}" alt="...">
-                            <div class="carousel-caption border opacity shadow">
-                                {{ 'PHP jest najczęściej stosowany do tworzenia skryptów po stronie serwera WWW, ale może być on również używany do przetwarzania danych z poziomu wiersza poleceń, a nawet do pisania programów pracujących w trybie graficznym (np. za pomocą biblioteki GTK+, używając rozszerzenia PHP-GTK). Implementacja PHP wraz z serwerem WWW Apache oraz serwerem baz danych MySQL określana jest jako platforma AMP (w środowisku Linux – LAMP, w Windows – WAMP). Ponadto PHP można uruchomić na serwerze IIS (Windows) oraz w chmurze Windows Azure.' | trans }}
+                            <div class="carousel-caption">
+                                {{ 'PHP jest najczęściej stosowany do tworzenia skryptów po stronie serwera WWW, ale może być on również używany do przetwarzania danych z poziomu wiersza poleceń.' | trans }}
                             </div>
                         </div>
                         <div class="item">
                             <img src="{{ asset('bundles/codecatsfront/images/python-bg.png') | imagine_filter('my_thumb') }}" alt="...">
                             <div class="carousel-caption">
-                                {{ 'Python – język programowania wysokiego poziomu ogólnego przeznaczenia[4] i rozbudowanym pakiecie bibliotek standardowych[5], którego ideą przewodnią jest czytelność i klarowność kodu źródłowego. Jego składnia cechuje się przejrzystością i zwięzłością[6][7]. Python wspiera różne paradygmaty programowania: obiektowy, imperatywny oraz w mniejszym stopniu funkcyjny. Posiada w pełni dynamiczny system typów i automatyczne zarządzanie pamięcią, będąc w tym podobnym do języków Perl, Ruby, Scheme czy Tcl. Podobnie jak inne języki dynamiczne jest często używany jako język skryptowy. Interpretery Pythona są dostępne na wiele systemów operacyjnych. Python rozwijany jest jako projekt Open Source zarządzany przez Python Software Foundation, która jest organizacją non-profit. Standardową implementacja języka jest CPython (napisany w C), ale istnieją też inne, np. Jython (napisany w Javie), CLPython napisany w Common Lisp, IronPython (na platformę .NET) i PyPy (napisany w Pythonie, zob. bootstrap).' | trans }}
+                                {{ 'Python – język programowania wysokiego poziomu ogólnego przeznaczenia[4] i rozbudowanym pakiecie bibliotek standardowych[5], którego ideą przewodnią jest czytelność i klarowność kodu źródłowego.' | trans }}
                             </div>
                         </div>
                     </div>
-
                     <!-- Controls -->
                     <a class="left carousel-control hidden" href="#carousel-example-generic" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left"></span>
@@ -44,23 +35,27 @@
                         <span class="glyphicon glyphicon-chevron-right"></span>
                     </a>
                 </div>
-
             </div>
         </div>
     </section>
     <section class="bg1">
         <article>
             <h3 class="text-danger well shadow">{{ 'Najaktywniejsi użytkownicy' | trans }}</h3>
-            <div class="row">
+        {% set rowCounter = 0 %}
+        {% set rowOpen = false %}
         {% for user in users %}
+                {% if rowCounter == 0 %}
+                    {% set rowOpen = true %}
+                    <div class="row">
+                {% endif %}
                 <div class="col-md-4">
                     <div>
-                        <div class="pull-right navbar-text well text-muted center-block opacity shadow">
-                            <div class="text-center well shadow">
+                        <div class="pull-right navbar-text well well-sm text-muted center-block opacity shadow">
+                            <div class="text-center well well-sm shadow">
                                 {{ 'Użytkownik' | trans }}: <span class="text-primary">{{ user[0].username }}</span>
                                 <span class="bg-warning clearfix">{{ 'E-mail' | trans }}: {{ user[0].email }}</span>
                                 <span class="bg-warning clearfix">{{ 'Rola' | trans }}: {{ user[0].grade }}</span>
-                                <ol class="well">
+                                <ol class="well well-sm">
                                     {% for phone in user[0].phones %}
                                         <li>{{ 'Telefon' | trans }}: {{ phone.number }}</li>
                                     {% else %}
@@ -74,43 +69,62 @@
                                 </div>
                             {% endif %}
                             <hr>
-                            <p class="center-block well shadow">
+                            <p class="center-block well well-sm shadow">
                                 {{ 'Ilość dni spędzonych podczas projektu' | trans }}:
                                 {% if user.progress_days %}<span class="text-danger">{{ user.progress_days }}</span>{% else %} - {% endif %}
                             </p>
-                            <a class="btn btn-primary center-block" href="#">{{ 'Zobacz szczegóły' | trans }}</a>
+                            <a class="btn btn-primary center-block" href="#">{{ 'Zobacz szczegóły' | trans }} <span class="glyphicon glyphicon-hand-left"></span></a>
                         </div>
                     </div>
                 </div>
+                {% set rowCounter = rowCounter + 1 %}
+                {% if rowCounter == 3 %}
+                    {% set rowOpen = false %}
+                    </div>
+                {% endif %}
+                {% if rowCounter == 3 %}
+                    {% set rowCounter = 0 %}
+                {% endif %}
         {% endfor %}
+        {% if rowOpen == true %}
             </div>
+        {% endif %}
         </article>
     </section>
     <section class="fixed-bg-pure">
         <div class="bgtriangle"></div>
         <div class="on-top bgtriangle-fix">
             <h3 class="text-danger well shadow">{{ 'Kategorie' | trans }}</h3>
-                {% set rowCounter = '0' %}
+                {% set rowCounter = 0 %}
+                {% set rowOpen = false %}
                 {% for category in categories %}
                     {% if rowCounter == 0 %}
+                        {% set rowOpen = true %}
                         <div class="row">
                     {% endif %}
                     <div class="col-md-4">
-                        <dl class="opacity well shadow border">
+                        <dl class="opacity well well-sm shadow border">
                             <dt id="category{{ category.name }}">{{ category.name }}</dt>
                             <dd>{{ category.description }}</dd>
-                            <dd><a class="btn btn-primary center-block" href="#">{{ 'Zobacz szczegóły' | trans }}</a></dd>
+                            <dd>
+                                <a class="btn btn-primary center-block" href="#">
+                                    {{ 'Zobacz szczegóły' | trans }} <span class="glyphicon glyphicon-hand-left"></span>
+                                </a>
+                            </dd>
                         </dl>
                     </div>
                     {% set rowCounter = rowCounter + 1 %}
                     {% if rowCounter == 3 %}
+                        {% set rowOpen = false %}
                         </div>
                     {% endif %}
                     {% if rowCounter == 3 %}
                         {% set rowCounter = 0 %}
                     {% endif %}
                 {% endfor %}
-
+                {% if rowOpen == true %}
+                    </div>
+                {% endif %}
         </div>
     </section>
     <section class="bg2">
@@ -119,7 +133,7 @@
             <h3 class="text-danger well shadow">{{ 'Ostatnia aktywność' | trans }}</h3>
             <ul class="list-unstyled">
                 {% for progress in progresses %}
-                    <li class="well">
+                    <li class="opacity shadow border margins">
                         <div class="row">
                             <div class="col-md-8">
                                 <dl class="dl-horizontal">
@@ -131,9 +145,15 @@
                                     <dd>{{ progress.ended | date('Y-m-d') }}</dd>
                                 </dl>
                             </div>
-                            <div class="col-md-2"><a href="#category{{ progress.category.name }}" class="btn btn-primary">{{ progress.category.name }}</a></div>
                             <div class="col-md-2">
-                                <a href="#" class="btn btn-primary">{{ progress.user.username }}</a>
+                                <a href="#category{{ progress.category.name }}" class="btn btn-primary">
+                                    {{ progress.category.name }} <span class="glyphicon glyphicon-briefcase"></span>
+                                </a>
+                            </div>
+                            <div class="col-md-2">
+                                <a href="#" class="btn btn-primary">
+                                    {{ progress.user.username }} <span class="glyphicon glyphicon-user"></span>
+                                </a>
                             </div>
                         </div>
 
@@ -160,7 +180,9 @@
                     {% if categoryMostUsed[0].progress is defined %}
                         <div class="text-muted">
                             {{ 'Nazwa' | trans }}:
-                            <a class="btn btn-primary center-block" href="#">{{ categoryMostUsed[0].progress.category.name }}</a>
+                            <a class="btn btn-primary center-block" href="#">
+                                {{ categoryMostUsed[0].progress.category.name }} <span class="glyphicon glyphicon-briefcase"></span>
+                            </a>
                         </div>
                         <p>
                             <span class="text-muted">{{ 'Liczba dni' }}: </span><span class="text-danger">{{ categoryMostUsed[0].countDays }}</span>
@@ -174,7 +196,7 @@
                 <div class="opacity border shadow well">
                     <h4>{{ 'Najaktywniejszy użytkownik' | trans }}</h4>
                     {% if users[0][0] is defined %}
-                        <a class="btn btn-primary center-block" href="#">{{ users[0][0].username }}</a>
+                        <a class="btn btn-primary center-block" href="#">{{ users[0][0].username }} <span class="glyphicon glyphicon-user"></span></a>
                         <br>
                         <p>
                             <span class="text-muted">{{ 'Liczba dni' }}: </span><span class="text-danger">{{ users[0].progress_days }}</span>
@@ -199,12 +221,14 @@
                         <span class="text-muted">{{ 'Liczba dni' }}: </span><span class="text-danger">{{ progressStrike.strike }}</span>
                         <div class="text-muted">
                             {{ 'Tytuł' | trans }}:
-                            <a class="btn btn-primary center-block" href="#">{{ progressStrike.progress.title }}</a>
+                            <a class="btn btn-primary center-block" href="#">
+                                {{ progressStrike.progress.title }} <span class="glyphicon glyphicon-cloud"></span>
+                            </a>
                         </div>
                         <br>
                         <div class="text-muted">
                             {{ 'Użytkownik' | trans }}:
-                            <a class="btn btn-primary center-block" href="#">{{ progressStrike.progress.user.username }}</a>
+                            <a class="btn btn-primary center-block" href="#">{{ progressStrike.progress.user.username }} <span class="glyphicon glyphicon-user"></span></a>
                         </div>
                         <br>
                         <p>
@@ -219,35 +243,36 @@
         </div>
     </section>
     <section class="bg3">
-        <h1>Tu mogę dać użytkowników</h1>
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
+        <h3 class="text-danger well shadow">{{ 'Ostatnio dołączyli' | trans }}</h3>
+        {% set rowCounter = 0 %}
+        {% set rowOpen = false %}
+        {% for user in newUsers %}
+            {% if rowCounter == 0 %}
+                {% set rowOpen = true %}
+                <div class="row">
+            {% endif %}
+            <div class="col-md-3">
+                <dl class="opacity well shadow border">
+                    <dt>{{ 'E-mail' | trans }}: {{ user.email }}</dt>
+                    <dd>{{ 'Nazwa' | trans }}: {{ user.username }}</dd>
+                    <dd>
+                        <a class="btn btn-primary center-block" href="#">
+                            {{ 'Zobacz szczegóły' | trans }} <span class="glyphicon glyphicon-hand-left"></span>
+                        </a>
+                    </dd>
+                </dl>
+            </div>
+            {% set rowCounter = rowCounter + 1 %}
+            {% if rowCounter == 4 %}
+                {% set rowOpen = false %}
+                </div>
+            {% endif %}
+            {% if rowCounter == 4 %}
+                {% set rowCounter = 0 %}
+            {% endif %}
+        {% endfor %}
+        {% if rowOpen == true %}
+            </div>
+        {% endif %}
     </section>
-    <section class="fixed-bg-pure">
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <br><br><br><br><br><br><br><br><br><br>
-    </section>
-    <footer>
-        Hello see you soon!
-        <button type="button" class="btn btn-default btn-lg">
-            <span class="glyphicon glyphicon-star"></span> Star
-        </button>
-    {#
-        <img src="{{ asset('bundles/codecatsfront/images/python-bg.png') }}">#}
-    </footer>
-</section>
 {% endblock %}

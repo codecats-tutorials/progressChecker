@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     public function indexAction()
     {
-        return new Response('CodeCatsFrontBundle:User:index.html.twig');
+        return $this->render('CodeCatsFrontBundle:User:index.html.twig');
     }
 
 }

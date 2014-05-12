@@ -2,6 +2,14 @@ code_cats_front_homepage:
     pattern:  /
     defaults: { _controller: CodeCatsFrontBundle:Default:index }
 
-index:
-    pattern: /user/index
+code_cats_front_users:
+    pattern: /users/index
     defaults: { _controller: CodeCatsFrontBundle:User:index }
+
+code_cats_front_statistics:
+    pattern: /statistics/index
+    defaults: { _controller: CodeCatsFrontBundle:Statistics:index }
+
+code_cats_front_technology:
+    pattern: /technology/index
+    defaults: { _controller: CodeCatsFrontBundle:Technology:index }

@@ -20,7 +20,8 @@ class DefaultController extends Controller
             'progresses'    => $progress->findBy(array(), array('ended' => 'DESC'), 5),
             'progressStrike'=> $progress->findLongestStrike(),
             'countDays'     => $progress->countDays(),
-            'categoryMostUsed' => $category->findMostUsed()
+            'categoryMostUsed' => $category->findMostUsed(),
+            'newUsers'      => $user->findBy(array(), array('id' => 'DESC'), 8)
         ));
     }
 }
