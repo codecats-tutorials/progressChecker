@@ -63,7 +63,7 @@
                                     {% endfor %}
                                 </ol>
                             </div>
-                            {% if user[0].avatar.path %}
+                            {% if user[0].avatar.path is defined %}
                                 <div>
                                     <img class="img-circle center-block shadow" src="{{ path('code_cats_panel_avatar_get', {name: user[0].avatar.path}) }}" alt="avatar for {{ user[0].username }}"/>
                                 </div>
