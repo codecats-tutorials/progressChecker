@@ -13,6 +13,25 @@ use Doctrine\ORM\Query\ResultSetMapping;
  */
 class UserRepository extends EntityRepository
 {
+    public function findFavoriteCategory($id)
+    {
+        $qb = $this->createQueryBuilder('u')
+            ->select('u')->addSelect('p as progress')->addSelect('SUM(DATEDIFF(p.ended, p.started)) as time')
+            ->leftJoin('u.progresses', 'p')->where('u.id = :id')->groupBy('p.id')->orderBy('time', 'DESC');
+        $qb->setParameter('id', $id);
+
+        echo $qb->getQuery()->getSQL();
+
+        return $qb->getQuery()->getResult();
+    }
+    public function findProgressTime($id)
+    {
+        $qb = $this->createQueryBuilder('u')->select('u')->addSelect('SUM(DATEDIFF(p.ended, p.started)) as time')
+            ->leftJoin('u.progresses', 'p')->where('u.id = :id');
+        $qb->setParameter('id', $id);
+
+        return $qb->getQuery()->getSingleResult();
+    }
     /**
     SELECT *, sum(datediff(p.ended, p.started)) as progress_days FROM User u
     left join Progress p

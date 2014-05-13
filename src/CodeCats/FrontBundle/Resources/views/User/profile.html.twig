@@ -1,0 +1,72 @@
+{% extends "CodeCatsFrontBundle::layout.html.twig" %}
+{% block title %}{{ 'Profil użytkownika' | trans }}{% endblock %}
+{% block content %}
+    <section class="fixed-bg-pure"></section>
+    <section class="fixed-bg-pure"></section>
+    <section class="bg1">
+        <div class="row">
+            {% if user.avatar.path is defined %}
+                <div class="col-md-4">
+                    <img class="size-300x200" src="{{ path('code_cats_panel_avatar_get', {name: user.avatar.path}) }}" alt="avatar for {{ user.username }}"/>
+                </div>
+            {% endif %}
+            <div class="col-md-4 text-muted center-block">
+                <div class="text-center">
+                    <div class="well well-sm shadow">{{ 'Użytkownik' | trans }}: <span class="text-primary">{{ user.username }}</span></div>
+                    <div class="well well-sm shadow">{{ 'E-mail' | trans }}: {{ user.email }}</div>
+                    <div class="well well-sm shadow">{{ 'Rola' | trans }}: {{ user.grade }}</div>
+                </div>
+                <div class="well well-sm shadow">
+                    <ol class="well well-sm">
+                        {% for phone in user.phones %}
+                            <li>{{ 'Telefon' | trans }}: {{ phone.number }}</li>
+                        {% else %}
+                            <li>{{ 'Brak numeru telefonu' | trans }}</li>
+                        {% endfor %}
+                    </ol>
+                </div>
+                <p class="center-block well well-sm shadow">
+                    {{ 'Ilość dni spędzonych podczas projektu' | trans }}:
+                    <span class="text-danger">{{ progressTime.time }}</span>
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="fixed-bg-pure">
+        <div class="row">
+            <div class="col-md-8"><img class="margins" src="{{ asset('bundles/codecatsfront/images/php-bg.png')}}" alt="..."></div>
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    {% for progress in user.progresses %}
+                        <li class="well">
+                            <div>
+                                <h4>{{ progress.title }}</h4>
+                                <p class="text-primary">
+                                    {{ progress.description }}
+                                </p>
+                                <h3><small>{{ 'Czas' | trans }}</small></h3>
+                                <label>{{ 'Od' | trans }}: <span class="text-danger">{{ progress.started | date('d - m - Y') }}</span></label>
+                                <label>{{ 'Do' | trans }}: <span class="text-danger">{{ progress.ended | date('d - m - Y') }}</span></label>
+                            </div>
+                        </li>
+                    {% else %}
+                        <li><div>{{ 'Brak aktywności' | trans }}</div></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+    {{ dump(favorite[0]) }}
+    {#
+    <section class="bg2">
+
+    </section>
+    <section class="fixed-bg-pure">
+    </section>
+    <section class="bg3">
+
+    </section>
+    <section class="fixed-bg-pure">
+    </section>
+    #}
+{% endblock %}

@@ -1,7 +1,6 @@
 {% extends "CodeCatsFrontBundle::layout.html.twig" %}
 {% block title %}{{ 'Strona główna' | trans }}{% endblock %}
 {% block content %}
-
     <section class="front-header">
         <div>
             <h1 class="text-center title">Progress Checker</h1>
@@ -50,7 +49,7 @@
                 {% endif %}
                 <div class="col-md-4">
                     <div>
-                        <div class="pull-right navbar-text well well-sm text-muted center-block opacity shadow">
+                        <div class="navbar-text well well-sm text-muted center-block opacity shadow">
                             <div class="text-center well well-sm shadow">
                                 {{ 'Użytkownik' | trans }}: <span class="text-primary">{{ user[0].username }}</span>
                                 <span class="bg-warning clearfix">{{ 'E-mail' | trans }}: {{ user[0].email }}</span>
@@ -73,7 +72,9 @@
                                 {{ 'Ilość dni spędzonych podczas projektu' | trans }}:
                                 {% if user.progress_days %}<span class="text-danger">{{ user.progress_days }}</span>{% else %} - {% endif %}
                             </p>
-                            <a class="btn btn-primary center-block" href="#">{{ 'Zobacz szczegóły' | trans }} <span class="glyphicon glyphicon-hand-left"></span></a>
+                            <a class="btn btn-primary center-block" href="{{ path('code_cats_front_user_profile', {id: user[0].id}) }}">
+                                {{ 'Zobacz szczegóły' | trans }} <span class="glyphicon glyphicon-hand-left"></span>
+                            </a>
                         </div>
                     </div>
                 </div>

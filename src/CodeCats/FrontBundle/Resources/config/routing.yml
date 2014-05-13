@@ -6,6 +6,10 @@ code_cats_front_users:
     pattern: /users/index
     defaults: { _controller: CodeCatsFrontBundle:User:index }
 
+code_cats_front_user_profile:
+    pattern: /user/{id}
+    defaults: { _controller: CodeCatsFrontBundle:User:profile }
+
 code_cats_front_statistics:
     pattern: /statistics/index
     defaults: { _controller: CodeCatsFrontBundle:Statistics:index }

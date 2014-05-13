@@ -186,3 +186,8 @@ div.bgtriangle-fix {
         background-attachment: scroll;
     }
 }
+
+.size-300x200 {
+    height: 300px;
+    width: 200px;
+}
