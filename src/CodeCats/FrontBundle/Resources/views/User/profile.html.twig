@@ -1,5 +1,5 @@
 {% extends "CodeCatsFrontBundle::layout.html.twig" %}
-{% block title %}{{ 'Profil użytkownika' | trans }}{% endblock %}
+{% block title %}{{ user.username }} - {{ 'Profil użytkownika' | trans }}{% endblock %}
 {% block content %}
     <section class="fixed-bg-pure"></section>
     <section class="fixed-bg-pure"></section>
@@ -38,7 +38,7 @@
             <div class="col-md-4">
                 <ul class="list-unstyled">
                     {% for progress in user.progresses %}
-                        <li class="well">
+                        <li class="well shadow">
                             <div>
                                 <h4>{{ progress.title }}</h4>
                                 <p class="text-primary">
@@ -56,17 +56,49 @@
             </div>
         </div>
     </section>
-    {{ dump(favorite[0]) }}
-    {#
     <section class="bg2">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-6">
+                <ul class="list-unstyled">
+                {% for favorite in favorites %}
+                    <li class="active well well-lg shadow">
+                        <h4 class="text-center">
+                            {{ favorite.progress.category.name }} <span class="badge pull-right">{{ favorite.time }}</span> <small class="pull-right">{{ 'Liczba dni' | trans }}: </small>
+                            <small>{{ favorite.progress.category.description | length > 50 ? favorite.progress.category.description | slice(0, 50) ~ ' ...' : favorite.progress.category.description }}</small>
+                        </h4>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </section>
+    {% set max = progressTime.time %}
+    <section class="fixed-bg-pure">
+        <div class="well well-lg">
+            <h4>{{ 'Czas całościowy: ' | trans }} <span class="badge">{{ max }}</span> <small>{{ 'dni' | trans }}</small></h4>
+            <div class="progress progress-striped active">
+                <div class="progress-bar"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                    <span class="sr-only">100% {{ 'użycia' }}</span>
+                </div>
+            </div>
+        </div>
+        {% for favorite in favorites %}
+            {% set percents = (favorite.time * 100 / max) | round  %}
+            <div class="well well-lg">
+                <h3>{{ 'Czas dla: ' | trans }} <label class="label label-primary">{{ favorite.progress.category.name }}</label> <span class="badge">{{ favorite.time }}</span> <small>{{ 'dni' | trans }}</small></h3>
+                <div class="progress progress-striped active">
+                    <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="{{ percents }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percents }}%">
+                        <span class="sr-only">{{ percents }}% {{ 'użycia' }}</span>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+    {#<section class="bg3">
 
     </section>
     <section class="fixed-bg-pure">
-    </section>
-    <section class="bg3">
-
-    </section>
-    <section class="fixed-bg-pure">
-    </section>
-    #}
+    </section>#}
 {% endblock %}

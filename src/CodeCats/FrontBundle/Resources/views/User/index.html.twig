@@ -2,11 +2,69 @@
 {% block title %}{{ 'Użytkownik' | trans }}{% endblock %}
 {% block content %}
     <section class="bg1">
-
+        <article>
+            <h3 class="text-danger well shadow">{{ 'Najaktywniejsi użytkownicy' | trans }}</h3>
+            {% set rowCounter = 0 %}
+            {% set rowOpen = false %}
+            {% for user in mostActive %}
+                {% if rowCounter == 0 %}
+                    {% set rowOpen = true %}
+                    <div class="row">
+                {% endif %}
+                <div class="col-md-4">
+                    <div>
+                        <div class="navbar-text well well-sm text-muted center-block opacity shadow">
+                            <div class="text-center well well-sm shadow">
+                                {{ 'Użytkownik' | trans }}: <span class="text-primary">{{ user[0].username }}</span>
+                                <span class="bg-warning clearfix">{{ 'E-mail' | trans }}: {{ user[0].email }}</span>
+                                <span class="bg-warning clearfix">{{ 'Rola' | trans }}: {{ user[0].grade }}</span>
+                                <ol class="well well-sm">
+                                    {% for phone in user[0].phones %}
+                                        <li>{{ 'Telefon' | trans }}: {{ phone.number }}</li>
+                                    {% else %}
+                                        <li>{{ 'Brak numeru telefonu' | trans }}</li>
+                                    {% endfor %}
+                                </ol>
+                            </div>
+                            {% if user[0].avatar.path is defined %}
+                                <div>
+                                    <img class="img-circle center-block shadow" src="{{ path('code_cats_panel_avatar_get', {name: user[0].avatar.path}) }}" alt="avatar for {{ user[0].username }}"/>
+                                </div>
+                            {% endif %}
+                            <hr>
+                            <p class="center-block well well-sm shadow">
+                                {{ 'Ilość dni spędzonych podczas projektu' | trans }}:
+                                {% if user.progress_days %}<span class="text-danger">{{ user.progress_days }}</span>{% else %} - {% endif %}
+                            </p>
+                            <a class="btn btn-primary center-block" href="{{ path('code_cats_front_user_profile', {id: user[0].id}) }}">
+                                {{ 'Zobacz szczegóły' | trans }} <span class="glyphicon glyphicon-hand-left"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {% set rowCounter = rowCounter + 1 %}
+                {% if rowCounter == 3 %}
+                    {% set rowOpen = false %}
+                    </div>
+                {% endif %}
+                {% if rowCounter == 3 %}
+                    {% set rowCounter = 0 %}
+                {% endif %}
+            {% endfor %}
+            {% if rowOpen == true %}
+                </div>
+            {% endif %}
+        </article>
     </section>
     <section class="fixed-bg-pure">
+        <h3 class="text-danger well shadow">{{ 'Wszyscy użytkownicy' | trans }}</h3>
+        {% for user in users %}
+            <span class="well well-sm opacity shadow border">
+                <a class="btn" href="{{ path('code_cats_front_user_profile', {id: user.id}) }}">{{ user.username }}</a>
+            </span>
+        {% endfor %}
     </section>
-    <section class="bg2">
+    {#<section class="bg2">
 
     </section>
     <section class="fixed-bg-pure">
@@ -15,5 +73,5 @@
 
     </section>
     <section class="fixed-bg-pure">
-    </section>
+    </section>#}
 {% endblock %}

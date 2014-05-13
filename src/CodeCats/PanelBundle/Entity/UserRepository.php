@@ -13,21 +13,21 @@ use Doctrine\ORM\Query\ResultSetMapping;
  */
 class UserRepository extends EntityRepository
 {
-    public function findFavoriteCategory($id)
+    public function findFavoriteCategory($id, $limit)
     {
-        $qb = $this->createQueryBuilder('u')
-            ->select('u')->addSelect('p as progress')->addSelect('SUM(DATEDIFF(p.ended, p.started)) as time')
-            ->leftJoin('u.progresses', 'p')->where('u.id = :id')->groupBy('p.id')->orderBy('time', 'DESC');
-        $qb->setParameter('id', $id);
+        $qb = $this->getEntityManager()->getRepository('CodeCatsPanelBundle:Progress')->createQueryBuilder('p')
+            ->select('p as progress')->addSelect('SUM(DATEDIFF(p.ended, p.started)) as time')
+            ->leftJoin('p.user', 'u')->leftJoin('p.category', 'c')->where('u.id = :id')->groupBy('c.id')->orderBy('time', 'DESC')
+            ->setMaxResults($limit);
 
-        echo $qb->getQuery()->getSQL();
+        $qb->setParameter('id', $id);
 
         return $qb->getQuery()->getResult();
     }
-    public function findProgressTime($id)
+    public function findProgressTime($id, $limit)
     {
         $qb = $this->createQueryBuilder('u')->select('u')->addSelect('SUM(DATEDIFF(p.ended, p.started)) as time')
-            ->leftJoin('u.progresses', 'p')->where('u.id = :id');
+            ->leftJoin('u.progresses', 'p')->where('u.id = :id')->setMaxResults($limit);
         $qb->setParameter('id', $id);
 
         return $qb->getQuery()->getSingleResult();

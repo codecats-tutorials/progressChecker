@@ -25,7 +25,6 @@ class CategoryRepository extends EntityRepository
      */
     public function findMostUsed($limit = 1)
     {
-        $qb = $this->createQueryBuilder('c');
         $qb = $this->getEntityManager()->getRepository('CodeCatsPanelBundle:Progress')->createQueryBuilder('p');
         $qb->select('p as progress')->addSelect('SUM(DATEDIFF(p.ended, p.started)) as countDays')
             ->join('p.category', 'cat')->groupBy('p.category')->orderBy('countDays', 'DESC')->setMaxResults($limit);

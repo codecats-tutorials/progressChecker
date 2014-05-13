@@ -10,7 +10,13 @@ class UserController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('CodeCatsFrontBundle:User:index.html.twig');
+        $em         = $this->getDoctrine()->getManager();
+        $users      = $em->getRepository('CodeCatsPanelBundle:User');
+
+        return $this->render('CodeCatsFrontBundle:User:index.html.twig', array(
+            'mostActive'        => $users->findMostActive(3),
+            'users'             => $users->findAll()
+        ));
     }
 
     public function profileAction(Request $request, $id)
@@ -19,8 +25,8 @@ class UserController extends Controller
 
         return $this->render('CodeCatsFrontBundle:User:profile.html.twig', array(
             'user'          => $user->find($id),
-            'progressTime'  => $user->findProgressTime($id),
-            'favorite'      => $user->findFavoriteCategory($id)
+            'progressTime'  => $user->findProgressTime($id, 3),
+            'favorites'     => $user->findFavoriteCategory($id, 5)
         ));
     }
 }

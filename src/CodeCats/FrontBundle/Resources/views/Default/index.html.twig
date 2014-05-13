@@ -152,7 +152,7 @@
                                 </a>
                             </div>
                             <div class="col-md-2">
-                                <a href="#" class="btn btn-primary">
+                                <a href="{{ path('code_cats_front_user_profile', {id: progress.user.id}) }}" class="btn btn-primary">
                                     {{ progress.user.username }} <span class="glyphicon glyphicon-user"></span>
                                 </a>
                             </div>
@@ -197,7 +197,7 @@
                 <div class="opacity border shadow well">
                     <h4>{{ 'Najaktywniejszy użytkownik' | trans }}</h4>
                     {% if users[0][0] is defined %}
-                        <a class="btn btn-primary center-block" href="#">{{ users[0][0].username }} <span class="glyphicon glyphicon-user"></span></a>
+                        <a class="btn btn-primary center-block" href="{{ path('code_cats_front_user_profile', {id: users[0][0].id}) }}">{{ users[0][0].username }} <span class="glyphicon glyphicon-user"></span></a>
                         <br>
                         <p>
                             <span class="text-muted">{{ 'Liczba dni' }}: </span><span class="text-danger">{{ users[0].progress_days }}</span>
@@ -229,7 +229,9 @@
                         <br>
                         <div class="text-muted">
                             {{ 'Użytkownik' | trans }}:
-                            <a class="btn btn-primary center-block" href="#">{{ progressStrike.progress.user.username }} <span class="glyphicon glyphicon-user"></span></a>
+                            <a class="btn btn-primary center-block" href="{{ path('code_cats_front_user_profile', {id: progressStrike.progress.user.id}) }}">
+                                {{ progressStrike.progress.user.username }} <span class="glyphicon glyphicon-user"></span>
+                            </a>
                         </div>
                         <br>
                         <p>
@@ -257,7 +259,7 @@
                     <dt>{{ 'E-mail' | trans }}: {{ user.email }}</dt>
                     <dd>{{ 'Nazwa' | trans }}: {{ user.username }}</dd>
                     <dd>
-                        <a class="btn btn-primary center-block" href="#">
+                        <a class="btn btn-primary center-block" href="{{ path('code_cats_front_user_profile', {id: user.id}) }}">
                             {{ 'Zobacz szczegóły' | trans }} <span class="glyphicon glyphicon-hand-left"></span>
                         </a>
                     </dd>
