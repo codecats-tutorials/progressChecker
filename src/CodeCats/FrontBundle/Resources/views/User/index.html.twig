@@ -64,10 +64,30 @@
             </span>
         {% endfor %}
     </section>
-    {#<section class="bg2">
+    <section class="bg2">
+        {% set percents = 100  %}
+        <div class="well well-lg shadow">
+            <h3>{{ 'Czas' | trans }} <label class="label label-primary">{{ 'ogółem' | trans }}</label> <span class="badge shadow">{{ countDays }}</span> <small>{{ 'dni' | trans }}</small></h3>
+            <div class="progress progress-striped active shadow">
+                <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="{{ percents }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percents }}%">
+                    <span class="sr-only">100% {{ 'użycia' }}</span>
+                </div>
+            </div>
+        </div>
 
+        {% for user in mostActive %}
+            {% set percents = (user.progress_days * 100 / countDays) | round  %}
+            <div class="well well-sm shadow">
+                <h3>{{ 'Czas użytkownika' | trans }} <a href="{{ path('code_cats_front_user_profile', {id: user[0].id}) }}" class="label label-success">{{ user[0].username }}</a> <span class="badge shadow">{{ user.progress_days }}</span> <small>{{ 'dni' | trans }}</small></h3>
+                <div class="progress progress-striped active shadow">
+                    <div class="progress-bar progress-bar-primary"  role="progressbar" aria-valuenow="{{ percents }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percents }}%">
+                        <span class="sr-only">100% {{ 'użycia' }}</span>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </section>
-    <section class="fixed-bg-pure">
+    {#<section class="fixed-bg-pure">
     </section>
     <section class="bg3">
 

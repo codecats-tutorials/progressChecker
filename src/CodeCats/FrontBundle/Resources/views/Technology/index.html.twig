@@ -1,12 +1,53 @@
 {% extends "CodeCatsFrontBundle::layout.html.twig" %}
 {% block title %}{{ 'Użytkownik' | trans }}{% endblock %}
 {% block content %}
+    <section class="fixed-bg-pure"></section><section class="fixed-bg-pure"></section>
     <section class="bg1">
-
+        {% set rowCounter = 0 %}
+        {% set rowOpen = false %}
+        {% for category in technologies %}
+            {% if rowCounter == 0 %}
+                {% set rowOpen = true %}
+                <div class="row">
+            {% endif %}
+            <div class="col-md-4">
+                <dl class="opacity well well-sm shadow border">
+                    <dt id="category{{ category.name }}">{{ category.name }}</dt>
+                    <dd>{{ category.description }}</dd>
+                    <dd>
+                        <a class="btn btn-primary center-block" href="{{ path('code_cats_front_technology_show', { id: category.id}) }}">
+                            {{ 'Zobacz szczegóły' | trans }} <span class="glyphicon glyphicon-hand-left"></span>
+                        </a>
+                    </dd>
+                </dl>
+            </div>
+            {% set rowCounter = rowCounter + 1 %}
+            {% if rowCounter == 3 %}
+                {% set rowOpen = false %}
+                </div>
+            {% endif %}
+            {% if rowCounter == 3 %}
+                {% set rowCounter = 0 %}
+            {% endif %}
+        {% endfor %}
+        {% if rowOpen == true %}
+            </div>
+        {% endif %}
     </section>
     <section class="fixed-bg-pure">
+        <ul class="list-unstyled row">
+            {% for used in mostUsed %}
+                <li class="col-md-5 well well-lg">
+                    <h4>{{ 'Najpopularniejszy' | trans }}</h4>
+                    <a href="{{ path('code_cats_front_technology_show', { id: used.progress.category.id}) }}" class="btn btn-danger">
+                        {{ used.progress.category.name }}
+                    </a>
+                    <label class="badge pull-right">{{ used.countDays }}</label>
+                </li>
+            {% endfor %}
+        </ul>
     </section>
-    <section class="bg2">
+    {#<section class="bg2">
 
     </section>
     <section class="fixed-bg-pure">
@@ -15,5 +56,5 @@
 
     </section>
     <section class="fixed-bg-pure">
-    </section>
+    </section>#}
 {% endblock %}

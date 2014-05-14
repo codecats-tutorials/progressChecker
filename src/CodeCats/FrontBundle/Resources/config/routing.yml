@@ -17,3 +17,7 @@ code_cats_front_statistics:
 code_cats_front_technology:
     pattern: /technology/index
     defaults: { _controller: CodeCatsFrontBundle:Technology:index }
+
+code_cats_front_technology_show:
+    pattern: /technology/single/{id}
+    defaults: { _controller: CodeCatsFrontBundle:Technology:show }

@@ -1,12 +1,142 @@
 {% extends "CodeCatsFrontBundle::layout.html.twig" %}
 {% block title %}{{ 'Użytkownik' | trans }}{% endblock %}
 {% block content %}
+    <section class="fixed-bg-pure"></section><section class="fixed-bg-pure"></section>
     <section class="bg1">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="opacity border shadow well">
+                    <h5>{{ 'Dni ogółem' | trans }} <small>{{ 'Suma dla wszystkich użytkowiników' | trans }}:</small> <span class="text-danger">{{ countDays }}</span></h5>
+                </div>
+            </div>
+            <div class="col-md-9">
+                {% set percents = 100  %}
+                <div class="well well-sm">
+                    <h3>{{ 'Ogółem: ' | trans }} <label class="label label-primary">{{ 'Razem' | trans }}</label> <span class="badge">{{ countDays }}</span> <small>{{ 'dni' | trans }}</small></h3>
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="{{ percents }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percents }}%">
+                            <span class="sr-only">{{ percents }}% {{ 'użycia' }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="opacity border shadow well">
+                    <h4>{{ 'Najdłużej używany język' | trans }}</h4>
+                    {% if categoryMostUsed[0].progress is defined %}
+                        <div class="text-muted">
+                            {{ 'Nazwa' | trans }}:
+                            <a class="btn btn-primary center-block" href="{{ path('code_cats_front_technology_show', { id: categoryMostUsed[0].progress.category.id}) }}">
+                                {{ categoryMostUsed[0].progress.category.name }} <span class="glyphicon glyphicon-briefcase"></span>
+                            </a>
+                        </div>
+                        <p>
+                            <span class="text-muted">{{ 'Liczba dni' }}: </span><span class="text-danger">{{ categoryMostUsed[0].countDays }}</span>
+                        </p>
+                    {% else %}
+                        {{ 'Brak danych' | trans }}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-md-9">
+                {% set percents = (categoryMostUsed[0].countDays * 100 / countDays) | round  %}
+                <div class="well well-sm">
+                    <h3>{{ 'Czas: ' | trans }} <label class="label label-primary">{{ categoryMostUsed[0].progress.category.name }}</label> <span class="badge">{{ categoryMostUsed[0].countDays }}</span> <small>{{ 'dni' | trans }}</small></h3>
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="{{ percents }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percents }}%">
+                            <span class="sr-only">{{ percents }}% {{ 'użycia' }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% if users[0][0] is defined %}
+            <div class="col-md-3">
+                <div class="opacity border shadow well">
 
+                    <h4>{{ 'Najaktywniejszy użytkownik' | trans }}</h4>
+
+                        <a class="btn btn-primary center-block" href="{{ path('code_cats_front_user_profile', {id: users[0][0].id}) }}">{{ users[0][0].username }} <span class="glyphicon glyphicon-user"></span></a>
+                        <br>
+                        <p>
+                            <span class="text-muted">{{ 'Liczba dni' }}: </span><span class="text-danger">{{ users[0].progress_days }}</span>
+                        </p>
+                </div>
+            </div>
+            <div class="col-md-9">
+                {% set percents = (users[0].progress_days * 100 / countDays) | round  %}
+                <div class="well well-sm">
+                    <h3>{{ 'Czas: ' | trans }} <label class="label label-primary">{{ users[0][0].username }}</label> <span class="badge">{{ users[0].progress_days }}</span> <small>{{ 'dni' | trans }}</small></h3>
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="{{ percents }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percents }}%">
+                            <span class="sr-only">{{ percents }}% {{ 'użycia' }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% else %}
+                {{ 'Brak danych' | trans }}
+            {% endif %}
+        </div>
     </section>
     <section class="fixed-bg-pure">
+        <div class="row">
+            <div class="col-md-9"></div>
+            <div class="col-md-3">
+                <div class="opacity border shadow well">
+                    <h4>{{ 'Liczba kategorii' | trans }}</h4>
+                    <p>
+                        <span class="text-muted">{{ 'Razem' }}: </span><span class="text-danger">{{ categories | length }}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                {% set percents = (progressStrike.strike * 100 / countDays) | round  %}
+                <div class="well well-sm">
+                    <h3>{{ 'Czas: ' | trans }} <label class="label label-primary">{{ progressStrike.progress.title }}</label> <span class="badge">{{ progressStrike.strike }}</span> <small>{{ 'dni' | trans }}</small></h3>
+                    <div class="progress progress-striped active">
+                        <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="{{ percents }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ percents }}%">
+                            <span class="sr-only">{{ percents }}% {{ 'użycia' }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="opacity border shadow well">
+                    <h4>{{ 'Najdłuższe przyłożenie' | trans }}</h4>
+                    <div>
+                        <span class="text-muted">{{ 'Liczba dni' }}: </span><span class="text-danger">{{ progressStrike.strike }}</span>
+                        <div class="text-muted">
+                            {{ 'Tytuł' | trans }}:
+                            <a class="btn btn-primary center-block" href="#">
+                                {{ progressStrike.progress.title }} <span class="glyphicon glyphicon-cloud"></span>
+                            </a>
+                        </div>
+                        <br>
+                        <div class="text-muted">
+                            {{ 'Użytkownik' | trans }}:
+                            <a class="btn btn-primary center-block" href="{{ path('code_cats_front_user_profile', {id: progressStrike.progress.user.id}) }}">
+                                {{ progressStrike.progress.user.username }} <span class="glyphicon glyphicon-user"></span>
+                            </a>
+                        </div>
+                        <br>
+                        <p>
+                            <span class="text-muted">{{ 'Od' }}: </span><span class="text-danger">{{ progressStrike.progress.started | date('Y-m-d') }}</span>
+                        </p>
+                        <p>
+                            <span class="text-muted">{{ 'Do' }}: </span><span class="text-danger">{{ progressStrike.progress.ended | date('Y-m-d') }}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="bg2">
+    {#<section class="bg2">
 
     </section>
     <section class="fixed-bg-pure">
@@ -15,5 +145,5 @@
 
     </section>
     <section class="fixed-bg-pure">
-    </section>
+    </section>#}
 {% endblock %}

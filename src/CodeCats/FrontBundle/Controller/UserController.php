@@ -12,10 +12,12 @@ class UserController extends Controller
     {
         $em         = $this->getDoctrine()->getManager();
         $users      = $em->getRepository('CodeCatsPanelBundle:User');
+        $progress   = $em->getRepository('CodeCatsPanelBundle:Progress');
 
         return $this->render('CodeCatsFrontBundle:User:index.html.twig', array(
             'mostActive'        => $users->findMostActive(3),
-            'users'             => $users->findAll()
+            'users'             => $users->findAll(),
+            'countDays'         => $progress->countDays()
         ));
     }
 
