@@ -3,12 +3,16 @@
 namespace CodeCats\PanelBundle\Controller;
 
 use CodeCats\PanelBundle\Entity\Email;
+use CodeCats\PanelBundle\Entity\Progress;
 use CodeCats\PanelBundle\Entity\User;
 use CodeCats\PanelBundle\Form\EmailType;
+use CodeCats\PanelBundle\Form\ProgressType;
+use CodeCats\PanelBundle\Form\Type\ExtjsTimeType;
 use CodeCats\PanelBundle\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Security\Acl\Exception\Exception;
 
 class TestController extends Controller
 {
@@ -36,11 +40,13 @@ class TestController extends Controller
 
     public function testAction(Request $request)
     {
+        $this->container->get('code_cats.type.extjs_time');
 
+        //$a = new ExtjsTimeType(null);
         $em     = $this->getDoctrine()->getManager();
-        $email   = new Email();
+        $ent   = new Progress();
 
-        $form = $this->createForm(new EmailType(), $email, array('method' => 'PUT'));
+        $form = $this->createForm(new ProgressType(), $ent, array('method' => 'PUT'));
         $form->add('submit', 'submit');
         $form->handleRequest($request);
 

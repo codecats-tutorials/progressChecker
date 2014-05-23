@@ -17,3 +17,9 @@ services:
         tags:
             - {name: doctrine.event_listener, event: prePersist }
             - {name: doctrine.event_listener, event: preUpdate }
+
+    code_cats.type.extjs_time:
+        class: CodeCats\PanelBundle\Form\Type\ExtjsTimeType
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: form.type_extension, alias: extjs_time }

@@ -43,6 +43,11 @@ class Progress implements \JsonSerializable
      */
     private $started;
 
+    /*
+     * @var
+     */
+    //private $startedTime;
+
     /**
      * @var DateTime
      *
@@ -50,6 +55,10 @@ class Progress implements \JsonSerializable
      */
     private $ended;
 
+    /**
+     * @ORM\Column(name="endedTime", type="datetime")
+     */
+    private $endedTime;
     /**
      * @ORM\ManyToOne(targetEntity="CodeCats\PanelBundle\Entity\Category", inversedBy="progresses")
      * @ORM\JoinColumn(name="category_id", referencedColumnName="id")
@@ -126,8 +135,6 @@ class Progress implements \JsonSerializable
     public function setStarted($date)
     {
         $this->started = $date;
-
-        return $this;
     }
 
     public function getStarted()
@@ -138,13 +145,21 @@ class Progress implements \JsonSerializable
     public function setEnded($date)
     {
         $this->ended = $date;
-
-        return $this;
     }
 
     public function getEnded()
     {
         return $this->ended;
+    }
+
+    public function setEndedTime($endedTime)
+    {
+        $this->endedTime = $endedTime;
+    }
+
+    public function getEndedTime()
+    {
+        return $this->endedTime;
     }
 
     public function setCategory(Category $category)
@@ -184,6 +199,7 @@ class Progress implements \JsonSerializable
             'description'   => $this->getDescription(),
             'started'       => $this->getStarted()->format($pattern),
             'ended'         => $this->getEnded()->format($pattern),
+            'endedTime'     => $this->getEndedTime()->format('H:i'),
             'category'      => $this->getCategory(),
             'user'          => $this->getUser()
         );

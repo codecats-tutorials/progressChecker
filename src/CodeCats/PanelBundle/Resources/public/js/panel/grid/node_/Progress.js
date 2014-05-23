@@ -64,6 +64,14 @@ Ext.define('Pc.grid.node_.Progress', {
             }
         },
         {
+            text        : Ext.String.format(t('Zakończono')),
+            dataIndex   : 'endedTime',
+            field       : {
+                xtype       : 'timefield',
+                format      : 'H:i'
+            }
+        },
+        {
             text        : t('Kategoria'),
             dataIndex   : 'category_id',
             field       : {
@@ -71,7 +79,9 @@ Ext.define('Pc.grid.node_.Progress', {
                 fieldLabel  : null
             },
             renderer    : function (txt, metaData, record) {
+                window.re = record;
                 if ( ! record.get('category')) return txt;
+
 
                 return record.get('category').name;
             }
