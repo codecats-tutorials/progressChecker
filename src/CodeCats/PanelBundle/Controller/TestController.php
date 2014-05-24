@@ -10,6 +10,7 @@ use CodeCats\PanelBundle\Form\ProgressType;
 use CodeCats\PanelBundle\Form\Type\ExtjsTimeType;
 use CodeCats\PanelBundle\Form\UserType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Forms;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Acl\Exception\Exception;
@@ -40,26 +41,29 @@ class TestController extends Controller
 
     public function testAction(Request $request)
     {
-        $this->container->get('code_cats.type.extjs_time');
+//        $this->container->get('extjs_time');
 
-        //$a = new ExtjsTimeType(null);
+//        $a = new ExtjsTimeType(null);
         $em     = $this->getDoctrine()->getManager();
         $ent   = new Progress();
+        $factory = Forms::createFormFactory();
 
-        $form = $this->createForm(new ProgressType(), $ent, array('method' => 'PUT'));
+        //$form = $this->createForm(new ProgressType(), $ent, array('method' => 'PUT'));
+        $form       = $factory->createNamed(null, new ProgressType(), $ent);
         $form->add('submit', 'submit');
-        $form->handleRequest($request);
+        $form->handleRequest(null, $request);
 
         if ($form->isValid()) {
 
-
-            //$em->flush();
+//            $em->persist($ent);
+//            $em->flush();
         }
 
         return $this->render('CodeCatsPanelBundle:Test:test.html.twig', array(
             'form' => $form->createView(),
             //'form' => $this->createForm(new UserType(), $user)->createView(),
-            'valid'=> $form->isValid()
+            'valid'=> $form->isValid(),
+            'entity' => $ent
         ));
     }
 

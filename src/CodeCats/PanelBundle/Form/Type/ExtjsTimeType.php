@@ -16,23 +16,17 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class ExtjsTimeType extends AbstractType {
-    private $om;
-
-    public function __construct(ObjectManager $om)
-    {
-        $this->om = $om;
-    }
 
     public function buildForm(FormBuilderInterface $builderInterface, array $options)
     {
-        $transformer = new ExtjsTimeToObjectTransformer($this->om);
+        $transformer = new ExtjsTimeToObjectTransformer();
         $builderInterface->addModelTransformer($transformer);
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolverInterface)
     {
         $resolverInterface->setDefaults(array(
-            'invalid_message' => 'The selected date not valid',
+            'invalid_message' => 'The time is not valid',
         ));
     }
 

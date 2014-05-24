@@ -3,6 +3,7 @@
 namespace CodeCats\PanelBundle\Form;
 
 use CodeCats\PanelBundle\Form\DataTransformer\StringToDateTimeTransformer;
+use CodeCats\PanelBundle\Form\Type\ExtjsTimeType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Csrf\CsrfProvider\CsrfProviderInterface;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -29,7 +30,8 @@ class ProgressType extends AbstractType
                 'widget' => 'single_text',
                 'format' => 'yyyy-MM-dd',
             ))
-            ->add('endedTime', 'code_cats.type.extjs_time')
+            ->add('endedTime', new ExtjsTimeType())
+//            ->add('endedTime', 'code_cats.type.extjs_time')
         ;
     }
     

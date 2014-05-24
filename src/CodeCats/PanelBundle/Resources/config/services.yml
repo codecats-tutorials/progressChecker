@@ -2,9 +2,6 @@ parameters:
 #    code_cats_panel.example.class: CodeCats\PanelBundle\Example
 
 services:
-#    code_cats_panel.example:
-#        class: %code_cats_panel.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
     code_cats.locale_listener:
         class: CodeCats\PanelBundle\EventListener\LocaleListener
         arguments: ["%kernel.default_locale%"]
@@ -20,6 +17,5 @@ services:
 
     code_cats.type.extjs_time:
         class: CodeCats\PanelBundle\Form\Type\ExtjsTimeType
-        arguments: ["@doctrine.orm.entity_manager"]
         tags:
-            - { name: form.type_extension, alias: extjs_time }
+            - {name: form.type, alias: extjs_time}

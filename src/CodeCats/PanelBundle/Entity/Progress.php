@@ -56,7 +56,7 @@ class Progress implements \JsonSerializable
     private $ended;
 
     /**
-     * @ORM\Column(name="endedTime", type="datetime")
+     * @ORM\Column(name="endedTime", type="time")
      */
     private $endedTime;
     /**

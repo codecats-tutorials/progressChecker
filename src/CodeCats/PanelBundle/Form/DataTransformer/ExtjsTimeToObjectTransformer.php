@@ -43,7 +43,7 @@ class ExtjsTimeToObjectTransformer implements DataTransformerInterface {
      */
     public function transform($value)
     {
-        return new \DateTime();
+        return '1970-01-01T23:23:23';
     }
 
     /**
@@ -72,6 +72,6 @@ class ExtjsTimeToObjectTransformer implements DataTransformerInterface {
      */
     public function reverseTransform($value)
     {
-        return new \DateTime();
+        return new \DateTime($value);
     }
 }
