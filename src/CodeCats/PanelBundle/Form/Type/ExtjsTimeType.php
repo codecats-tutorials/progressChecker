@@ -41,6 +41,6 @@ class ExtjsTimeType extends AbstractType {
      */
     public function getName()
     {
-        return 'extjs_time';
+        return 'extjstime';
     }
 }

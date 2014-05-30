@@ -11,11 +11,6 @@ use Symfony\Component\Yaml\Parser;
 
 class DefaultController extends Controller
 {
-    public function getAction(Request $request)
-    {
-
-    }
-
     public function indexAction(Request $request)
     {
     	if ( ! $this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {

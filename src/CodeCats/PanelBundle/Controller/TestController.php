@@ -41,7 +41,7 @@ class TestController extends Controller
 
     public function testAction(Request $request)
     {
-//        $this->container->get('extjs_time');
+        $this->container->get('code_cats.type.extjstime');
 
 //        $a = new ExtjsTimeType(null);
         $em     = $this->getDoctrine()->getManager();

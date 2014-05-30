@@ -5,6 +5,7 @@ Ext.define('Pc.model.Progress', {
         'title',
         'description',
         'started',
+        'startedTime',
         'ended',
         'endedTime',
         'category',

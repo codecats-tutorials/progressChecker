@@ -26,12 +26,12 @@ class ProgressType extends AbstractType
                 'widget' => 'single_text',
                 'format' => 'yyyy-MM-dd',
             ))
+            ->add('startedTime', new ExtjsTimeType())
             ->add('ended', 'date', array(
                 'widget' => 'single_text',
                 'format' => 'yyyy-MM-dd',
             ))
             ->add('endedTime', new ExtjsTimeType())
-//            ->add('endedTime', 'code_cats.type.extjs_time')
         ;
     }
     

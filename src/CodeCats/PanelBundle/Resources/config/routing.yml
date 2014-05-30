@@ -1,4 +1,3 @@
-#-----------------------------------------------------------------------------------------------------------------------
 code_cats_panel_language:
     pattern: /language/{locale}
     defaults: { _controller: CodeCatsPanelBundle:Language:switchLanguage }
@@ -23,7 +22,6 @@ logout:
 register:
     path: /register
     defaults: { _controller: CodeCatsPanelBundle:User:register }
-#-----------------------------------------------------------------------------------------------------------------------
 
 test:
     pattern: /test

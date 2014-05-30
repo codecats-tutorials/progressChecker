@@ -43,6 +43,10 @@ class Progress implements \JsonSerializable
      */
     private $started;
 
+    /**
+     * @ORM\Column(name="startedTime", type="time")
+     */
+    private $startedTime;
     /*
      * @var
      */
@@ -151,7 +155,15 @@ class Progress implements \JsonSerializable
     {
         return $this->ended;
     }
+    public function setStartedTime($startedTime)
+    {
+        $this->startedTime = $startedTime;
+    }
 
+    public function getStartedTime()
+    {
+        return $this->startedTime;
+    }
     public function setEndedTime($endedTime)
     {
         $this->endedTime = $endedTime;
@@ -198,6 +210,7 @@ class Progress implements \JsonSerializable
             'title'         => $this->getTitle(),
             'description'   => $this->getDescription(),
             'started'       => $this->getStarted()->format($pattern),
+            'startedTime'   => $this->getStartedTime()->format('H:i'),
             'ended'         => $this->getEnded()->format($pattern),
             'endedTime'     => $this->getEndedTime()->format('H:i'),
             'category'      => $this->getCategory(),

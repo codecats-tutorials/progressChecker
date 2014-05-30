@@ -56,6 +56,14 @@ Ext.define('Pc.grid.node_.Progress', {
             }
         },
         {
+            text        : Ext.String.format(t('Rozpoczęto')),
+            dataIndex   : 'startedTime',
+            field       : {
+                xtype       : 'timefield',
+                format      : 'H:i'
+            }
+        },
+        {
             text        : Ext.String.format(t('Zakończono')),
             dataIndex   : 'ended',
             field       : {

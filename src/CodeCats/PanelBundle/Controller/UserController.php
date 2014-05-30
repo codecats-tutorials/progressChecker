@@ -38,7 +38,6 @@ class UserController extends Controller
     }
     public function updateAction(Request $request)
     {
-        $fb     = $this->get('fire_php');
         $em     = $this->getDoctrine()->getManager();
         $user   = $em->getRepository('CodeCatsPanelBundle:User')->find($this->get('security.context')->getToken()->getUser()->getId());
 
@@ -51,7 +50,6 @@ class UserController extends Controller
 
             $em->flush();
         }
-        $fb->log($form->isValid());
 
         return new JsonResponse(array('success' => true));
     }
