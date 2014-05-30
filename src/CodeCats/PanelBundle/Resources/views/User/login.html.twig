@@ -7,23 +7,22 @@
 {% endblock %}
 
 {% block body %}
+
     <div class="languages message">
     {% for locale, language in languages %}
         <a class="button-link" href="{{ path('code_cats_panel_language', {locale: locale}) }}" tabindex={{ loop.index + 3 }}>{{ language }}</a>
     {% else %}
     {% endfor %}
     </div>
-
     {% for flashMessage in app.session.flashbag.get('notice') %}
         <div id="note" class="info message">
             <p>{{ flashMessage | trans }}</p>
         </div>
     {% endfor %}
-
     <form class="center form" action="{{ path('login_check') }}" method="post">
         <p>
             <label for="username">{{ 'login.username' | trans }}</label>
-            <input type="text" id="username" name="_username" value="" placeholder="{{ 'login.username' | trans }}" required="required" tabindex=1 />
+            <input type="text" id="username" name="_username" value="{{ form.login.vars.value }}" placeholder="{{ 'login.username' | trans }}" required="required" tabindex=1 />
         </p>
         <p>
             <label for="password">{{ 'login.password' | trans }}</label>
@@ -42,9 +41,10 @@
         {% endif %}
     </form>
 
-    {% block javascripts %}
-        <script type="text/javascript"
-                src="{{ asset('bundles/codecatspanel/js/jquery/jquery-2.1.0.min.js') }}">
-        </script>
-    {% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript"
+            src="{{ asset('bundles/codecatspanel/js/jquery/jquery-2.1.0.min.js') }}">
+    </script>
 {% endblock %}

@@ -66,22 +66,19 @@ class UserController extends Controller
 		$form = $this->createForm(new LoginType(), new Login());
 
 		$session = $request->getSession();
-
 		if ($request->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
 			$error = $request->attributes->get(SecurityContext::AUTHENTICATION_ERROR);
 		} else {
 			$error = $session->get(SecurityContext::AUTHENTICATION_ERROR);
 			$session->remove(SecurityContext::AUTHENTICATION_ERROR);
 		}
+        $form->get('login')->setData($session->get(SecurityContext::LAST_USERNAME));
 
-		return $this->render(
-				'CodeCatsPanelBundle:User:login.html.twig',
-				array(
-						'form'          => $form->createView(),
-						'error'         => $error,
-                        'languages'     => $messages['messages']
-				)
-		);
+		return $this->render('CodeCatsPanelBundle:User:login.html.twig', array(
+            'form'          => $form->createView(),
+            'error'         => $error,
+            'languages'     => $messages['messages']
+        ));
 	}
 
     public function logoutAction(Request $request)
@@ -119,11 +116,8 @@ class UserController extends Controller
             return $this->redirect($this->generateUrl('login'));
         }
 
-        return $this->render(
-            'CodeCatsPanelBundle:User:register.html.twig',
-            array(
-                'form' => $form->createView()
-            )
-        );
+        return $this->render('CodeCatsPanelBundle:User:register.html.twig', array(
+            'form' => $form->createView()
+        ));
     }
 }
