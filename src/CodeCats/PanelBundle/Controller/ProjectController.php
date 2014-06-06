@@ -2,40 +2,39 @@
 
 namespace CodeCats\PanelBundle\Controller;
 
-use CodeCats\PanelBundle\Entity\Category;
-use CodeCats\PanelBundle\Form\CategoryType;
+use CodeCats\PanelBundle\Entity\Project;
+use CodeCats\PanelBundle\Form\ProjectType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Forms;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
-class CategoryController extends Controller
+class ProjectController extends Controller
 {
     public function getAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $category = $em->getRepository('CodeCatsPanelBundle:Category');
-        $all = $category->findAll();
+        $project = $em->getRepository('CodeCatsPanelBundle:Project');
+        $all = $project->findAll();
 
         return new JsonResponse(array('success' => true, 'data' => $all));
     }
 
     public function createAction(Request $request)
     {
-        $fb = $this->get('fire_php');
         $em = $this->getDoctrine()->getManager();
         $factory = Forms::createFormFactory();
 
-        $category = new Category();
-        $form = $factory->createNamed(null, new CategoryType(), $category);
+        $project = new Project();
+        $form = $factory->createNamed(null, new ProjectType(), $project);
 
         $form->submit(json_decode($request->getContent(), true));
 
         if ($form->isValid()) {
-            $em->persist($category);
+            $em->persist($project);
             $em->flush();
 
-            return new JsonResponse(array('success' => true, 'id' => $category->getId()));
+            return new JsonResponse(array('success' => true, 'id' => $project->getId()));
         }
 
         return new JsonResponse(array('success' => false, 'errors' => $form->getErrors()));
@@ -46,9 +45,9 @@ class CategoryController extends Controller
         $em = $this->getDoctrine()->getManager();
         $factory = Forms::createFormFactory();
 
-        $category = $em->getRepository('CodeCatsPanelBundle:Category')->find($id);
+        $project = $em->getRepository('CodeCatsPanelBundle:Project')->find($id);
 
-        $form = $factory->createNamed(null, new CategoryType(), $category, array('method' => 'PUT'));
+        $form = $factory->createNamed(null, new ProjectType(), $project, array('method' => 'PUT'));
         $form->submit(json_decode($request->getContent(), true));
 
         if ($form->isValid()) {
@@ -63,9 +62,9 @@ class CategoryController extends Controller
     public function deleteAction(Request $request, $id)
     {
         $em = $this->getDoctrine()->getManager();
-        $category = $em->getRepository('CodeCatsPanelBundle:Category')->find($id);
+        $project = $em->getRepository('CodeCatsPanelBundle:Project')->find($id);
 
-        $em->remove($category);
+        $em->remove($project);
         $em->flush();
 
         return new JsonResponse(array('success' => true));

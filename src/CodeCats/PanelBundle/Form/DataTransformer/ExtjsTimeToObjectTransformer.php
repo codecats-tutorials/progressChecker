@@ -14,6 +14,12 @@ use Symfony\Component\Form\Exception\TransformationFailedException;
 
 class ExtjsTimeToObjectTransformer implements DataTransformerInterface {
 
+    private $setNull = false;
+
+    public function __construct($options) {
+        if (isset($options['nullable']) && $options['nullable'] === true) $this->setNull = true;
+    }
+
     /**
      * Transforms a value from the original representation to a transformed representation.
      *
@@ -72,6 +78,8 @@ class ExtjsTimeToObjectTransformer implements DataTransformerInterface {
      */
     public function reverseTransform($value)
     {
+        if ( ! $value && $this->setNull === true) return null;
+
         return new \DateTime($value);
     }
 }

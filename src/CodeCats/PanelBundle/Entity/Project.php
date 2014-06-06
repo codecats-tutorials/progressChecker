@@ -2,6 +2,7 @@
 
 namespace CodeCats\PanelBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="CodeCats\PanelBundle\Entity\ProjectRepository")
  */
-class Project
+class Project implements \JsonSerializable
 {
     /**
      * @var integer
@@ -31,49 +32,49 @@ class Project
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=255)
+     * @ORM\Column(name="description", type="string", length=255, nullable=true)
      */
     private $description;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateStarted", type="date")
+     * @ORM\Column(name="dateStarted", type="date", nullable=true)
      */
     private $dateStarted;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="timeStarted", type="time")
+     * @ORM\Column(name="timeStarted", type="time", nullable=true)
      */
     private $timeStarted;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateEnded", type="date")
+     * @ORM\Column(name="dateEnded", type="date", nullable=true)
      */
     private $dateEnded;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="timeEnded", type="time")
+     * @ORM\Column(name="timeEnded", type="time", nullable=true)
      */
     private $timeEnded;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="dateDeadline", type="date")
+     * @ORM\Column(name="dateDeadline", type="date", nullable=true)
      */
     private $dateDeadline;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="timeDeadline", type="time")
+     * @ORM\Column(name="timeDeadline", type="time", nullable=true)
      */
     private $timeDeadline;
 
@@ -92,9 +93,17 @@ class Project
      */
     private $workers;
 
+    /**
+     * @var
+     *
+     * @ORM\OneToMany(targetEntity="CodeCats\PanelBundle\Entity\Progress", mappedBy="project")
+     */
+    private $progresses;
+
     public function __construct()
     {
-        $this->workers = ArrayCollection();
+        $this->workers = new ArrayCollection();
+        $this->progresses = new ArrayCollection();
     }
     /**
      * Get id
@@ -308,5 +317,41 @@ class Project
     public function getWorker()
     {
         return $this->workers;
+    }
+
+    public function addProgress(Progress $progress)
+    {
+        $this->progresses->add($progress);
+    }
+
+    public function getProgresses()
+    {
+        return $this->progresses;
+    }
+
+
+    /**
+     * (PHP 5 &gt;= 5.4.0)<br/>
+     * Specify data which should be serialized to JSON
+     * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     */
+    public function jsonSerialize()
+    {
+        $formatTime = 'H:i';
+        $formatDate = 'Y-m-d';
+
+        return array(
+            'id'            => $this->getId(),
+            'name'          => $this->getName(),
+            'description'   => $this->getDescription(),
+            'dateStarted'   => ($this->getDateStarted() !== null) ? $this->getDateStarted()->format($formatDate) : null,
+            'timeStarted'   => ($this->getTimeStarted() !== null) ? $this->getTimeStarted()->format($formatTime) : null,
+            'dateEnded'     => ($this->getDateEnded() !== null) ? $this->getDateEnded()->format($formatDate) : null,
+            'timeEnded'     => ($this->getTimeEnded() !== null) ? $this->getTimeEnded()->format($formatTime) : null,
+            'dateDeadline'  => ($this->getDateDeadline() !== null) ? $this->getDateDeadline()->format($formatDate) : null,
+            'timeDeadline'  => ($this->getTimeDeadline() !== null) ? $this->getTimeDeadline()->format($formatTime) : null
+        );
     }
 }

@@ -47,10 +47,6 @@ class Progress implements \JsonSerializable
      * @ORM\Column(name="startedTime", type="time")
      */
     private $startedTime;
-    /*
-     * @var
-     */
-    //private $startedTime;
 
     /**
      * @var DateTime
@@ -74,6 +70,14 @@ class Progress implements \JsonSerializable
      * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
      */
     private $user;
+
+    /**
+     * @var
+     *
+     * @ORM\ManyToOne(targetEntity="CodeCats\PanelBundle\Entity\Project", inversedBy="progresses")
+     *
+     */
+    private $project;
 
     public function __construct()
     {
@@ -192,6 +196,16 @@ class Progress implements \JsonSerializable
     public function getUser()
     {
         return $this->user;
+    }
+
+    public function setProject(Project $project)
+    {
+        $this->project = $project;
+    }
+
+    public function getProject()
+    {
+        return $this->project;
     }
 
     /**

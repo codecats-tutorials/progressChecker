@@ -17,9 +17,16 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class ExtjsTimeType extends AbstractType {
 
+    private $options;
+
+    public function __construct($options = null)
+    {
+        $this->options = $options;
+    }
+
     public function buildForm(FormBuilderInterface $builderInterface, array $options)
     {
-        $transformer = new ExtjsTimeToObjectTransformer();
+        $transformer = new ExtjsTimeToObjectTransformer($this->options);
         $builderInterface->addModelTransformer($transformer);
     }
 

@@ -140,3 +140,23 @@ code_cats_panel_email_send:
     pattern: send/email
     defaults: { _controller: CodeCatsPanelBundle:Send:email }
     methods: [POST]
+
+code_cats_panel_project_get:
+    pattern: /project
+    defaults: { _controller: CodeCatsPanelBundle:Project:get }
+    methods: [GET]
+
+code_cats_panel_project_create:
+    pattern: /project
+    defaults: { _controller: CodeCatsPanelBundle:Project:create }
+    methods: [POST]
+
+code_cats_panel_project_update:
+    pattern: /project/{id}
+    defaults: { _controller: CodeCatsPanelBundle:Project:update }
+    methods: [PUT]
+
+code_cats_panel_project_delete:
+    pattern: /project/{id}
+    defaults: { _controller: CodeCatsPanelBundle:Project:delete }
+    methods: [DELETE]

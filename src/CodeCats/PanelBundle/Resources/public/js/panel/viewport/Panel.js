@@ -18,6 +18,14 @@ Ext.define('Pc.viewport.Panel', {
                     ]
                 },
                 {
+                    title : t('Projekty'),
+                    items : [
+                        {
+                            xtype   : 'grid-project'
+                        }
+                    ]
+                },
+                {
                     title : t('Języki'),
                     items : [
                         {
