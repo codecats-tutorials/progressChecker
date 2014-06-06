@@ -11,7 +11,9 @@ Ext.define('Pc.model.Progress', {
         'category',
         'category_id',
         'user',
-        'user_id'
+        'user_id',
+        'project',
+        'project_id'
     ],
     validations: [
         {
@@ -22,6 +24,7 @@ Ext.define('Pc.model.Progress', {
     ],
     associations: [
         {model: 'Pc.model.Category', name: 'category', type: 'hasOne'},
-        {model: 'Pc.model.User', name: 'user', type: 'hasOne'}
+        {model: 'Pc.model.User', name: 'user', type: 'hasOne'},
+        {model: 'Pc.model.Project', name: 'project', type: 'hasOne'}
     ]
 });

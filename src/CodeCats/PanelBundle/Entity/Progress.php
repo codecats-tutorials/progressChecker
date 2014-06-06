@@ -228,7 +228,8 @@ class Progress implements \JsonSerializable
             'ended'         => $this->getEnded()->format($pattern),
             'endedTime'     => $this->getEndedTime()->format('H:i'),
             'category'      => $this->getCategory(),
-            'user'          => $this->getUser()
+            'user'          => $this->getUser(),
+            'project'       => $this->getProject()
         );
     }
 }

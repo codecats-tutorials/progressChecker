@@ -106,6 +106,19 @@ Ext.define('Pc.grid.node_.Progress', {
 
                 return record.get('user').username;
             }
+        },
+        {
+            text        : t('Projekt'),
+            dataIndex   : 'project_id',
+            field       : {
+                xtype       : 'combobox-project',
+                fieldLabel  : null
+            },
+            renderer    : function (txt, metaData, record) {
+                if ( ! record.get('project')) return txt;
+
+                return record.get('project').name;
+            }
         }
     ],
     tbar    : [
