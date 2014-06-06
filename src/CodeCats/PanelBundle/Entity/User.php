@@ -77,10 +77,27 @@ class User implements UserInterface, \JsonSerializable, \Serializable
      */
     private $companyEmail;
 
+    /**
+     * @var
+     *
+     * @ORM\OneToMany(targetEntity="CodeCats\PanelBundle\Entity\Project", mappedBy="manager")
+     */
+    private $projectsManage;
+
+    /**
+     * @var
+     *
+     * @ORM\ManyToMany(targetEntity="CodeCats\PanelBundle\Entity\Project", mappedBy="workers")
+     * @ORM\JoinColumn(name="worker_id", referencedColumnName="id")
+     */
+    private $projects;
+
     public function __construct()
     {
         $this->progresses   = new ArrayCollection();
         $this->phones       = new ArrayCollection();
+        $this->projectsManage = new ArrayCollection();
+        $this->projects     = new ArrayCollection();
     }
 
     /**
@@ -225,6 +242,26 @@ class User implements UserInterface, \JsonSerializable, \Serializable
     public function getCompanyEmail()
     {
         return $this->companyEmail;
+    }
+
+    public function addProjectManage(Project $project)
+    {
+        $this->projectsManage->add($project);
+    }
+
+    public function getProjectsManage()
+    {
+        return $this->projectsManage;
+    }
+
+    public function addProject(Project $project)
+    {
+        $this->projects->add($project);
+    }
+
+    public function getProjects()
+    {
+        return $this->projects;
     }
 
     /**
