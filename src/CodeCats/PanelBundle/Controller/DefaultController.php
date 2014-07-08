@@ -54,6 +54,7 @@ class DefaultController extends Controller
                 $scripts[] = preg_replace ('#^.+/js/panel#', '/js/panel', $object);
             }
         }
+        asort($scripts);
 
         return $scripts;
     }

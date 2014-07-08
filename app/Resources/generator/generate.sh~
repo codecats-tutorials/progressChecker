@@ -1,11 +1,14 @@
 #!/bin/bash
+#look up for the translations in whole project,
+#generate yaml(s)
+#translate 2nd column from choosen yaml
 ./lookupTranslations.sh
 ./progress.sh 'found all'
 
 #python yaml.py en
-#./progress.sh en 
+#./progress.sh en
 
-#python yaml.py es 
+#python yaml.py es
 #./progress.sh es
 
 #python yaml.py it
@@ -16,3 +19,11 @@
 
 #python yaml.py pl
 #./progress.sh pl
+
+#python yaml.py pl pl
+#./progress.sh
+
+cd ./reverseTranslateFromYaml
+cp ../messages/messages.pl.yml ./input/messages.pl.yml
+python translate.py en base
+../progress.sh en-trans

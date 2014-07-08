@@ -173,7 +173,10 @@ class Avatar
         $this->getFile()->move($this->getUploadRootDir(), $this->path);
 
         if ( ! empty($this->temp)) {
-            unlink($this->getUploadRootDir() . '/' . $this->temp);
+            $file = $this->getUploadRootDir() . '/' . $this->temp;
+            if (file_exists($file)){
+                unlink($file);
+            }
             $this->temp = null;
         }
         $this->file = null;

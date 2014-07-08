@@ -1,0 +1,2 @@
+RewriteCond %{THE_REQUEST} ^(GET|HEAD)\ /web/
+RewriteRule ^(.*)$ /$1 [L,R=301]

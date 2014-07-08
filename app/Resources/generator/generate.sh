@@ -17,10 +17,13 @@
 #python yaml.py fr
 #./progress.sh fr
 
-python yaml.py pl
-./progress.sh pl
+#python yaml.py pl
+#./progress.sh pl
+
+#python yaml.py pl pl
+#./progress.sh
 
 cd ./reverseTranslateFromYaml
-cp ../messages/messages.pl.yml ./input/messages.pl.yml
-python translate.py en pl
+cp ../messages/messages.base.yml ./input/messages.base.yml
+python translate.py en base
 ../progress.sh en-trans
