@@ -1,2 +1,2 @@
 #!/bin/bash
-git add . && git commit -a -m "$1" && git push base2
+git add . && git commit -a -m "$1" && git push -u origin base2
