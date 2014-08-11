@@ -2,13 +2,10 @@
 
 {% block stylesheets %}
 <link type="text/css"
-      href="{{ asset('bundles/codecatscore/NewbridgeGreen-extjs-theme-bootstrap-987ff4a/resources/css/bootstrap/bootstrap.css') }}"
+      href="{{ asset('bundles/codecatscore/js/ext/ext-5.0.0/packages/ext-theme-crisp/build/resources/ext-theme-crisp-all-debug.css') }}"
       rel="stylesheet"
         />
-<link type="text/css"
-      href="{{ asset('bundles/codecatscore/css/core/grid.css') }}"
-      rel="stylesheet"
-        />
+
 {% endblock %}
 
 {% block body %}
@@ -26,8 +23,15 @@
         </script>
     {% endblock %}
     {% block libs %}
+    {#
     <script type="text/javascript"
             src="{{ asset('bundles/codecatscore/js/ext-4.2.1.883/ext-all-dev.js') }}">
+    </script>
+    #}
+
+    <script
+            type="text/javascript"
+            src="{{ asset('bundles/codecatscore/js/ext/ext-5.0.0/build/ext-all-debug.js') }}">
     </script>
     {% endblock %}
     {% block app %}

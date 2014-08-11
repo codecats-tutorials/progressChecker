@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0f5bf28fac35560dbdb2e597d32df056",
+    "hash": "7a6551ebf8ae44817aba215cd4303ab7",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -628,6 +628,43 @@
                 "orm"
             ],
             "time": "2014-07-11 03:05:53"
+        },
+        {
+            "name": "dvelopment/firephp-bundle",
+            "version": "dev-master",
+            "target-dir": "FirePHPBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dVelopment/FirePHPBundle.git",
+                "reference": "086623f58e7bd5bcbc0482f97d479b9b25d30819"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dVelopment/FirePHPBundle/zipball/086623f58e7bd5bcbc0482f97d479b9b25d30819",
+                "reference": "086623f58e7bd5bcbc0482f97d479b9b25d30819",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/framework-bundle": ">=2.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "FirePHPBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "The FirePHPBundle provides simple integration FirePHP for your Symfony2 project.",
+            "keywords": [
+                "Symfony2",
+                "bundle",
+                "firephp"
+            ],
+            "time": "2013-09-08 12:36:35"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1621,9 +1658,9 @@
 
     ],
     "minimum-stability": "stable",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "dvelopment/firephp-bundle": 20
+    },
     "prefer-stable": false,
     "platform": {
         "php": ">=5.3.3"
