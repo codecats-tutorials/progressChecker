@@ -1,0 +1,8 @@
+code_cats_user:
+    resource: "@CodeCatsUserBundle/Resources/config/routing.yml"
+    prefix:   /User/
+
+code_cats_core:
+    resource: "@CodeCatsCoreBundle/Resources/config/routing.yml"
+    prefix:   /
+

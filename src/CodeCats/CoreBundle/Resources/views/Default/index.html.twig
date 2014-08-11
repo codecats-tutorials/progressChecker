@@ -1,0 +1,25 @@
+{% extends 'CodeCatsCoreBundle::layout.html.twig' %}
+{% block body %}
+    {% block item %}
+        {#<section id="user" style="display:none">
+            {{ user }}
+        </section>#}
+    {% endblock %}
+{% endblock %}
+{% block app %}
+    {#
+    {% for package in packages %}
+        <script type="text/javascript"
+                src="{{ asset('bundles/codecatscore' ~ package) }}">
+        </script>
+    {% endfor %}
+    {% for script in scripts %}
+        <script type="text/javascript"
+                src="{{ asset('bundles/codecatscore' ~ script) }}">
+        </script>
+    {% endfor %}
+    <script type="text/javascript"
+            src="{{ asset('bundles/codecatscore/js/core/main.js') }}">
+    </script>
+    #}
+{% endblock %}

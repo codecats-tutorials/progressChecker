@@ -1,0 +1,14 @@
+login_check:
+    path: /login_check
+login:
+    path: /login
+    defaults: { _controller: CodeCatsUserBundle:Default:login }
+account:
+    path: /
+    defaults: { _controller: CodeCatsUserBundle:Default:login }
+logout:
+    path: /logout
+    defaults: { _controller: CodeCatsUserBundle:Default:logout }
+register:
+    path: /register
+    defaults: { _controller: CodeCatsUserBundle:Default:register }

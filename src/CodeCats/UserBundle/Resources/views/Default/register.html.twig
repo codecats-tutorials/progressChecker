@@ -1,0 +1,38 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link type="text/css"
+          href="{{ asset('bundles/codecatsuser/css/login.css') }}"
+          rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div class="info message">
+            <p>{{ flashMessage | trans }}</p>
+        </div>
+    {% endfor %}
+
+    <form class="center form" action="" method="post">
+        {% for child in form %}
+            <p>
+                {{ form_widget(child) }}
+                {{ form_label(child) }}
+            </p>
+        {% endfor %}
+        {% if form_errors(form) %}
+            <div class="error message form-error">
+                {{ form_errors(form) }}
+            </div>
+        {% endif %}
+    </form>
+
+{% endblock %}
+{#
+{% block javascripts %}
+    <script type="text/javascript"
+            src="{{ asset('bundles/codecatsuser/js/jquery/jquery-2.1.0.min.js') }}">
+    </script>
+{% endblock %}
+#}

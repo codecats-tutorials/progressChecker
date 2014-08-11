@@ -1,0 +1,35 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+<link type="text/css"
+      href="{{ asset('bundles/codecatscore/NewbridgeGreen-extjs-theme-bootstrap-987ff4a/resources/css/bootstrap/bootstrap.css') }}"
+      rel="stylesheet"
+        />
+<link type="text/css"
+      href="{{ asset('bundles/codecatscore/css/core/grid.css') }}"
+      rel="stylesheet"
+        />
+{% endblock %}
+
+{% block body %}
+    {% block items %}
+    {% endblock %}
+{% endblock %}
+
+{% block javascripts %}
+    {% block bootstrap %}
+        <script type="text/javascript"
+                src="{{ asset('bundles/codecatscore/js/core/config.js') }}">
+        </script>
+        <script type="text/javascript"
+                src="{{ asset('bundles/codecatscore/js/core/translate.js') }}">
+        </script>
+    {% endblock %}
+    {% block libs %}
+    <script type="text/javascript"
+            src="{{ asset('bundles/codecatscore/js/ext-4.2.1.883/ext-all-dev.js') }}">
+    </script>
+    {% endblock %}
+    {% block app %}
+    {% endblock %}
+{% endblock %}

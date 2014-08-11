@@ -1,0 +1,10 @@
+parameters:
+#    code_cats_user.example.class: CodeCats\UserBundle\Example
+
+services:
+  code_cats.user_manager:
+    class: CodeCats\UserBundle\EventListener\UserManager
+    arguments: [@service_container]
+    tags:
+      - { name: doctrine.event_listener, event: prePersist }
+      - { name: doctrine.event_listener, event: preUpdate }

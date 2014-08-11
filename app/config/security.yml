@@ -1,0 +1,30 @@
+security:
+  encoders:
+    CodeCats\UserBundle\Entity\User:
+      algorithm: sha1
+      encode_as_base64: false
+      iterations: 1
+
+  role_hierarchy:
+    RULE_USER: ROLE_UNFILLED_USER
+    ROLE_ADMIN: ROLE_USER
+    ROLE_DEVELOPER: ROLE_ADMIN
+    ROLE_SUPER_ADMIN: [ROLE_DEVELOPER, ROLE_ALLOWED_TO_SWITCH]
+
+  providers:
+    administrators:
+      entity: {class: CodeCats\UserBundle\Entity\User, property: username}
+
+  firewalls:
+    admin_area:
+      pattern: ^/admin
+      http_basic: ~
+    secured_area:
+      pattern: ^/
+      anonymous: ~
+      form_login:
+        login_path: login
+        check_path: login_check
+  access_control:
+    - { path: ^/panel/progress, roles: ROLE_USER }
+    - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }

@@ -1,0 +1,3 @@
+code_cats_core_homepage:
+    path:     /
+    defaults: { _controller: CodeCatsCoreBundle:Default:index }

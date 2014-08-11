@@ -1,0 +1,51 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link type="text/css"
+          href="{{ asset('bundles/codecatsuser/css/login.css') }}"
+          rel="stylesheet" />
+{% endblock %}
+
+{% block body %}
+
+    <div class="languages message">
+    {% for locale, language in languages %}
+        <a class="button-link" href="{{ path('code_cats_user_language', {locale: locale}) }}" tabindex={{ loop.index + 3 }}>{{ language }}</a>
+    {% else %}
+    {% endfor %}
+    </div>
+    {% for flashMessage in app.session.flashbag.get('notice') %}
+        <div id="note" class="info message">
+            <p>{{ flashMessage | trans }}</p>
+        </div>
+    {% endfor %}
+    <form class="center form" action="{{ path('login_check') }}" method="post">
+        <p>
+            <label for="username">{{ 'login.username' | trans }}</label>
+            <input type="text" id="username" name="_username" value="{{ form.login.vars.value }}" placeholder="{{ 'login.username' | trans }}" required="required" tabindex=1 />
+        </p>
+        <p>
+            <label for="password">{{ 'login.password' | trans }}</label>
+            <input type="password" id="password" name="_password" placeholder="{{ 'login.password' | trans }}" required="required" tabindex=2 />
+        </p>
+        <div>
+            <input type="hidden" name="_target_path" value="account" />
+        </div>
+        <p>
+            <input type="submit" name="login" class="button-link form-submit" value="{{ 'login.submit' | trans }}" tabindex=3 />
+        </p>
+        {% if error %}
+            <div class="error message form-error">
+                {{ error.message | trans }}
+            </div>
+        {% endif %}
+    </form>
+
+{% endblock %}
+{#
+{% block javascripts %}
+    <script type="text/javascript"
+            src="{{ asset('bundles/codecatsuser/js/jquery/jquery-2.1.0.min.js') }}">
+    </script>
+{% endblock %}
+#}
