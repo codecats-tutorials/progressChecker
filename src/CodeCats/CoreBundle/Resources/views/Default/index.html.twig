@@ -1,4 +1,17 @@
 {% extends 'CodeCatsCoreBundle::layout.html.twig' %}
+{% block stylesheets %}
+    {{  parent() }}
+
+    <link type="text/css"
+          href="{{ asset('bundles/codecatscore/css/main.css') }}"
+          rel="stylesheet"
+    />
+    <link type="text/css"
+          href="{{ asset('bundles/codecatscore/css/fat-cow-icons.css') }}"
+          rel="stylesheet"
+    />
+{% endblock %}
+
 {% block body %}
     {% block item %}
         <section id="user" style="display:none">
@@ -7,6 +20,22 @@
     {% endblock %}
 {% endblock %}
 {% block app %}
+
+    {# {% Loading content #}
+    <article id="load" class="center">
+        <h1 class="title">progress<span class="big-letter">L</span>og</h1>
+        <section>
+            <div>
+                <div class="imageBg imageBig"></div>
+                <div class="imageBg imageSmall"></div>
+            </div>
+            <div class="links">
+                <a href="{{ path('logout') }}">{{ 'Wyloguj' | trans }}</a>
+                <a href=".">{{ 'Odśwież' | trans }}</a>
+            </div>
+        </section>
+    </article>
+    {# Loading content %} #}
 
     {% for package in packages %}
         <script type="text/javascript"

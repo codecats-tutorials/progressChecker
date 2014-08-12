@@ -1,51 +1,72 @@
 Ext.define('Pl.viewport.Main', {
     extend: 'Ext.container.Viewport',
-    //xtype: 'viewport',
     layout: 'border',
-    formulas: {
-        fullName: function (get) {
-            return ('firstName') + ' ' + ('lastName');
-        },
-        name: '3'
-    },
     items : [
-        /*{
-            xtype   : 'pc-header'
+        {
+            name    : 'header',
+            xtype   : 'pl-header'
+        },
+        {
+            name    : 'menu',
+            title   : 'Menu',
+            region  : 'west',
+            animCollapse: true,
+            width   : '20%',
+            split   : true,
+            collapsible: true,
+            layout  : {
+                type    : 'accordion',
+                animate : true
+            },
+            header  : {
+                itemPosition: 1,
+                items       : [
+                    {
+                        xtype   : 'splitbutton',
+                        text    : 'Options',
+                        menu    : [
+                            {
+                                text: 'Jira'
+                            }
+                        ]
+                    }
+                ]
+            },
+            items: [
+                {
+                    html        : '<div class="portlet-content">aaaaa</div>',
+                    title       :'Postęp',
+                    autoScroll  : true,
+                    border      : false,
+                    glyph       : '9798@'
+                },
+                {
+                    title       :'Projekty',
+                    html        : '<div class="portlet-content">bbbbb</div>',
+                    border      : false,
+                    autoScroll  : true,
+                    iconCls     : 'settings'
+                },
+                {
+                    title       : 'Język',
+                    html        : '<div class="portlet-content">icon</div>',
+                    border      : false,
+                    autoScroll  : true,
+                    iconCls     : 'settings'
+                }
+            ]
         },
         {
             region  : 'center',
             xtype   : 'tabpanel',
-            items   : [
-                {
-                    title : t('Postęp'),
-                    items : [
-                        {
-                            xtype   : 'grid-progress'
-                        }
-                    ]
-                },
-                {
-                    title : t('Projekty'),
-                    items : [
-                        {
-                            xtype   : 'grid-project'
-                        }
-                    ]
-                },
-                {
-                    title : t('Języki'),
-                    items : [
-                        {
-                            xtype   : 'grid-category'
-                        }
-                    ]
-                }
+            name    : 'tab',
+            items: [
             ]
         },
         {
             xtype   : 'panel',
             region  : 'south',
             title   : 'll'
-        }*/
+        }
     ]
 });

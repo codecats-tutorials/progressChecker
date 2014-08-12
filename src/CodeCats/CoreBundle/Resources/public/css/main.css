@@ -1,0 +1,136 @@
+.center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+}
+.title {
+    margin-top:-100%;
+    margin-bottom: 50%;
+    position: relative;
+    font-size: xx-large;
+}
+span.big-letter {
+    color: #1882B7;
+    font-size: 1.1em;
+    font-family: "Lucida Console";
+    font-weight: bold;
+}
+h1.title {  
+    left:-20%;
+}
+.links a{
+    position: relative;
+    left:-20%;
+    font-size: x-small;
+}
+div.imageBg {
+    background-attachment: fixed;
+    background: url(../images/gear.png) no-repeat center center;
+}
+div.imageBig {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 130px;
+    height: 130px;
+    margin:-70px 0 0 -70px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+div.imageSmall { 
+    background-size: 60% 60%;
+    position: relative;
+    top: 35%;
+    left: 35%;
+    width: 60px;
+    height: 60px;
+    margin:-60px 0 0 -60px;
+    -webkit-animation:spinBack 4s linear infinite;
+    -moz-animation:spinBack 4s linear infinite;
+    animation:spinBack 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-moz-keyframes spinBack { 100% { -moz-transform: rotate(-360deg); } }
+@-webkit-keyframes spinBack { 100% { -webkit-transform: rotate(-360deg); } }
+@keyframes spinBack { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+.x-viewport-header {
+    background-image: -webkit-gradient(linear,50% 0,50% 100%,color-stop(0%,#f3f6fc),color-stop(100%,#cbdaf0));
+    background-image: -webkit-linear-gradient(top,#f3f6fc,#cbdaf0);
+    background-image: -moz-linear-gradient(top,#f3f6fc,#cbdaf0);
+    background-image: -o-linear-gradient(top,#f3f6fc,#cbdaf0);
+    background-image: linear-gradient(top,#f3f6fc,#cbdaf0);
+    border-bottom: 1px solid #a3bde5;
+}
+
+.x-viewport-header-title {
+    padding: 5px 10px 0px 90px;
+    left: 40% !important;/*push logo to center*/
+    background: url(../images/unicrm-logo.png) no-repeat 31px -2px;
+    background-size: 35px;
+    background-position: 60px -5px;
+    color: #e7eef8;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 0px 1px 0 #969798, 0px -1px 0 #969798,1px 0px 0 #969798, -1px 0px 0 #969798, 3px 3px 5px #4280cd;
+}
+.x-viewport-header-title small{
+    color:red;
+    font-size: xx-small;
+    position: relative;
+    left:-40px;
+    top:2px;
+}
+.x-viewport-header-topmenu {
+    left: auto !important;
+    right: 7px !important;
+}
+.x-viewport-header-topmenu-over {
+    content: '' !important;
+    text-decoration: underline !important;
+}
+.x-bg-default {
+    background-color: #DFE8F6;
+}
+.x-border-all {
+    border: 1px solid #99BCE8;
+}
+.x-border-t {
+    border-top: 1px solid #99BCE8;
+}
+.x-border-r {
+    border-right: 1px solid #99BCE8;
+}
+.x-border-b {
+    border-bottom: 1px solid #99BCE8;
+}
+.x-border-l {
+    border-left: 1px solid #99BCE8;
+}
+.x-viewport-header-balloon {
+    background-color: #FF7F7F;
+    border: 2px solid #7F0000;
+    color: #FFFFFF;
+    font: bold 11px/19px Tahoma,sans-serif;
+    height: 25px;
+    margin: 0 auto;
+    position: relative;
+    text-indent: 1em;
+    top: -35px;
+    width: 500px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.x-viewport-header-balloon a {
+    text-decoration: none;
+    color: #222;
+    cursor: pointer;
+}
+.x-viewport-header-balloon a:hover {
+    color: #FF0000;
+}
