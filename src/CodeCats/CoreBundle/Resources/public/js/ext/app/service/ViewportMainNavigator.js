@@ -1,5 +1,5 @@
 /**
- * Logic for the main viewport
+ * Logic for the main viewport. Main responsibility is to switching accordions and tabs.
  */
 Ext.define('Pl.ViewportMainNavigator', {
     statics         : {
@@ -14,7 +14,8 @@ Ext.define('Pl.ViewportMainNavigator', {
     },
     config         : {
         createdTabs : null,
-        tabPanel    : null
+        tabPanel    : null,
+        accordionPanel: null
     },
     constructor     : function (config) {
         this.callParent(arguments);
@@ -24,12 +25,22 @@ Ext.define('Pl.ViewportMainNavigator', {
     initialize      : function () {
         var me = this;
         me.logWho();
-        me.setCreatedTabs([])
+        me.setCreatedTabs([]);
+    },
+    initializeTabPanelListeners: function () {
+        var tabPanel    = this.getTabPanel(),
+            navigator   = this;
+
+        tabPanel.addListener('tabchange', function (tabPanel, tab) {
+            if (navigator.isAccordionCollapsed(tab) === false) {
+                navigator.accordionCollapse(tab)
+            }
+        });
     },
     logWho          : function () {
         console.log('Service: ' + Pl.ViewportMainNavigator.$className);
     },
-    accordionOpen   : function(panelModule) {
+    tabOpen   : function(panelModule) {
         if (this.isOpened(panelModule) === false) {
             this.addCloseListener(panelModule);
             this.getTabPanel().add(panelModule);
@@ -38,6 +49,10 @@ Ext.define('Pl.ViewportMainNavigator', {
 
         if (this.isActiveTab(panelModule) === false) {
             this.activateTab(panelModule);
+        }
+
+        if (this.isAccordionCollapsed(panelModule) === false) {
+            this.accordionCollapse(panelModule)
         }
     },
     isOpened        : function (module) {
@@ -97,5 +112,57 @@ Ext.define('Pl.ViewportMainNavigator', {
                 navigator.getCreatedTabs().splice(position, 1);
             }
         });
+    },
+    accordionCollapse       : function (module) {
+        var accordion = this.getAccordion(module);
+
+        if (accordion !== null) {
+
+            return accordion.toggleCollapse();
+        }
+
+        return false;
+    },
+    getAccordion            : function (module) {
+        var tabs = this.getAccordionPanel().items;
+        for (var i in tabs.items) {
+            if (tabs.items[i].id === module.moduleId) {
+                return tabs.getAt(i);
+            }
+        }
+
+        return null;
+    },
+    getAccordionCollapsed   : function () {
+        var tabs = this.getAccordionPanel().items;
+        for (var i in tabs.items) {
+            if (tabs.items[i].collapsed === false) {
+                return tabs.getAt(i);
+            }
+        }
+
+        return null;
+    },
+    isAccordionCollapsed    : function (module) {
+        var accordion = this.getAccordionCollapsed();
+        if (accordion === null) {
+            return false;
+        }
+
+        return (accordion.id === module.moduleId);
+    },
+    createModuleView        : function (module) {
+        return new Ext.Panel({
+            layout  : 'hbox',
+            closable: true,
+            title   : module.title,
+            /**
+             * Unique identification of module. It's easy to check for example
+             * if module is already opened
+             */
+            moduleId: module.id,
+            //main components of the module
+            items   : module.itemsModule
+        })
     }
 });

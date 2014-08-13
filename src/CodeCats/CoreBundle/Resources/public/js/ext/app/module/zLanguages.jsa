@@ -1,0 +1,21 @@
+/**
+ * Created by t on 8/13/14.
+ */
+Ext.define('Pl.module.Languages', {
+    extend      : 'Pl.module.Module',
+    //module order
+    order       : 1,
+    //trigger to turn off automatic adding
+    exclude     : false,
+    //title has to be overrided
+    title       : 'Języki',
+    html        : null,
+    border      : true,
+    autoScroll  : false,
+    iconCls     : 'icon-small-fat-cow-script_code',
+    /*glyph       : '9898@'*/
+    //items inside main content
+    itemsModule : [],
+    //items under the tab
+    items       : []
+});
